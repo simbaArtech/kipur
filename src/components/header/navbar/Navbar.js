@@ -1,6 +1,6 @@
 import { Wrapper } from "./styles"
 
-export default function  Navbar () {
+export default function Navbar() {
     return (
         <Wrapper>
             <div>מומלצים</div>

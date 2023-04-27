@@ -1,11 +1,13 @@
-import Navbar from "./components/navbar/Navbar";
+import './App.css';
+import Header from "./components/header/Header";
+import { Routes, Route } from 'react-router-dom';
+import Recommended from './pages/Recommended';
 
 function App() {
   return (
-    <div>
-      <p>כאן יהיה הפוטר</p>
-      <Navbar />
-    </div>
+    <Routes>
+      <Route path="/" element={<Recommended />} />
+    </Routes>
   );
 }
 
