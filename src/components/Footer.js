@@ -1,15 +1,18 @@
 import { LocalPostOffice as EmailIcon } from '@mui/icons-material';
+import logos from "../assets/pictures/logos.png";
+import { FooterContainer, Contact, Logos } from './footerStyle';
 
 export default function Footer() {
     return (
         <>
-            <div style={{ color: "white", padding: "3rem", fontSize: "0.7rem" }}>
+            <FooterContainer>
+                <Logos src={logos} />
                 פותח ועוצב ע"י תחום ארטק במערך ההדרכה שבחיל המודיעין
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <Contact>
                     צרו קשר
                     <EmailIcon style={{ width: "18px", paddingLeft: "4px" }} />
-                </div>
-            </div>
+                </Contact>
+            </FooterContainer >
         </>
     )
 }
