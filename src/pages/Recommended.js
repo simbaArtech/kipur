@@ -7,7 +7,6 @@ import { SemiTitle, Container, ArticleDetailsContainer, ArticleTextContainer, Ar
 export default function Recommended() {
     return (
         <>
-            <Header />
             <Container>
                 <Carousel />
                 <SemiTitle>כותרת</SemiTitle>

@@ -1,9 +1,18 @@
 @font-face {
-  font-family: "Almoni";   /*Can be any text*/
+  font-family: "Almoni";
+  /*Can be any text*/
   src: local("Almoni"),
     url("./assets/fonts/AlmoniLight.ttf") format("truetype");
 }
 
-body, html {
+body,
+html {
   font-family: "Almoni";
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
 }
