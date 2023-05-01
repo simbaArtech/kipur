@@ -14,11 +14,6 @@ export const TitleLabel = styled.div`
     justify-content: space-between;
     padding-left: 2rem;
 `
-
-export const Container = styled.div`
-    background: #32332F;
-`
-
 export const PersonalCircle = styled.img`
     border-radius: 50%;
     width: 6.5rem;

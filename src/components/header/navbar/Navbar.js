@@ -36,7 +36,7 @@ export default function Navbar() {
             heb: "אירועים"
         },
         {
-            id: "pictures",
+            id: "images",
             heb: "תמונות מספרות"
         },
         {

@@ -7,10 +7,6 @@ export const SemiTitle = styled.div`
     text-align: right;
     margin: 1rem;
 `
-
-export const Container = styled.div`
-    background: #32332F;
-`
 export const ArticleTextContainer = styled.div`
     margin-right: 1rem;
     margin-top: 5px;
