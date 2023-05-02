@@ -7,5 +7,5 @@ export const Wrapper = styled.div`
     justify-content: space-around;
     padding: 1rem 0 1rem 0;
     flex-direction: row-reverse;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
 `
