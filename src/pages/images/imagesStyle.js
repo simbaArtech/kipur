@@ -24,7 +24,7 @@ export const ImageDescription = styled.div`
 `
 // Animations
 const fadeIn = keyframes`
-  0% {opacity: 0;},
+  0% {opacity: 1;},
   100% {opacity: 1;}
 `;
 
@@ -41,5 +41,5 @@ export const ImageTextContainer = styled.div`
     background: #000000a6;
     direction: rtl;
     opacity:  ${(props) => (props.visible ? "1" : "0")};
-    transition: ${(props) => (props.visible ? "width 0.2s, height 0.2s, opacity 0.2s 0.2s" : "width 0.2s 0.2s, height 0.2s 0.2s, opacity 0.2s")};
+    transition: ${(props) => (props.visible ? "width 0.2s, height 0.2s, opacity 0.3s 0.05s" : "width 0.2s 0.2s, height 0.2s 0.2s, opacity 0.2s")};
 `

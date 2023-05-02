@@ -9,8 +9,8 @@ export default function SortButtons() {
     ];
 
     const [selected, setSelected] = useState("לפני המלחמה");
-    const containerStyle = { display: "flex", flexDirection: "row-reverse", textAlign: "center", color: "white", fontWeight: "bold", fontSize: "0.65rem", padding: "1.8rem 0.5rem" };
-    const selectedStyle = { margin: "auto", borderRadius: "9px", width: "4.8rem", padding: "2px 0px", background: "#657c54" };
+    const containerStyle = { display: "flex", flexDirection: "row-reverse", textAlign: "center", color: "white", fontWeight: "bold", fontSize: "0.65rem", padding: "2rem 0.5rem" };
+    const selectedStyle = { margin: "auto", borderRadius: "9px", width: "4.8rem", padding: "2px 0px", background: "#657c54", border: "1px solid #657c54" };
     const unselectedStyle = { margin: "auto", borderRadius: "9px", width: "4.8rem", padding: "2px 0px", background: "none", border: "1px solid #657c54" };
 
     return (

@@ -40,7 +40,7 @@ export default function Navbar() {
             heb: "תמונות מספרות"
         },
         {
-            id: "amanUnit",
+            id: "amanUnits",
             heb: 'יחידות אמ"ן'
         },
         {

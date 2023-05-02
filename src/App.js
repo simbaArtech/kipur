@@ -6,6 +6,8 @@ import GameCircle from './components/GameCircle';
 import People from './pages/people/People';
 import Events from './pages/events/Events';
 import Images from './pages/images/Images';
+import AmanUnits from './pages/AmanUnits';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,10 +19,12 @@ function App() {
           <Route path="/people" element={<People />} />
           <Route path="/events" element={<Events />} />
           <Route path="/images" element={<Images />} />
+          <Route path="/amanUnits" element={<AmanUnits />} />
           <Route path="*" element={<Navigate to="/recommended" replace />} />
         </Routes>
+        <GameCircle />
+        <Footer />
       </div>
-      <GameCircle />
     </>
   );
 }

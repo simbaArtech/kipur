@@ -1,18 +1,13 @@
-import { useState } from "react";
-import articlepic from "../../assets/pictures/cardImage.jpg";
-import Carousel from "../../components/carousel/Carousel"
+import articlepic from "../assets/pictures/cardImage.jpg";
+import SortButtons from "../components/SortButtons";
 import { AccountCircle, CalendarMonth } from '@mui/icons-material';
-import Footer from "../../components/Footer";
-import { SemiTitle, ArticleDetailsContainer, ArticleTextContainer, ArticleContainer, ArticlePic, ArticleTitle, ArticleDetail } from "../../components/general";
-import Card from "../../components/Card";
+import { ArticleDetailsContainer, ArticleTextContainer, ArticleContainer, ArticlePic, ArticleTitle, ArticleDetail } from "../components/general";
 
-export default function Recommended() {
-    const [showCard, setShowCard] = useState(false);
+export default function AmanUnits() {
     return (
         <>
-            <Carousel />
-            <SemiTitle>כותרת</SemiTitle>
-            <ArticleContainer onClick={() => setShowCard(true)}>
+            <SortButtons />
+            <ArticleContainer>
                 <ArticlePic src={articlepic} />
                 <ArticleTextContainer>
                     <ArticleTitle>כותרת ארוכה מאוד אבל מאוד ארוכה ממש שצריך לרדת שורה</ArticleTitle>
@@ -55,9 +50,6 @@ export default function Recommended() {
                     </ArticleDetailsContainer>
                 </ArticleTextContainer>
             </ArticleContainer>
-            {showCard &&
-                <Card setShowCard={setShowCard} />
-            }
         </>
     )
 }

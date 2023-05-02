@@ -1,5 +1,5 @@
 import Footer from "../../components/Footer";
-import { ArticleDetailsContainer, ArticleTextContainer, ArticleContainer, ArticlePic, ArticleTitle, ArticleDetail } from "../recommended/recommendedStyle";
+import { ArticleDetailsContainer, ArticleTextContainer, ArticleContainer, ArticlePic, ArticleTitle, ArticleDetail } from "../../components/general";
 import { SemiTitle, PersonalContainer, TitleLabel, PersonalCircle, PersonalName, PersonalitiesContainer, SeeAll } from "./peopleStyle";
 export default function People() {
 
@@ -69,7 +69,6 @@ export default function People() {
                     </ArticleTextContainer>
                 </ArticleContainer>
             )}
-            <Footer />
         </>
     )
 }

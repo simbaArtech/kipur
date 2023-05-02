@@ -8,7 +8,21 @@ export const FooterContainer = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
+    bottom: 0;
+    position: relative;
     `
+export const CardFooterContainer = styled.div`
+    color: white;
+    padding: 2.7rem 2.7rem 0rem;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: #32332f;
+`
 
 export const Contact = styled.div`
     display: flex;
