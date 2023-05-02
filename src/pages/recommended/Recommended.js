@@ -47,7 +47,7 @@ export default function Recommended() {
             <ArticleContainer>
                 <ArticlePic src={articlepic} />
                 <ArticleTextContainer>
-                    <ArticleTitle>כותרת יחסית קצרה</ArticleTitle>
+                    <ArticleTitle>כותרת יחסית יחסית קצרה</ArticleTitle>
                     <ArticleDetailsContainer>
                         <ArticleDetail>
                             כאן יהיה טקסט
