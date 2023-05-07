@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components"
+import styled from "styled-components"
 
 export const ImagesContainer = styled.div`
     display: flex;
@@ -20,18 +20,7 @@ export const ImageTitle = styled.div`
     font-weight: bold;
 `
 export const ImageDescription = styled.div`
-
 `
-// Animations
-const fadeIn = keyframes`
-  0% {opacity: 1;},
-  100% {opacity: 1;}
-`;
-
-const fadeOut = keyframes`
-  0%{opacity: 1;},
-  100%{opacity: 0;}
-`;
 
 export const ImageTextContainer = styled.div`
     color: white;

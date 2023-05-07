@@ -10,6 +10,12 @@ export const Wrapper = styled.div`
 
 export const CardImage = styled.img`
     width: 100%;
+    height: 17rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent),
+        url(${props => props.imgSrc});
 `
 export const CardContainer = styled.div`
     background: white;
