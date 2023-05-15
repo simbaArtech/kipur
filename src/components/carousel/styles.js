@@ -10,4 +10,5 @@ export const CardTitle = styled.div`
     width: 85%;
     margin: auto;
     font-size: 1rem;
+    text-align: right;
 `

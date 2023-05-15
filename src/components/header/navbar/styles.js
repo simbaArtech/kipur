@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
     color: white;
     display: flex;
     justify-content: space-around;
-    padding: 1rem 0 1rem 0;
+    padding: 7px 0;
     flex-direction: row-reverse;
     font-size: 0.85rem;
 `

@@ -1,9 +1,9 @@
-import { Wrapper, CardImage, CardContainer, CardHeaderLogo, CardTitle, UselessHorizontalLine, CardDetail, UselessDot, UselessDotsCOntainer, TextContainer, BackBtn } from "./cardStyle";
+import { Wrapper, CardImage, CardContainer, CardHeaderLogo, CardTitle, UselessHorizontalLine, CardDetail, UselessDot, UselessDotsCOntainer, TextContainer, BackBtn } from "./articleStyle";
 import { ArrowForwardIos as ArrowIcon } from '@mui/icons-material';
-import Footer from "./Footer";
-import logo from "../assets/pictures/logo.png";
+import Footer from "../footer/Footer";
+import logo from "../../assets/pictures/logo.png";
 
-export default function Card({ setShowCard }) {
+export default function Article({ setShowCard }) {
     return (
         <>
             <Wrapper>
@@ -11,7 +11,7 @@ export default function Card({ setShowCard }) {
                 <BackBtn onClick={() => setShowCard(false)}>
                     <ArrowIcon sx={{ color: "white", width: "1rem", paddingLeft: "5px" }} />
                 </BackBtn>
-                <CardImage imgSrc={require("../assets/pictures/kipur.jpg")} />
+                <CardImage imgSrc={require("../../assets/pictures/kipur.jpg")} />
                 <CardContainer>
                     <UselessHorizontalLine />
                     <CardTitle>כותרת משנה משנה משנה משנה משנה משנה משנה</CardTitle>

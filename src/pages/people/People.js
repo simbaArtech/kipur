@@ -1,4 +1,3 @@
-import Footer from "../../components/Footer";
 import { ArticleDetailsContainer, ArticleTextContainer, ArticleContainer, ArticlePic, ArticleTitle, ArticleDetail } from "../../components/general";
 import { SemiTitle, PersonalContainer, TitleLabel, PersonalCircle, PersonalName, PersonalitiesContainer, SeeAll } from "./peopleStyle";
 export default function People() {
@@ -24,13 +23,13 @@ export default function People() {
 
     const casualties = [
         {
-            name: 'סר"ן גדעון אבידב ז"ל',
+            name: 'סרן גדעון אבידב ז"ל',
             years: "1952-1973",
             unit: 'חיל המודיעין, סיירת מטכ"ל',
             pic: require("../../assets/pictures/gurion.jpg")
         },
         {
-            name: 'סר"ן גדעון אבידב ז"ל',
+            name: 'סרן גדעון אבידב ז"ל',
             years: "1952-1973",
             unit: 'חיל המודיעין, סיירת מטכ"ל',
             pic: require("../../assets/pictures/moshedayan.jpg")
@@ -55,7 +54,6 @@ export default function People() {
             </PersonalitiesContainer>
             <TitleLabel>
                 <SemiTitle>חללים</SemiTitle>
-                <SeeAll>ראה הכל</SeeAll>
             </TitleLabel>
             {casualties.map(casualty =>
                 <ArticleContainer>

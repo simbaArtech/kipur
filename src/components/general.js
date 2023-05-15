@@ -8,9 +8,13 @@ export const SemiTitle = styled.div`
     margin: 1rem;
 `
 export const ArticleTextContainer = styled.div`
-    margin-right: 1rem;
+    margin: 5px auto 0 auto;
+    width: 59vw;
     margin-top: 5px;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 
 export const ArticleContainer = styled.div`

@@ -3,17 +3,17 @@ import cube from "../assets/pictures/cube.png";
 export default function GameCircle() {
     const circleStyle = {
         background: "#475E36",
-        width: "3.5rem",
-        height: "3.5rem",
+        width: "70px",
+        height: "70px",
         borderRadius: "50%",
         position: "relative",
-        left: "1.2rem",
-        bottom: "0.7rem"
+        left: "30px",
+        bottom: "33px"
     }
 
     const imgStyle = {
-        padding: "20%",
-        width: "2.2rem",
+        padding: "19%",
+        width: "48px",
         position: "relative",
     }
 
