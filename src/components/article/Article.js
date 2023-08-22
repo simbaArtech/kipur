@@ -1,5 +1,6 @@
 import { Wrapper, CardImage, CardContainer, CardHeaderLogo, CardTitle, UselessHorizontalLine, CardDetail, UselessDot, UselessDotsCOntainer, TextContainer, BackBtn } from "./articleStyle";
 import { ArrowForwardIos as ArrowIcon } from '@mui/icons-material';
+import React from 'react';
 import Footer from "../footer/Footer";
 import logo from "../../assets/pictures/logo.png";
 

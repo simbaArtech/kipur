@@ -1,3 +1,4 @@
+import React from "react";
 import { LocalPostOffice as EmailIcon } from '@mui/icons-material';
 import logos from "../../assets/pictures/logos.png";
 import { FooterContainer, Contact, Logos, CardFooterContainer } from './footerStyle';

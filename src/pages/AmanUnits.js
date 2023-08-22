@@ -1,3 +1,4 @@
+import React from "react";
 import articlepic from "../assets/pictures/cardImage.jpg";
 import SortButtons from "../components/SortButtons";
 import { AccountCircle, CalendarMonth } from '@mui/icons-material';

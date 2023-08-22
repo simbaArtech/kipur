@@ -1,72 +1,60 @@
-import { ArticleDetailsContainer, ArticleTextContainer, ArticleContainer, ArticlePic, ArticleTitle, ArticleDetail } from "../../components/general";
-import { SemiTitle, PersonalContainer, TitleLabel, PersonalCircle, PersonalName, PersonalitiesContainer, SeeAll } from "./peopleStyle";
+import React, { useState } from "react";
+import {
+  ArticleDetailsContainer,
+  ArticleTextContainer,
+  ArticleContainer,
+  ArticlePic,
+  ArticleTitle,
+  ArticleDetail,
+} from "../../components/general";
+import {
+  SemiTitle,
+  PersonalContainer,
+  TitleLabel,
+  PersonalCircle,
+  PersonalName,
+  PersonalitiesContainer,
+  SeeAll,
+} from "./peopleStyle";
+import { personalities, warPrisoners, slainPeople } from "../people/consts";
+
 export default function People() {
-
-    const personalities = [
-        {
-            name: "גולדה מאיר",
-            pic: require("../../assets/pictures/goldameir.jpg")
-        },
-        {
-            name: "משה דיין",
-            pic: require("../../assets/pictures/moshedayan.jpg")
-        },
-        {
-            name: "דוד בן גוריון",
-            pic: require("../../assets/pictures/gurion.jpg")
-        },
-        {
-            name: "משה דיין",
-            pic: require("../../assets/pictures/moshedayan.jpg")
-        }
-    ];
-
-    const casualties = [
-        {
-            name: 'סרן גדעון אבידב ז"ל',
-            years: "1952-1973",
-            unit: 'חיל המודיעין, סיירת מטכ"ל',
-            pic: require("../../assets/pictures/gurion.jpg")
-        },
-        {
-            name: 'סרן גדעון אבידב ז"ל',
-            years: "1952-1973",
-            unit: 'חיל המודיעין, סיירת מטכ"ל',
-            pic: require("../../assets/pictures/moshedayan.jpg")
-        }
-    ]
-
-    return (
-        <>
-            <TitleLabel>
-                <SemiTitle>אישים</SemiTitle>
-                <SeeAll>ראה הכל</SeeAll>
-            </TitleLabel>
-            <PersonalitiesContainer>
-                {personalities.map(person => {
-                    return (
-                        <PersonalContainer>
-                            <PersonalCircle src={person.pic} />
-                            <PersonalName>{person.name}</PersonalName>
-                        </PersonalContainer>
-                    )
-                })}
-            </PersonalitiesContainer>
-            <TitleLabel>
-                <SemiTitle>חללים</SemiTitle>
-            </TitleLabel>
-            {casualties.map(casualty =>
-                <ArticleContainer>
-                    <ArticlePic src={casualty.pic} />
-                    <ArticleTextContainer>
-                        <ArticleTitle>{casualty.name}</ArticleTitle>
-                        <ArticleTitle>{casualty.years}</ArticleTitle>
-                        <ArticleDetailsContainer>
-                            <ArticleDetail>{casualty.unit}</ArticleDetail>
-                        </ArticleDetailsContainer>
-                    </ArticleTextContainer>
-                </ArticleContainer>
-            )}
-        </>
-    )
+  const handleClickOnPersonality = () => {};
+  return (
+    <>
+      <TitleLabel>
+        <SemiTitle>אישים</SemiTitle>
+        <SeeAll>ראה הכל</SeeAll>
+      </TitleLabel>
+      <PersonalitiesContainer>
+        {personalities.map((person, index) => {
+          return (
+            <PersonalContainer>
+              <PersonalCircle
+                src={person.pic}
+                onClick={() => handleClickOnPersonality(person)}
+              />
+              <PersonalName>{person.name}</PersonalName>
+            </PersonalContainer>
+          );
+        })}
+      </PersonalitiesContainer>
+      <TitleLabel>
+        <SemiTitle>שבויי מלחמה</SemiTitle>
+        <SemiTitle>חללים</SemiTitle>
+      </TitleLabel>
+      {warPrisoners.map((prisoner) => (
+        <ArticleContainer>
+          <ArticlePic src={prisoner.pic} />
+          <ArticleTextContainer>
+            <ArticleTitle>{prisoner.name}</ArticleTitle>
+            <ArticleTitle>{prisoner.years}</ArticleTitle>
+            <ArticleDetailsContainer>
+              <ArticleDetail>{prisoner.unit}</ArticleDetail>
+            </ArticleDetailsContainer>
+          </ArticleTextContainer>
+        </ArticleContainer>
+      ))}
+    </>
+  );
 }

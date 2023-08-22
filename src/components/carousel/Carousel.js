@@ -1,8 +1,12 @@
 import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+
+import "swiper/swiper.min.css";
+import "swiper/modules/pagination/pagination.min.css";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import "./styles.css";
 import { CardTitle, CardWrapper } from "./styles";
