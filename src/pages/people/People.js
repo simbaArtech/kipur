@@ -19,6 +19,8 @@ import {
 import { personalities, warPrisoners, slainPeople } from "../people/consts";
 
 export default function People() {
+  const [showWar, setShowWar] = useState(true);
+
   const handleClickOnPersonality = () => {};
   return (
     <>
@@ -40,21 +42,39 @@ export default function People() {
         })}
       </PersonalitiesContainer>
       <TitleLabel>
-        <SemiTitle>שבויי מלחמה</SemiTitle>
-        <SemiTitle>חללים</SemiTitle>
+        <SemiTitle onClick={() => setShowWar((prevState) => !prevState)}>
+          שבויי מלחמה
+        </SemiTitle>
+        <SemiTitle onClick={() => setShowWar((prevState) => !prevState)}>
+          חללים
+        </SemiTitle>
       </TitleLabel>
-      {warPrisoners.map((prisoner) => (
-        <ArticleContainer>
-          <ArticlePic src={prisoner.pic} />
-          <ArticleTextContainer>
-            <ArticleTitle>{prisoner.name}</ArticleTitle>
-            <ArticleTitle>{prisoner.years}</ArticleTitle>
-            <ArticleDetailsContainer>
-              <ArticleDetail>{prisoner.unit}</ArticleDetail>
-            </ArticleDetailsContainer>
-          </ArticleTextContainer>
-        </ArticleContainer>
-      ))}
+      {showWar &&
+        warPrisoners.map((prisoner) => (
+          <ArticleContainer>
+            <ArticlePic src={prisoner.pic} />
+            <ArticleTextContainer>
+              <ArticleTitle>{prisoner.name}</ArticleTitle>
+              <ArticleTitle>{prisoner.years}</ArticleTitle>
+              <ArticleDetailsContainer>
+                <ArticleDetail>{prisoner.unit}</ArticleDetail>
+              </ArticleDetailsContainer>
+            </ArticleTextContainer>
+          </ArticleContainer>
+        ))}
+      {!showWar &&
+        slainPeople.map((person) => (
+          <ArticleContainer>
+            <ArticlePic src={person.pic} />
+            <ArticleTextContainer>
+              <ArticleTitle>{person.name}</ArticleTitle>
+              <ArticleTitle>{person.years}</ArticleTitle>
+              <ArticleDetailsContainer>
+                <ArticleDetail>{person.unit}</ArticleDetail>
+              </ArticleDetailsContainer>
+            </ArticleTextContainer>
+          </ArticleContainer>
+        ))}
     </>
   );
 }
