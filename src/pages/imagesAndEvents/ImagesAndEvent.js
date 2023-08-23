@@ -7,6 +7,7 @@ import {
   ImageDescription,
   ImageTextContainer,
 } from "./imagesStyle";
+import { articles } from "../../components/article/consts";
 
 export default function ImagesAndEvents() {
   const [data, setData] = useState([
@@ -45,6 +46,8 @@ export default function ImagesAndEvents() {
     items[i].showText = !items[i].showText;
     setData(items);
   };
+
+  //const filteredArticle = articles.filter((article) => return article.type === );
 
   return (
     <>
