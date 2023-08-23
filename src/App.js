@@ -8,15 +8,37 @@ import ImagesAndEvents from "./pages/imagesAndEvents/ImagesAndEvent";
 import AmanUnits from "./pages/AmanUnits";
 import Footer from "./components/footer/Footer";
 import React, { useState } from "react";
+import Navbar from "./components/navbar/Navbar";
 import BadResolution from "./components/badResolution/BadResolution";
 
 function App() {
   const [selected, setSelected] = useState("recommended");
-
+  const items = [
+    {
+      id: "recommended",
+      heb: "מומלצים",
+    },
+    {
+      id: "people",
+      heb: "אישים",
+    },
+    {
+      id: "images",
+      heb: "סיפורים",
+    },
+    {
+      id: "amanUnits",
+      heb: 'יחידות אמ"ן',
+    },
+    {
+      id: "timeline",
+      heb: "ציר זמן",
+    },
+  ];
   return (
     <>
       {window.innerWidth > 500 && <BadResolution />}
-      <Header selected={selected} setSelected={setSelected} />
+      <Header />
       <div style={{ background: "#32332F" }}>
         {selected == "recommended" ? (
           <Recommended />
@@ -27,9 +49,9 @@ function App() {
         ) : (
           selected == "amanUnits" && <AmanUnits />
         )}
-
         <GameCircle />
-        <Footer />
+        <Footer selected={selected} setSelected={setSelected} />
+        <Navbar items={items} selected={selected} setSelected={setSelected} />
       </div>
     </>
   );

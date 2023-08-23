@@ -8,8 +8,8 @@ export default function GameCircle() {
     height: "70px",
     borderRadius: "50%",
     position: "relative",
-    left: "30px",
-    bottom: "33px",
+    left: "25px",
+    bottom: "55px",
   };
 
   const imgStyle = {

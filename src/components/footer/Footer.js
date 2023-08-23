@@ -15,7 +15,6 @@ export default function Footer({ card }) {
       {card ? (
         <CardFooterContainer>
           <Logos src={logos} />
-          <Kishur href="https://go.idf.il/e5y8w4e6q2"> לאתר צה"ל </Kishur>
           <Kishur href="https://yomkipurwar.mod.gov.il/Pages/default.aspx">
             לאתר כלים חינוכיים של אמ"ן
           </Kishur>
@@ -28,7 +27,6 @@ export default function Footer({ card }) {
       ) : (
         <FooterContainer>
           <Logos src={logos} />
-          <Kishur href="https://go.idf.il/e5y8w4e6q2">לאתר צה"ל</Kishur>
           <Kishur href="https://yomkipurwar.mod.gov.il/Pages/default.aspx">
             לאתר כלים חינוכיים של אמ"ן
           </Kishur>

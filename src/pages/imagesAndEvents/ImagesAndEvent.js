@@ -38,6 +38,8 @@ export default function ImagesAndEvents() {
     },
   ]);
 
+  const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "תוצאות"];
+
   const handleClick = (i) => {
     let items = [...data];
     items[i].showText = !items[i].showText;
@@ -46,7 +48,7 @@ export default function ImagesAndEvents() {
 
   return (
     <>
-      <SortButtons />
+      <SortButtons labels={labels} />
       <ImagesContainer>
         {data.map((current, index) => {
           return (

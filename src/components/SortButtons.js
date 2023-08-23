@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-export default function SortButtons() {
-  const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "תוצאות"];
+export default function SortButtons({labels}) {
 
   const [selected, setSelected] = useState("לפני המלחמה");
   const containerStyle = {
