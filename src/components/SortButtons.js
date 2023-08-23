@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-export default function SortButtons({labels}) {
-
-  const [selected, setSelected] = useState("לפני המלחמה");
+export default function SortButtons({ labels }) {
+  const [selected, setSelected] = useState(labels[0]);
   const containerStyle = {
     display: "flex",
     flexDirection: "row-reverse",

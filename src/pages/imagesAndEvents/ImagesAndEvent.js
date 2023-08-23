@@ -38,7 +38,7 @@ export default function ImagesAndEvents() {
     },
   ]);
 
-  const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "תוצאות"];
+  const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "בעקבות המלחמה"];
 
   const handleClick = (i) => {
     let items = [...data];

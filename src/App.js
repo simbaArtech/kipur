@@ -16,23 +16,28 @@ function App() {
   const items = [
     {
       id: "recommended",
-      heb: "מומלצים",
+      heb: "עמוד הבית",
+      icon: require("./assets/pictures/home.svg"),
     },
     {
       id: "people",
       heb: "אישים",
+      icon: require("./assets/pictures/people.svg"),
     },
     {
       id: "images",
       heb: "סיפורים",
+      icon: require("./assets/pictures/story.svg"),
     },
     {
       id: "amanUnits",
       heb: 'יחידות אמ"ן',
+      icon: require("./assets/pictures/unit.png"),
     },
     {
       id: "timeline",
-      heb: "ציר זמן",
+      heb: "מנהרת הזמן",
+      icon: require("./assets/pictures/timeline.svg"),
     },
   ];
   return (

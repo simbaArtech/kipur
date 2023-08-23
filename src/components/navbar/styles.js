@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  background: #20211e;
-  color: white;
+  background: white;
+  color: #797979;
   display: flex;
   position: fixed;
   bottom: 0;

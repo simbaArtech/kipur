@@ -1,5 +1,5 @@
 import React from "react";
-import cube from "../assets/pictures/cube.png";
+import crossword from "../assets/pictures/crossword.svg";
 
 export default function GameCircle() {
   const circleStyle = {
@@ -8,8 +8,8 @@ export default function GameCircle() {
     height: "70px",
     borderRadius: "50%",
     position: "relative",
-    left: "25px",
-    bottom: "55px",
+    left: "15px",
+    bottom: "90px",
   };
 
   const imgStyle = {
@@ -29,7 +29,7 @@ export default function GameCircle() {
   return (
     <div style={blackFadeStyle}>
       <div style={circleStyle}>
-        <img src={cube} style={imgStyle} />
+        <img src={crossword} style={imgStyle} />
       </div>
     </div>
   );

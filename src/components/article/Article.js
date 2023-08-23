@@ -4,7 +4,7 @@ import React from 'react';
 import Footer from "../footer/Footer";
 import logo from "../../assets/pictures/logo.png";
 
-export default function Article({ setShowCard }) {
+export default function Article({ setShowCard, article }) {
     return (
         <>
             <Wrapper>
