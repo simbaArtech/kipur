@@ -18,7 +18,7 @@ export default function Recommended() {
   return (
     <>
       <Carousel />
-      <SemiTitle>כותרת</SemiTitle>
+      <SemiTitle>כתבות מומלצות</SemiTitle>
       <ArticleContainer onClick={() => setShowCard(true)}>
         <ArticlePic src={articlepic} />
         <ArticleTextContainer>
@@ -29,10 +29,6 @@ export default function Recommended() {
             <ArticleDetail>
               שם כותב המאמר
               <AccountCircle sx={{ height: "14px" }} />
-            </ArticleDetail>
-            <ArticleDetail>
-              תאריך כתיבה
-              <CalendarMonth sx={{ height: "14px" }} />
             </ArticleDetail>
           </ArticleDetailsContainer>
         </ArticleTextContainer>

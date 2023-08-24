@@ -10,6 +10,7 @@ import Footer from "./components/footer/Footer";
 import React, { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import BadResolution from "./components/badResolution/BadResolution";
+import TimeLine from "./pages/timeline/TimeLine";
 
 function App() {
   const [selected, setSelected] = useState("recommended");
@@ -51,6 +52,8 @@ function App() {
           <People />
         ) : selected == "images" ? (
           <ImagesAndEvents />
+        ) : selected == "timeline" ? (
+          <TimeLine />
         ) : (
           selected == "amanUnits" && <AmanUnits />
         )}
