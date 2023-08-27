@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/pictures/logo.png";
+import logo from "../../assets/pictures/logo.webp";
 import { Title, Logo, Container } from "./styles";
 
 export default function Header() {

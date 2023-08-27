@@ -1,72 +1,66 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SortButtons from "../../components/SortButtons";
+import articlepic from "../../assets/pictures/cardImage.jpg";
+import { AccountCircle, CalendarMonth } from "@mui/icons-material";
 import {
-  ImagesContainer,
-  ImageContainer,
-  ImageTitle,
-  ImageDescription,
-  ImageTextContainer,
-} from "./imagesStyle";
-import { articles } from "../../components/article/consts";
+  SemiTitle,
+  ArticleDetailsContainer,
+  ArticleTextContainer,
+  ArticleContainer,
+  ArticlePic,
+  ArticleTitle,
+  ArticleDetail,
+} from "../../components/general";
+import Carousel from "../../components/carousel/Carousel";
+
+import Article from "../../components/article/Article";
+import { aritcles } from "../../components/article/consts";
 
 export default function ImagesAndEvents() {
-  const [data, setData] = useState([
-    {
-      src: require("../../assets/pictures/gurion.jpg"),
-      title: "דוד בן גוריון",
-      description: "היה מדינאי ישראלי, ראש הממשלה הראשון של מדינת ישראל.",
-      showText: false,
-    },
-    {
-      src: require("../../assets/pictures/goldameir.jpg"),
-      title: "זוהי גולדה מאיר",
-      description:
-        "גולדה מאיר הייתה ראש ממשלת ישראל הרביעית, בין מרץ 1969 ליוני 1974. כראש הממשלה, הנהיגה את ישראל בתקופת מלחמת ההתשה ומלחמת יום הכיפורים.",
-      showText: false,
-    },
-    {
-      src: require("../../assets/pictures/moshedayan.jpg"),
-      title: "משה דיין",
-      description:
-        "משה דיין היה מצביא, מדינאי ואיש ציבור ישראלי. היה חבר הכנסת ושר בממשלות ישראל, שימש שר הביטחון במהלך מלחמת ששת הימים, מלחמת ההתשה ומלחמת יום הכיפורים.",
-      showText: false,
-    },
-    {
-      src: require("../../assets/pictures/kipur.jpg"),
-      title: "תמונה ממאגר יום הכיפורים",
-      description: "זוהי תמונה ממאגר סודי של פרסומי יום הכיפורים 1973.",
-      showText: false,
-    },
-  ]);
-
+  const [showCard, setShowCard] = useState(false);
+  const [articleI, setArticleI] = useState();
+  const [selectedLabel, setSelectedLabel] = useState("לפני המלחמה");
   const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "בעקבות המלחמה"];
-
-  const handleClick = (i) => {
-    let items = [...data];
-    items[i].showText = !items[i].showText;
-    setData(items);
-  };
-
-  //const filteredArticle = articles.filter((article) => return article.type === );
 
   return (
     <>
       <SortButtons labels={labels} />
-      <ImagesContainer>
-        {data.map((current, index) => {
+      <>
+        {aritcles.map((article) => {
           return (
-            <ImageContainer
-              onClick={() => handleClick(index)}
-              src={current.src}
-            >
-              <ImageTextContainer visible={current.showText} delay="300ms">
-                <ImageTitle>{current.title}</ImageTitle>
-                <ImageDescription>{current.description}</ImageDescription>
-              </ImageTextContainer>
-            </ImageContainer>
+            <div>
+              <ArticleContainer
+                onClick={() => {
+                  setShowCard(true);
+                  setArticleI(article);
+                }}
+              >
+                {article.pic ? (
+                  <ArticlePic src={article.pic} />
+                ) : (
+                  <ArticlePic src={articlepic} />
+                )}
+                <ArticleTextContainer>
+                  <ArticleTitle>{article.title}</ArticleTitle>
+                  <ArticleDetailsContainer>
+                    <ArticleDetail>
+                      {article.type}
+                      <AccountCircle
+                        sx={{
+                          height: "14px",
+                        }}
+                      />
+                    </ArticleDetail>
+                  </ArticleDetailsContainer>
+                </ArticleTextContainer>
+              </ArticleContainer>
+              {showCard && (
+                <Article setShowCard={setShowCard} article={articleI} />
+              )}
+            </div>
           );
         })}
-      </ImagesContainer>
+      </>
     </>
   );
 }

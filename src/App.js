@@ -30,11 +30,11 @@ function App() {
       heb: "סיפורים",
       icon: require("./assets/pictures/story.svg"),
     },
-    {
-      id: "amanUnits",
-      heb: 'יחידות אמ"ן',
-      icon: require("./assets/pictures/unit.png"),
-    },
+    // {
+    //   id: "amanUnits",
+    //   heb: 'יחידות אמ"ן',
+    //   icon: require("./assets/pictures/unit.svg"),
+    // },
     {
       id: "timeline",
       heb: "מנהרת הזמן",
