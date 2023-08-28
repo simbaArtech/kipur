@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function SortButtons({ labels, selectedLabel }) {
+export default function SortButtons({ labels, onSelectLabel }) {
   const [selected, setSelected] = useState(labels[0]);
 
   const containerStyle = {
@@ -36,8 +36,8 @@ export default function SortButtons({ labels, selectedLabel }) {
           key={label}
           style={selected == label ? selectedStyle : unselectedStyle}
           onClick={() => {
+            onSelectLabel(label);
             setSelected(label);
-            // selectedLabel(label);
           }}
         >
           {label}

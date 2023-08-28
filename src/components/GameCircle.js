@@ -2,19 +2,10 @@ import React from "react";
 import crossword from "../assets/pictures/crossword.svg";
 
 export default function GameCircle() {
-  const circleStyle = {
-    background: "#475E36",
-    width: "70px",
-    height: "70px",
-    borderRadius: "50%",
-    position: "relative",
-    left: "15px",
-    bottom: "90px",
-  };
-
   const imgStyle = {
-    padding: "19%",
-    width: "48px",
+    bottom: "100px",
+    left: "15px",
+    width: "90px",
     position: "relative",
   };
 
@@ -28,9 +19,7 @@ export default function GameCircle() {
 
   return (
     <div style={blackFadeStyle}>
-      <div style={circleStyle}>
-        <img src={crossword} style={imgStyle} />
-      </div>
+      <img src={crossword} style={imgStyle} />
     </div>
   );
 }

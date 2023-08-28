@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SortButtons from "../../components/SortButtons";
 import articlepic from "../../assets/pictures/cardImage.jpg";
-import { AccountCircle, CalendarMonth } from "@mui/icons-material";
 import {
   SemiTitle,
   ArticleDetailsContainer,
@@ -22,11 +21,19 @@ export default function ImagesAndEvents() {
   const [selectedLabel, setSelectedLabel] = useState("לפני המלחמה");
   const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "בעקבות המלחמה"];
 
+  const [filteredItems, setFilteredItems] = useState(aritcles);
+
+  const handleLabelSelect = (label) => {
+    setSelectedLabel(label);
+    const filtered = aritcles.filter((item) => item.type === label);
+    setFilteredItems(filtered);
+  };
+
   return (
     <>
-      <SortButtons labels={labels} />
+      <SortButtons labels={labels} onSelectLabel={handleLabelSelect} />
       <>
-        {aritcles.map((article) => {
+        {filteredItems.map((article) => {
           return (
             <div>
               <ArticleContainer
@@ -45,10 +52,9 @@ export default function ImagesAndEvents() {
                   <ArticleDetailsContainer>
                     <ArticleDetail>
                       {article.type}
-                      <AccountCircle
-                        sx={{
-                          height: "14px",
-                        }}
+                      <img
+                        src={require("../../assets/pictures/clock.svg")}
+                        style={{ height: "14px", marginLeft: "5px" }}
                       />
                     </ArticleDetail>
                   </ArticleDetailsContainer>

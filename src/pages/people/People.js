@@ -42,10 +42,16 @@ export default function People() {
         })}
       </PersonalitiesContainer>
       <TitleLabel>
-        <SemiTitle onClick={() => setShowWar((prevState) => !prevState)}>
+        <SemiTitle
+          onClick={() => setShowWar((prevState) => !prevState)}
+          style={{ borderBottom: showWar ? "3px solid #657c54" : "" }}
+        >
           שבויי מלחמה
         </SemiTitle>
-        <SemiTitle onClick={() => setShowWar((prevState) => !prevState)}>
+        <SemiTitle
+          style={{ borderBottom: !showWar ? "3px solid #657c54" : "" }}
+          onClick={() => setShowWar((prevState) => !prevState)}
+        >
           חללים
         </SemiTitle>
       </TitleLabel>

@@ -16,12 +16,13 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 200px;
+  width: 250px;
   background-color: white;
   padding: 4px;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
 `;
+// height: 150px;
 //opacity: 0.5;
 
 export const SelectedImage = styled.img`
