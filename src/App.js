@@ -3,17 +3,17 @@ import Header from "./components/header/Header";
 import Recommended from "./pages/recommended/Recommended";
 import GameCircle from "./components/GameCircle";
 import People from "./pages/people/People";
-import SlainPerson from "./pages/people/SlainPerson";
 import ImagesAndEvents from "./pages/imagesAndEvents/ImagesAndEvent";
-import AmanUnits from "./pages/AmanUnits";
 import Footer from "./components/footer/Footer";
 import React, { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import BadResolution from "./components/badResolution/BadResolution";
 import TimeLine from "./pages/timeline/TimeLine";
+import Game from "./components/game/Game";
 
 function App() {
   const [selected, setSelected] = useState("recommended");
+  const [game, setGame] = useState(false);
   const items = [
     {
       id: "recommended",
@@ -30,11 +30,6 @@ function App() {
       heb: "סיפורים",
       icon: require("./assets/pictures/story.svg"),
     },
-    // {
-    //   id: "amanUnits",
-    //   heb: 'יחידות אמ"ן',
-    //   icon: require("./assets/pictures/unit.svg"),
-    // },
     {
       id: "timeline",
       heb: "מנהרת הזמן",
@@ -52,12 +47,11 @@ function App() {
           <People />
         ) : selected == "images" ? (
           <ImagesAndEvents />
-        ) : selected == "timeline" ? (
-          <TimeLine />
         ) : (
-          selected == "amanUnits" && <AmanUnits />
+          selected == "timeline" && <TimeLine />
         )}
-        <GameCircle />
+        <GameCircle onClick={() => setGame(true)} />
+        {game ? <Game /> : ""}
         <Footer selected={selected} setSelected={setSelected} />
         <Navbar items={items} selected={selected} setSelected={setSelected} />
       </div>

@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://dani3li12.github.io",
   "dependencies": {
+    "@jaredreisinger/react-crossword": "^5.2.0",
     "@mui/icons-material": "^5.11.16",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

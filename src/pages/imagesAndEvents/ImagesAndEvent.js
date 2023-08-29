@@ -23,15 +23,14 @@ export default function ImagesAndEvents() {
 
   const [filteredItems, setFilteredItems] = useState(aritcles);
 
-  const handleLabelSelect = (label) => {
-    setSelectedLabel(label);
-    const filtered = aritcles.filter((item) => item.type === label);
+  useEffect(() => {
+    const filtered = aritcles.filter((item) => item.type === selectedLabel);
     setFilteredItems(filtered);
-  };
+  }, [selectedLabel]);
 
   return (
     <>
-      <SortButtons labels={labels} onSelectLabel={handleLabelSelect} />
+      <SortButtons labels={labels} setSelectedLabel={setSelectedLabel} />
       <>
         {filteredItems.map((article) => {
           return (

@@ -10,14 +10,13 @@ import {
   UselessDotsCOntainer,
   TextContainer,
   BackBtn,
+  PersonalCircle,
 } from "./articleStyle";
 import { ArrowForwardIos as ArrowIcon } from "@mui/icons-material";
 import React from "react";
-import Footer from "../footer/Footer";
 import logo from "../../assets/pictures/logo.webp";
 
 export default function Article({ setShowCard, article }) {
-  console.log(article);
   return (
     <>
       <Wrapper>
@@ -27,24 +26,53 @@ export default function Article({ setShowCard, article }) {
             sx={{ color: "white", width: "1rem", paddingLeft: "5px" }}
           />
         </BackBtn>
-        <CardImage
-          imgSrc={
-            article.pic
-              ? article.pic
-              : require("../../assets/pictures/kipur.jpg")
-          }
-        />
+        <div style={{ background: "gray" }}>
+          <CardImage
+            style={{ height: article.article ? "25rem" : "17rem" }}
+            imgSrc={
+              article.article
+                ? article.pic
+                : require("../../assets/pictures/back.png")
+            }
+          />
+          {article.article ? "" : <PersonalCircle src={article.pic} />}
+          {article.article ? (
+            ""
+          ) : (
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                top: "33%",
+                display: "flex",
+                justifyContent: "space-around",
+                color: "#99b882",
+              }}
+            >
+              {console.log(article.name)}
+              {article.name}
+            </div>
+          )}
+        </div>
         <CardContainer>
           <UselessHorizontalLine />
-          <CardTitle>{article.title}</CardTitle>
-          <UselessDotsCOntainer>
-            <UselessDot />
-            <UselessDot />
-            <UselessDot />
-          </UselessDotsCOntainer>
+          {article.article ? (
+            <>
+              <CardTitle>{article.title}</CardTitle>
+              <UselessDotsCOntainer>
+                <UselessDot />
+                <UselessDot />
+                <UselessDot />
+              </UselessDotsCOntainer>
+            </>
+          ) : (
+            <>
+              <CardTitle>{article.years}</CardTitle>
+              <CardTitle>{article.unit}</CardTitle>
+            </>
+          )}
           <TextContainer>{article.text}</TextContainer>
         </CardContainer>
-        {/* <Footer card={true} /> */}
       </Wrapper>
     </>
   );

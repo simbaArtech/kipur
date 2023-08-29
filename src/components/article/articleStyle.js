@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
 
 export const CardImage = styled.img`
   width: 100%;
-  height: 25rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent),
@@ -23,6 +22,8 @@ export const CardContainer = styled.div`
   border-radius: 20px 20px 0 0;
   padding-top: 0.7rem;
 `;
+// height: 100%;
+
 export const CardTitle = styled.div`
   color: #99b882;
   width: 250px;
@@ -89,4 +90,14 @@ export const CardHeaderLogo = styled.img`
   position: absolute;
   top: 2rem;
   left: 1.5rem;
+`;
+
+export const PersonalCircle = styled.img`
+  border-radius: 50%;
+  width: 9.5rem;
+  height: 9.5rem;
+  border: 1px solid white;
+  position: absolute;
+  top: 10%;
+  left: 30%;
 `;

@@ -1,7 +1,8 @@
 import React from "react";
 import crossword from "../assets/pictures/crossword.svg";
+import { hydrate } from "react-dom";
 
-export default function GameCircle() {
+export default function GameCircle({ onClick }) {
   const imgStyle = {
     bottom: "100px",
     left: "15px",
@@ -18,7 +19,7 @@ export default function GameCircle() {
   };
 
   return (
-    <div style={blackFadeStyle}>
+    <div style={blackFadeStyle} onClick={onClick}>
       <img src={crossword} style={imgStyle} />
     </div>
   );
