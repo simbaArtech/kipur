@@ -1,10 +1,19 @@
 import styled from "styled-components";
+import Carousel from "react-elastic-carousel";
+
+export const StyledCarousel = styled(Carousel)`
+  .rec.rec-arrow {
+    display: none;
+  }
+  .rec.rec-pagination {
+    display: none;
+  }
+`;
 
 export const ImageScroller = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   width: 100%;
   height: 100%;
 `;
@@ -16,14 +25,13 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 250px;
-  background-color: white;
-  padding: 4px;
+  width: ${({ isSelected }) => (isSelected ? "250px" : "235px")};
+  border: ${({ isSelected }) => (isSelected ? "2px solid white" : "")};
   margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  opacity: ${({ isSelected }) => (isSelected ? "1" : "0.5")};
+  transition: opacity 0.3s ease-in-out;
 `;
-// height: 150px;
-//opacity: 0.5;
 
 export const SelectedImage = styled.img`
   width: 250px;

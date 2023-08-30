@@ -41,7 +41,9 @@ function App() {
       {window.innerWidth > 500 && <BadResolution />}
       <Header />
       <div style={{ background: "#32332F" }}>
-        {selected == "recommended" ? (
+        {game ? (
+          <Game setGame={setGame} />
+        ) : selected == "recommended" ? (
           <Recommended />
         ) : selected == "people" ? (
           <People />
@@ -50,8 +52,7 @@ function App() {
         ) : (
           selected == "timeline" && <TimeLine />
         )}
-        <GameCircle onClick={() => setGame(true)} />
-        {game ? <Game /> : ""}
+        <GameCircle setGame={setGame} />
         <Footer selected={selected} setSelected={setSelected} />
         <Navbar items={items} selected={selected} setSelected={setSelected} />
       </div>

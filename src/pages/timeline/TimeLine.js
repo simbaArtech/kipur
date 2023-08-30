@@ -3,44 +3,30 @@ import {
   ImageScroller,
   ImageContainer,
   Image,
+  StyledCarousel,
   SelectedImage,
   ImageTitle,
 } from "./TimeLineStyles";
 import { data } from "./consts";
-import Carousel from "react-elastic-carousel";
+import { consts } from "react-elastic-carousel";
 
 export default function TimeLine() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(0);
 
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
+  const handleChangeImage = (currentItem) => {
+    setSelectedItem(currentItem.index);
   };
 
   return (
-    <Carousel verticalMode itemsToShow={3} focusOnSelect={true} style={{}}>
-      {data.map((item) => (
-        <Image src={item.pic} />
+    <StyledCarousel
+      verticalMode
+      itemsToShow={4}
+      focusOnSelect={true}
+      onChange={(event) => handleChangeImage(event)}
+    >
+      {data.map((item, index) => (
+        <Image src={item.pic} isSelected={index === selectedItem} />
       ))}
-    </Carousel>
+    </StyledCarousel>
   );
 }
-// <ImageScroller>
-//   {data.map((image, index) => (
-//     <ImageContainer key={index}>
-//       <Image
-//         src={image.pic}
-//         alt={`Image ${index}`}
-//         // className={`${styles.image} ${
-//         //   selectedImage === image ? styles["selected-image"] : ""
-//         // }`}
-//         onClick={() => handleImageClick(image)}
-//       />
-//       <div>
-//         <ImageTitle>{image.title}</ImageTitle>
-//       </div>
-//       <div>
-//         <ImageTitle>{image.date}</ImageTitle>
-//       </div>
-//     </ImageContainer>
-//   ))}
-// </ImageScroller>
