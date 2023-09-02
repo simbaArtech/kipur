@@ -4,13 +4,15 @@ import {
   StyledCarousel,
   ImageTitle,
   ImageDate,
-  Container
+  TitlesContainer,
+  Container,
+  TextImageSelected,
 } from "./TimeLineStyles";
 import { data } from "./consts";
 
 export default function TimeLine() {
   const [selectedItem, setSelectedItem] = useState(0);
-  const [style, setStyle] = useState();
+  const [showDesc, setShowDesc] = useState(false);
   // const carouselRef = useRef();
   const imageRef = useRef(null);
 
@@ -18,15 +20,6 @@ export default function TimeLine() {
     setSelectedItem(currentItem.index);
     // carouselRef.current.goTo(currentItem.index);
   };
-
-  useEffect(() => {
-    if (imageRef) {
-      const imageRect = imageRef.current.getBoundingClientRect();
-      const top = imageRect.top + window.scrollY + imageRect.height / 2;
-      const left = imageRect.left + window.scrollX + imageRect.width / 2;
-      setStyle({ top: `${top}px`, left: `${left}px` });
-    }
-  }, [selectedItem]);
 
   return (
     <Container>
@@ -36,24 +29,35 @@ export default function TimeLine() {
         // preventDefaultTouchmoveEvent
         // ref={carouselRef}
         focusOnSelect={true}
-        onChange={(event) => handleChangeImage(event)}
+        onChange={(event) => {handleChangeImage(event); setShowDesc(false);}}
       >
         {data.map((item, index) => (
-          <>
+          <div style={{ position: "relative" }}>
             <Image
               src={item.pic}
               isSelected={index === selectedItem}
+              onClick={() => index === selectedItem ? setShowDesc(true) : ""}
               ref={imageRef}
             />
-            {index === selectedItem ? (
-              <div>
-                <ImageDate style={style}>{item.date}</ImageDate>
-                <ImageTitle style={style}>{item.title}</ImageTitle>
-              </div>
+            {showDesc && index === selectedItem ? (
+              <TextImageSelected
+                visible={showDesc && index === selectedItem}
+                onClick={() => setShowDesc(false)}
+              >
+                {item.desc}
+              </TextImageSelected>
             ) : (
               ""
             )}
-          </>
+            {!showDesc && index === selectedItem ? (
+              <TitlesContainer>
+                <ImageDate>{item.date}</ImageDate>
+                <ImageTitle>{item.title}</ImageTitle>
+              </TitlesContainer>
+            ) : (
+              ""
+            )}
+          </div>
         ))}
       </StyledCarousel>
     </Container>
