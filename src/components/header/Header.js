@@ -6,8 +6,8 @@ export default function Header() {
   return (
     <>
       <Container>
-        <Logo src={logo} />
         <Title>אמ"ן במלחמת יום הכיפורים</Title>
+        <Logo src={logo} />
       </Container>
     </>
   );

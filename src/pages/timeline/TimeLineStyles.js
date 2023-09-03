@@ -44,7 +44,7 @@ export const TitlesContainer = styled.div`
 
 export const ImageTitle = styled.p`
   color: white;
-  font-size: 13px;
+  font-size: ${({ isSelected }) => (isSelected ? "13px" : "10px")};
   width: 200px;
   letter-spacing: 1px;
   padding: 0;
@@ -53,7 +53,7 @@ export const ImageTitle = styled.p`
 `;
 export const ImageDate = styled.p`
   padding: 0;
-  font-size: 21px;
+  font-size: ${({ isSelected }) => (isSelected ? "21px" : "19px")};
   letter-spacing: 1px;
   width: 125px;
   font-family: "Almoni";

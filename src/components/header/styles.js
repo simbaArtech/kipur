@@ -13,8 +13,8 @@ export const Logo = styled.img`
 export const Container = styled.div`
     display: flex;
     background: #20211E;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-weight: bold;
     padding: 1rem;
     align-items: center;
-`
+`;

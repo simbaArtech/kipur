@@ -49,16 +49,17 @@ export default function Recommended() {
           </ArticleDetailsContainer>
         </ArticleTextContainer>
       </ArticleContainer>
-      <ArticleContainer>
+      {showCard && <Article setShowCard={setShowCard} />}
+      <ArticleContainer
+        onClick={() =>
+          console.log("https://yomkipurwar.mod.gov.il/Pages/default.aspx")
+        }
+      >
         <ArticlePic src={articlepic} />
         <ArticleTextContainer>
-          <ArticleTitle>כותרת יחסית יחסית קצרה</ArticleTitle>
-          <ArticleDetailsContainer>
-            <ArticleDetail>כאן יהיה טקסט</ArticleDetail>
-          </ArticleDetailsContainer>
+          <ArticleTitle>אתר כלים חינוכיים של אמ"ן</ArticleTitle>
         </ArticleTextContainer>
       </ArticleContainer>
-      {showCard && <Article setShowCard={setShowCard} />}
     </>
   );
 }

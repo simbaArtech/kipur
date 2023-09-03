@@ -6,7 +6,6 @@ import {
   Contact,
   Logos,
   CardFooterContainer,
-  Kishur,
 } from "./footerStyle";
 
 export default function Footer({ card }) {
@@ -15,9 +14,6 @@ export default function Footer({ card }) {
       {card ? (
         <CardFooterContainer>
           <Logos src={logos} />
-          <Kishur href="https://yomkipurwar.mod.gov.il/Pages/default.aspx">
-            לאתר כלים חינוכיים של אמ"ן
-          </Kishur>
           פותח ועוצב ע"י תחום ארטק, מערך הדרכה אמ"ן
           <Contact>
             צרו קשר
@@ -27,9 +23,6 @@ export default function Footer({ card }) {
       ) : (
         <FooterContainer>
           <Logos src={logos} />
-          <Kishur href="https://yomkipurwar.mod.gov.il/Pages/default.aspx">
-            לאתר כלים חינוכיים של אמ"ן
-          </Kishur>
           פותח ועוצב ע"י תחום ארטק, מערך הדרכה אמ"ן
           <Contact>
             צרו קשר

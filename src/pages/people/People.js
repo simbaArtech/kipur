@@ -9,48 +9,24 @@ import {
 } from "../../components/general";
 import {
   SemiTitle,
-  PersonalContainer,
   TitleLabel,
+  PersonalContainer,
   PersonalCircle,
   PersonalName,
   PersonalitiesContainer,
   SeeAll,
 } from "./peopleStyle";
 import Article from "../../components/article/Article";
-import { personalities, warPrisoners, slainPeople } from "../people/consts";
+import { warPrisoners, slainPeople } from "../people/consts";
 
 export default function People() {
   const [personI, setPersonI] = useState();
-  const [showCard, setShowCard] = useState(false);
   const [showCardO, setShowCardO] = useState(false);
   const [showCardT, setShowCardT] = useState(false);
   const [showWar, setShowWar] = useState(true);
 
-  const handleClickOnPersonality = () => {};
   return (
     <>
-      <TitleLabel>
-        <SemiTitle>אישים</SemiTitle>
-        <SeeAll>ראה הכל</SeeAll>
-      </TitleLabel>
-      <PersonalitiesContainer>
-        {personalities.map((person, index) => {
-          return (
-            <PersonalContainer>
-              <PersonalCircle
-                src={person.pic}
-                onClick={() => {
-                  handleClickOnPersonality(person);
-                  setShowCard(true);
-                  setPersonI(person);
-                }}
-              />
-              <PersonalName>{person.name}</PersonalName>
-            </PersonalContainer>
-          );
-        })}
-        {showCard && <Article setShowCard={setShowCard} article={personI} />}
-      </PersonalitiesContainer>
       <TitleLabel>
         <SemiTitle
           onClick={() => {

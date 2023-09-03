@@ -5,7 +5,6 @@ import {
   CardHeaderLogo,
   CardTitle,
   UselessHorizontalLine,
-  CardDetail,
   UselessDot,
   UselessDotsCOntainer,
   TextContainer,

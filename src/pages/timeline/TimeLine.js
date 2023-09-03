@@ -27,7 +27,6 @@ export default function TimeLine() {
         verticalMode
         itemsToShow={3}
         focusOnSelect={true}
-        // onNextStart={(event) => console.log(event)}
         onChange={(event) => {
           handleChangeImage(event);
           setShowDesc(false);
@@ -42,6 +41,14 @@ export default function TimeLine() {
               onClick={() => (index === selectedItem ? setShowDesc(true) : "")}
               ref={imageRef}
             />
+            <TitlesContainer>
+              <ImageDate isSelected={index === selectedItem}>
+                {item.date}
+              </ImageDate>
+              <ImageTitle isSelected={index === selectedItem}>
+                {item.title}
+              </ImageTitle>
+            </TitlesContainer>
             {showDesc && index === selectedItem ? (
               <TextImageSelected
                 visible={showDesc && index === selectedItem}
@@ -49,16 +56,6 @@ export default function TimeLine() {
               >
                 {item.desc}
               </TextImageSelected>
-            ) : (
-              ""
-            )}
-            {!showDesc && index === selectedItem ? (
-              <TitlesContainer>
-                {/* {console.log(index)}
-                {console.log(selectedItem)} */}
-                <ImageDate>{item.date}</ImageDate>
-                <ImageTitle>{item.title}</ImageTitle>
-              </TitlesContainer>
             ) : (
               ""
             )}

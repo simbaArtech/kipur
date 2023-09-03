@@ -10,29 +10,64 @@ import {
   ArticleTitle,
   ArticleDetail,
 } from "../../components/general";
-import Carousel from "../../components/carousel/Carousel";
+import {
+  TitleLabel,
+  PersonalContainer,
+  PersonalCircle,
+  PersonalName,
+  PersonalitiesContainer,
+} from "../people/peopleStyle";
 
 import Article from "../../components/article/Article";
 import { aritcles } from "../../components/article/consts";
+import { personalities } from "../people/consts";
 
 export default function ImagesAndEvents() {
+  const [showCardO, setShowCardO] = useState(false);
   const [showCard, setShowCard] = useState(false);
   const [articleI, setArticleI] = useState();
   const [selectedLabel, setSelectedLabel] = useState("לפני המלחמה");
   const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "בעקבות המלחמה"];
 
-  const [filteredItems, setFilteredItems] = useState(aritcles);
+  const [filteredArticles, setFilteredArticles] = useState(aritcles);
+  const [filteredItems, setFilteredItems] = useState(personalities);
 
   useEffect(() => {
     const filtered = aritcles.filter((item) => item.type === selectedLabel);
-    setFilteredItems(filtered);
+    setFilteredArticles(filtered);
+    const filteredPerson = personalities.filter(
+      (item) => item.type === selectedLabel
+    );
+    setFilteredItems(filteredPerson);
   }, [selectedLabel]);
 
   return (
     <>
       <SortButtons labels={labels} setSelectedLabel={setSelectedLabel} />
       <>
-        {filteredItems.map((article) => {
+        <TitleLabel>
+          <SemiTitle>אישים</SemiTitle>
+        </TitleLabel>
+        <PersonalitiesContainer>
+          {filteredItems.map((person, index) => {
+            return (
+              <PersonalContainer>
+                <PersonalCircle
+                  src={person.pic}
+                  onClick={() => {
+                    setShowCardO(true);
+                    setArticleI(person);
+                  }}
+                />
+                <PersonalName>{person.name}</PersonalName>
+              </PersonalContainer>
+            );
+          })}
+          {showCardO && (
+            <Article setShowCard={setShowCardO} article={articleI} />
+          )}
+        </PersonalitiesContainer>
+        {filteredArticles.map((article) => {
           return (
             <div>
               <ArticleContainer
