@@ -6,6 +6,7 @@ import {
   ImageDate,
   TitlesContainer,
   Container,
+  ClickForMore,
   TextImageSelected,
 } from "./TimeLineStyles";
 import { data } from "./consts";
@@ -18,7 +19,6 @@ export default function TimeLine() {
 
   const handleChangeImage = (currentItem) => {
     setSelectedItem(currentItem.index);
-    // carouselRef.current.goTo(currentItem.index);
   };
 
   return (
@@ -26,17 +26,20 @@ export default function TimeLine() {
       <StyledCarousel
         verticalMode
         itemsToShow={3}
-        // preventDefaultTouchmoveEvent
-        // ref={carouselRef}
         focusOnSelect={true}
-        onChange={(event) => {handleChangeImage(event); setShowDesc(false);}}
+        // onNextStart={(event) => console.log(event)}
+        onChange={(event) => {
+          handleChangeImage(event);
+          setShowDesc(false);
+        }}
       >
         {data.map((item, index) => (
           <div style={{ position: "relative" }}>
+            {console.log(selectedItem)}
             <Image
               src={item.pic}
               isSelected={index === selectedItem}
-              onClick={() => index === selectedItem ? setShowDesc(true) : ""}
+              onClick={() => (index === selectedItem ? setShowDesc(true) : "")}
               ref={imageRef}
             />
             {showDesc && index === selectedItem ? (
@@ -51,9 +54,22 @@ export default function TimeLine() {
             )}
             {!showDesc && index === selectedItem ? (
               <TitlesContainer>
+                {/* {console.log(index)}
+                {console.log(selectedItem)} */}
                 <ImageDate>{item.date}</ImageDate>
                 <ImageTitle>{item.title}</ImageTitle>
               </TitlesContainer>
+            ) : (
+              ""
+            )}
+            {!showDesc && index === selectedItem ? (
+              <ClickForMore>
+                <img
+                  src={require("../../assets/pictures/tap.svg")}
+                  style={{ marginLeft: "4px", width: "20px", height: "20px" }}
+                ></img>
+                לחצו להרחבה
+              </ClickForMore>
             ) : (
               ""
             )}

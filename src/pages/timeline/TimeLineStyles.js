@@ -27,7 +27,7 @@ export const Image = styled.img`
   margin-bottom: 1rem;
   height: 215px;
   border-radius: 10px;
-  opacity: ${({ isSelected }) => (isSelected ? "1" : "0.5")};
+  opacity: ${({ isSelected }) => (isSelected ? "0.65" : "0.5")};
   transition: opacity 0.3s ease-in-out;
 `;
 
@@ -36,22 +36,31 @@ export const TitlesContainer = styled.div`
   flex-direction: column;
   direction: rtl;
   position: absolute;
-  bottom: 15%;
-  left: 65%;
+  bottom: 25%;
+  left: 55%;
   opacity: 1;
   width: 150px;
 `;
 
 export const ImageTitle = styled.p`
   color: white;
-  font-size: 17px;
+  font-size: 13px;
+  width: 200px;
+  letter-spacing: 1px;
   padding: 0;
+  -webkit-text-stroke: 2px white;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 1);
 `;
 export const ImageDate = styled.p`
   padding: 0;
-  font-size: 22px;
+  font-size: 21px;
+  letter-spacing: 1px;
+  width: 125px;
   font-family: "Almoni";
-  color: #797979;
+  -webkit-text-stroke: 2px #99b882;
+  color: #99b882;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.76);
+  text-stroke: 10px #797979;
 `;
 
 export const TextImageSelected = styled.div`
@@ -71,4 +80,14 @@ export const TextImageSelected = styled.div`
     props.visible
       ? "width 0.2s, height 0.2s, opacity 0.3s 0.05s"
       : "width 0.2s 0.2s, height 0.2s 0.2s, opacity 0.2s"};
+`;
+
+export const ClickForMore = styled.div`
+  position: absolute;
+  align-items: center;
+  display: flex;
+  direction: rtl;
+  color: white;
+  bottom: 10%;
+  right: 3%;
 `;
