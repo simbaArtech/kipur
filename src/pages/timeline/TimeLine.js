@@ -21,12 +21,20 @@ export default function TimeLine() {
     setSelectedItem(currentItem.index);
   };
 
+  // const goTo = (event) => {
+  //   const index = Number(event.target.id);
+  //   if (index === 39 || index === 40) {
+  //     carouselRef.current.goTo(index);
+  //   }
+  // };
+
   return (
     <Container>
       <StyledCarousel
         verticalMode
         itemsToShow={3}
         focusOnSelect={true}
+        // ref={carouselRef}
         onChange={(event) => {
           handleChangeImage(event);
           setShowDesc(false);
@@ -34,21 +42,25 @@ export default function TimeLine() {
       >
         {data.map((item, index) => (
           <div style={{ position: "relative" }}>
-            {console.log(selectedItem)}
             <Image
+              id={index}
               src={item.pic}
               isSelected={index === selectedItem}
-              onClick={() => (index === selectedItem ? setShowDesc(true) : "")}
+              onClick={() => (index === selectedItem ? setShowDesc(true) : "")} //goTo(event)
               ref={imageRef}
             />
-            <TitlesContainer>
-              <ImageDate isSelected={index === selectedItem}>
-                {item.date}
-              </ImageDate>
-              <ImageTitle isSelected={index === selectedItem}>
-                {item.title}
-              </ImageTitle>
-            </TitlesContainer>
+            {item.date || item.title ? (
+              <TitlesContainer>
+                <ImageDate isSelected={index === selectedItem}>
+                  {item.date}
+                </ImageDate>
+                <ImageTitle isSelected={index === selectedItem}>
+                  {item.title}
+                </ImageTitle>
+              </TitlesContainer>
+            ) : (
+              ""
+            )}
             {showDesc && index === selectedItem ? (
               <TextImageSelected
                 visible={showDesc && index === selectedItem}
@@ -59,7 +71,7 @@ export default function TimeLine() {
             ) : (
               ""
             )}
-            {!showDesc && index === selectedItem ? (
+            {item.desc && !showDesc && index === selectedItem ? (
               <ClickForMore>
                 <img
                   src={require("../../assets/pictures/tap.svg")}

@@ -287,4 +287,12 @@ export const data = [
             `,
     pic: require("../../assets/pictures/timeline41.jpg"),
   },
+  {
+    clear: true,
+    pic: require("../../assets/pictures/clear.svg"),
+  },
+  {
+    clear: true,
+    pic: require("../../assets/pictures/clear.svg"),
+  },
 ];
