@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Carousel from "react-elastic-carousel";
+import AlmoniDemibold from "../../assets/fonts/AlmoniDemibold.ttf";
 
 export const Container = styled.div`
   display: flex;
@@ -27,8 +28,17 @@ export const Image = styled.img`
   margin-bottom: 1rem;
   height: 215px;
   border-radius: 10px;
-  opacity: ${({ isSelected }) => (isSelected ? "0.65" : "0.5")};
+  opacity: ${({ isSelected }) => (isSelected ? "1" : "0.5")};
   transition: opacity 0.3s ease-in-out;
+`;
+
+export const DarkOnImage = styled.img`
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: ${({ isSelected }) => (isSelected ? "215px" : "212px")};
+  border-radius: 10px;
+  width: ${({ isSelected }) => (isSelected ? "275px" : "246px")};
 `;
 
 export const TitlesContainer = styled.div`
@@ -45,18 +55,21 @@ export const TitlesContainer = styled.div`
 export const ImageTitle = styled.p`
   color: white;
   font-size: ${({ isSelected }) => (isSelected ? "13px" : "10px")};
+  opacity: ${({ isSelected }) => (isSelected ? "1" : "0.5")};
   width: 200px;
   letter-spacing: 1px;
   padding: 0;
   -webkit-text-stroke: 2px white;
+  font-family: "AlmoniDemibold";
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 1);
 `;
 export const ImageDate = styled.p`
   padding: 0;
   font-size: ${({ isSelected }) => (isSelected ? "21px" : "19px")};
+  opacity: ${({ isSelected }) => (isSelected ? "1" : "0.5")};
   letter-spacing: 1px;
+  font-family: "AlmoniDemibold";
   width: 125px;
-  font-family: "Almoni";
   -webkit-text-stroke: 2px #99b882;
   color: #99b882;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.76);

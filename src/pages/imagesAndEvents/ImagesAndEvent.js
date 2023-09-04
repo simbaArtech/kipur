@@ -48,7 +48,7 @@ export default function ImagesAndEvents() {
         <TitleLabel>
           <SemiTitle>אישים</SemiTitle>
         </TitleLabel>
-        <PersonalitiesContainer>
+        <PersonalitiesContainer style={{ marginBottom: "10px" }}>
           {filteredItems.map((person, index) => {
             return (
               <PersonalContainer>

@@ -8,6 +8,7 @@ import {
   Container,
   ClickForMore,
   TextImageSelected,
+  DarkOnImage,
 } from "./TimeLineStyles";
 import { data } from "./consts";
 
@@ -48,6 +49,10 @@ export default function TimeLine() {
               isSelected={index === selectedItem}
               onClick={() => (index === selectedItem ? setShowDesc(true) : "")} //goTo(event)
               ref={imageRef}
+            />
+            <DarkOnImage
+              src={require("../../assets/pictures/forTimeline.png")}
+              isSelected={index === selectedItem}
             />
             {item.date || item.title ? (
               <TitlesContainer>
