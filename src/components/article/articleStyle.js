@@ -78,7 +78,7 @@ export const TextContainer = styled.div`
 export const BackBtn = styled.div`
   position: absolute;
   top: 2rem;
-  right: 1.5rem;
+  left: 1.5rem;
   z-index: 1;
   width: 25px;
   height: 25px;
@@ -89,7 +89,7 @@ export const CardHeaderLogo = styled.img`
   width: 7rem;
   position: absolute;
   top: 2rem;
-  left: 1.5rem;
+  right: 1.5rem;
 `;
 
 export const PersonalCircle = styled.img`

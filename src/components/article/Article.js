@@ -19,12 +19,12 @@ export default function Article({ setShowCard, article }) {
   return (
     <>
       <Wrapper>
-        <CardHeaderLogo src={logo} />
         <BackBtn onClick={() => setShowCard(false)}>
           <ArrowIcon
             sx={{ color: "white", width: "1rem", paddingLeft: "5px" }}
           />
         </BackBtn>
+        <CardHeaderLogo src={logo} />
         <div style={{ background: "gray" }}>
           <CardImage
             style={{ height: article.article ? "25rem" : "17rem" }}

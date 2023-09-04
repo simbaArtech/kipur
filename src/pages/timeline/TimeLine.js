@@ -50,10 +50,14 @@ export default function TimeLine() {
               onClick={() => (index === selectedItem ? setShowDesc(true) : "")} //goTo(event)
               ref={imageRef}
             />
-            <DarkOnImage
-              src={require("../../assets/pictures/forTimeline.png")}
-              isSelected={index === selectedItem}
-            />
+            {index !== 41 && index !== 42 ? (
+              <DarkOnImage
+                src={require("../../assets/pictures/forTimeline.png")}
+                isSelected={index === selectedItem}
+              />
+            ) : (
+              ""
+            )}
             {item.date || item.title ? (
               <TitlesContainer>
                 <ImageDate isSelected={index === selectedItem}>

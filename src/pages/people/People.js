@@ -32,12 +32,18 @@ export default function People() {
           onClick={() => {
             setShowWar((prevState) => !prevState);
           }}
-          style={{ borderBottom: showWar ? "3px solid #657c54" : "" }}
+          style={{
+            borderBottom: showWar ? "6px solid #657c54" : "",
+            color: showWar ? "#657c54" : "white",
+          }}
         >
           שבויי מלחמה
         </SemiTitle>
         <SemiTitle
-          style={{ borderBottom: !showWar ? "3px solid #657c54" : "" }}
+          style={{
+            borderBottom: !showWar ? "6px solid #657c54" : "",
+            color: !showWar ? "#657c54" : "white",
+          }}
           onClick={() => setShowWar((prevState) => !prevState)}
         >
           חללים
@@ -45,40 +51,44 @@ export default function People() {
       </TitleLabel>
       {showWar &&
         warPrisoners.map((prisoner) => (
-          <ArticleContainer
-            onClick={() => {
-              setShowCardO(true);
-              setPersonI(prisoner);
-            }}
-          >
-            <ArticlePic src={prisoner.pic} />
-            <ArticleTextContainer>
-              <ArticleTitle>{prisoner.name}</ArticleTitle>
-              <ArticleTitle>{prisoner.years}</ArticleTitle>
-              <ArticleDetailsContainer>
-                <ArticleDetail>{prisoner.unit}</ArticleDetail>
-              </ArticleDetailsContainer>
-            </ArticleTextContainer>
-          </ArticleContainer>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <ArticleContainer
+              onClick={() => {
+                setShowCardO(true);
+                setPersonI(prisoner);
+              }}
+            >
+              <ArticlePic src={prisoner.pic} />
+              <ArticleTextContainer>
+                <ArticleTitle>{prisoner.name}</ArticleTitle>
+                <ArticleTitle>{prisoner.years}</ArticleTitle>
+                <ArticleDetailsContainer>
+                  <ArticleDetail>{prisoner.unit}</ArticleDetail>
+                </ArticleDetailsContainer>
+              </ArticleTextContainer>
+            </ArticleContainer>
+          </div>
         ))}
       {showCardO && <Article setShowCard={setShowCardO} article={personI} />}
       {!showWar &&
         slainPeople.map((person) => (
-          <ArticleContainer
-            onClick={() => {
-              setShowCardT(true);
-              setPersonI(person);
-            }}
-          >
-            <ArticlePic src={person.pic} />
-            <ArticleTextContainer>
-              <ArticleTitle>{person.name}</ArticleTitle>
-              <ArticleTitle>{person.years}</ArticleTitle>
-              <ArticleDetailsContainer>
-                <ArticleDetail>{person.unit}</ArticleDetail>
-              </ArticleDetailsContainer>
-            </ArticleTextContainer>
-          </ArticleContainer>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <ArticleContainer
+              onClick={() => {
+                setShowCardT(true);
+                setPersonI(person);
+              }}
+            >
+              <ArticlePic src={person.pic} />
+              <ArticleTextContainer>
+                <ArticleTitle>{person.name}</ArticleTitle>
+                <ArticleTitle>{person.years}</ArticleTitle>
+                <ArticleDetailsContainer>
+                  <ArticleDetail>{person.unit}</ArticleDetail>
+                </ArticleDetailsContainer>
+              </ArticleTextContainer>
+            </ArticleContainer>
+          </div>
         ))}
       {showCardT && <Article setShowCard={setShowCardT} article={personI} />}
     </>

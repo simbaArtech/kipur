@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: white;
+  box-shadow: 0px -15px 15px rgba(0, 0, 0, 0.5);
   color: #797979;
   display: flex;
   position: fixed;

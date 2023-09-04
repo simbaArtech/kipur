@@ -67,9 +67,12 @@ export default function ImagesAndEvents() {
             <Article setShowCard={setShowCardO} article={articleI} />
           )}
         </PersonalitiesContainer>
+        <TitleLabel>
+          <SemiTitle>אירועים</SemiTitle>
+        </TitleLabel>
         {filteredArticles.map((article) => {
           return (
-            <div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
               <ArticleContainer
                 onClick={() => {
                   setShowCard(true);
