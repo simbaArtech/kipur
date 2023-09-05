@@ -13,7 +13,7 @@ import {
   PersonalCircle,
   UnderPic,
 } from "./articleStyle";
-import { ArrowForwardIos as ArrowIcon } from "@mui/icons-material";
+import ArrowIcon from "@mui/icons-material/ArrowBackIos";
 import React from "react";
 import logo from "../../assets/pictures/logo.webp";
 
@@ -44,7 +44,9 @@ export default function Article({ setShowCard, article }) {
               style={{
                 position: "absolute",
                 width: "100%",
-                top: "33%",
+                top: "27%",
+                webkitTextStroke: "1px #99b882",
+                letterSpacing: "2px",
                 display: "flex",
                 justifyContent: "space-around",
                 color: "#99b882",
@@ -72,8 +74,8 @@ export default function Article({ setShowCard, article }) {
             </>
           ) : (
             <>
-              <CardTitle>{article.years}</CardTitle>
               <CardTitle>{article.unit}</CardTitle>
+              <CardMiniTitle>{article.years}</CardMiniTitle>
             </>
           )}
           <TextContainer>{article.text}</TextContainer>
