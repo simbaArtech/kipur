@@ -18,7 +18,7 @@ export const ArticleTextContainer = styled.div`
 `;
 
 export const ArticleContainer = styled.div`
-  width: 300px;
+  width: 340px;
   border-radius: 10px;
   background: #43443e;
   display: flex;
