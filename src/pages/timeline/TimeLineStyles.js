@@ -54,27 +54,28 @@ export const TitlesContainer = styled.div`
 
 export const ImageTitle = styled.p`
   color: white;
-  font-size: ${({ isSelected }) => (isSelected ? "13px" : "10px")};
+  font-size: 12px;
   opacity: ${({ isSelected }) => (isSelected ? "1" : "0.5")};
   width: 200px;
-  letter-spacing: 1px;
+  margin-top: 0;
+  letter-spacing: 3px;
   padding: 0;
-  -webkit-text-stroke: 2px white;
-  font-family: "AlmoniDemibold";
+  font-family: ${AlmoniDemibold};
+  -webkit-text-stroke: 0.5px;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 1);
 `;
 export const ImageDate = styled.p`
   padding: 0;
-  font-size: ${({ isSelected }) => (isSelected ? "21px" : "19px")};
+  font-size: 24px;
   opacity: ${({ isSelected }) => (isSelected ? "1" : "0.5")};
-  letter-spacing: 1px;
-  font-family: "AlmoniDemibold";
-  width: 125px;
-  -webkit-text-stroke: 2px #99b882;
+  letter-spacing: 2px;
+  font-family: ${AlmoniDemibold};
+  width: 200px;
   color: #99b882;
+  -webkit-text-stroke: 1.5px #99b882;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.76);
-  text-stroke: 10px #797979;
 `;
+// text-stroke: 10px #797979;
 
 export const TextImageSelected = styled.div`
   color: white;

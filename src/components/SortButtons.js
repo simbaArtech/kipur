@@ -14,19 +14,17 @@ export default function SortButtons({ labels, setSelectedLabel }) {
   };
   const selectedStyle = {
     margin: "auto",
-    borderRadius: "9px",
-    width: "4.8rem",
-    padding: "2px 0px",
-    background: "#657c54",
-    border: "1px solid #657c54",
-  };
-  const unselectedStyle = {
-    margin: "auto",
-    borderRadius: "9px",
+    color: "#657c54",
     width: "4.8rem",
     padding: "2px 0px",
     background: "none",
-    border: "1px solid #657c54",
+    borderBottom: "3px solid #657c54",
+  };
+  const unselectedStyle = {
+    margin: "auto",
+    width: "4.8rem",
+    padding: "2px 0px",
+    background: "none",
   };
 
   return (

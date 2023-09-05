@@ -13,53 +13,87 @@ import {
 } from "../../components/general";
 import Article from "../../components/article/Article";
 
+const aritcles = [
+  {
+    article: true,
+    type: "לפני המלחמה",
+    miniTitle: `"אהרל'ה היה מגיע כנראה לאותה מסקנה, אך מציגה אחרת"`,
+    title: `ניצי הקונספציה בתקופתו של ראש אמ"ן אהרון יריב`,
+    text: `תיאור הקונספציה טרם פרוץ מלחמת יום הכיפורים בדרך כלל העמיד במרכז השיח את אלי זעירא, ראש אמ"ן בעת המלחמה ובשנה שקדמה לה. עם זאת, זרעיה של הקונספציה, ההערכה העמוקה שלסוריה ולמצרים אין כוונות ויכולות לצאת למלחמה עם ישראל, נטמנו עוד הרבה לפני לכן, בתקופתה של אהרן יריב, שכיהן בתפקידו בין 1964-1972.
+    לאחר הניצחון הישראלי במלחמת ששת הימים, הפך יעד החזרת סיני למטרה עליונה עבור המצרים. בימיו של אהרון יריב אמ"ן העריך כי אפשר ומצרים תבחר בעתיד במהלך צבאי במטרה להחזיר לידיה את שטחי סיני, אך לא סביר שמהלך כזה יתבצע ב-1973. תפיסה זו נשענה על כך שישנם שני תנאים לפריצתה של מלחמה כוללת: מצרים לא תצא למלחמה לפני שתצטייד במטוסי קרב שיוכלו להפציץ בעומק הישראלי; וכן, סוריה לא תצא למלחמה ללא מצרים.
+    התפיסה אמנם הייתה נכונה בימים שלאחר מלחמת ששת הימים, אך החמיצה לחלוטין את השינוי האסטרטגי במצרים לאחר עלייתו לשלטון של אנואר סאדאת ב-1970, עוד בימיו של יריב. סאדאת הבין כי יתכן והמצב הפוליטי המצרים יאלץ אותו לצאת למלחמה עוד לפני שישיג כושר הרתעה אווירי. כך, בימיו של יריב נוצר הפער העמוק בין התפיסה המודיעינית את האסטרטגיה המצרית ובין המציאות בשלטון המצרי. סאדאת למעשה התכוון לפתוח במלחמה להשגת יעדים טריטוריאליים התואמים את יכולות הצבא המצרי ואשר יניעו תהליך המדיני בהמשך.
+    יודגש כי גם בתקופתו של אהרן יריב, הידוע בשאילת שאלות, בהטלת ספק, ובמתן מקום רב לדעות אחרות, לא נשמעו הערכות מנוגדות. אלי זעירא טען לא פעם בפני ועדת אגרנט, כי לא הוא שהקים את מחלקת המחקר של אמ"ן והיא לא הגיעה אליו יש-מאין אלא קיבל אותה בירושה מאהרן יריב. כך, זעירא טוען כי כבר כשהגיע לאגף כל מחלקת מחקר, שיריב גידל והצמיח, העריכה שלא תהיה מלחמה ולא היו דעות מנוגדות משמעותיות. יתרה מכך, מסופר כי באירוע ההחלפה בין יריב לזעירא, יריב המשיך להחזיק בדעה הרווחת ואמר בפני הנוכחים כי הוא מוריש לזעירא מצב של שקט.
+    האלוף אביעזר יערי, שהיה ראש ענף 5 (סוריה ולבנון) במחלקת המחקר באותה תקופה אמר כי "אחרי מלחמת יום הכיפורים שאלנו את עצמנו מה אהרל'ה היה עושה. נטינו לחשוב שאילו הייתה עומדת לפניו אותה מערכת ידיעות ושיקולים הוא היה עוצר ושואל מתישהו למה זה לא יכול להיות הפוך." שלמה גזית, שהחליף את אלי זעירא כראש אמ"ן, טען ברבות הימים כי הוא חושב שגם בימים שלפני המלחמה "יריב היה מגיע לאותה מסקנה כמו זעירא, אך הוא היה מציג אותה אחרת".`,
+    pic: require("../../assets/pictures/ahron.jpg"),
+    underPic: `אהרן יריב כר' אמ"ן ב-1970; מקור: לשכת העיתונות הממשלתית`,
+  },
+  {
+    article: true,
+    type: `ערב המלחמה`,
+    title: `פגישת גולדה – חוסיין`,
+    miniTitle: `ההתרעה של המלך שנדחתה על הסף`,
+    text: `ההתרעה של המלך שנדחתה על הסף
+    ב-25 בספטמבר 1973 בשעות הערב, התקיים מפגש בין רוה"מ גולדה מאיר ומלך ירדן חוסיין באזור תל אביב לאור בקשה דחופה של המלך, לאחר שהגיעה לידיו ההבנה כי מצרים וסוריה עתידות לפלוש לישראל בסמיכות למועד הפגישה. זאת, בעיקר על רקע דרישת מדינות ערב ממנו להיערכות קונקרטית להגנה בכדי לבלום כניסה אפשרית של צה"ל לסוריה מדרום דרך ירדן. חוסיין חשש ממלחמה נגד ישראל ולא רצה למצוא את עצמו בתווך בין ישראל לסוריה. חוסיין קבע את הפגישה לאחר שנפגש עם נשיאי מצרים וסוריה ועם פייסל מלך סעודיה בשבועות שקדמו לכך.
+    במהלך הפגישה טען חוסיין כי כל הכוחות הסורים פרוסים בעמדות במסווה תרגילי, וכי ניתנה הוראה לדוויזיה 3 המשוריינת הסורית להגן על הגבול המשותף עם ירדן, מפני פלישה אפשרית של צה"ל בתגובה לתקיפה סורית קרבה. בנוסף, טען גם כי חיל האוויר ומערכות ההגנ"א הסורים אף הם מצויים בכשירות מרבית ומוכנים לפעולה. חוסיין גם הוסיף את הערכתו כי מדובר בתכנונה של מתקפה משולבת של הסורים והמצרים.
+    עם תום השיחה, יצרה גולדה קשר  עם שר הביטחון דאז, משה דיין ועדכנה אותו בנתונים. הוא מייד בדק את מהימנות הדברים מול הרמטכ"ל וראש אמ"ן ותוך מספר דקות עדכן את גולדה באופן ראשוני שההערכה של המלך ככל-הנראה מוטעית וכי יש לקחת אותה בערבון מוגבל. גם כאן, הקונספציה אודות נכונות צבאות ערב לפתוח במלחמה נגד ישראל עמדה בעינה.
+    למרות הערכה ראשונית זו, נקבעו דיונים בראשות הרמטכ"ל ושר הביטחון בכדי לדון לעומק בשאלת השפעת דברי המלך חוסיין על ההערכה ועל היערכות צה"ל כנגזרת שלה. בשני הדיונים, אשר יודגש כי לא השתתפו בהם נציגים אשר נכחו בפגישת גולדה-חוסיין או שידעו לאשורו מה עלה בפגישתם, הלכה והתגבשה עוד יותר ההערכה שלא עתידה לפרוץ מלחמה בטווח הזמן הקרוב וניתנה התייחסות 'מצמצמת' לחלק מדבריו של חוסיין. כך, בפועל, דבריו של חוסיין לא הצליחו לתרום להתרעה שצה"ל נדרש לה בכדי להיערך למתקפה אשר פרצה כשבועיים מאוחר יותר.
+    `,
+    pic: require("../../assets/pictures/hosi.jpg"),
+  },
+];
+
 export default function Recommended() {
   const [showCard, setShowCard] = useState(false);
+  const [articleI, setArticleI] = useState();
+
   return (
     <>
       <Carousel />
       <SemiTitle>כתבות מומלצות</SemiTitle>
-      <ArticleContainer onClick={() => setShowCard(true)}>
-        <ArticlePic src={articlepic} />
-        <ArticleTextContainer>
-          <ArticleTitle>
-            כותרת ארוכה מאוד אבל מאוד ארוכה ממש שצריך לרדת שורה
-          </ArticleTitle>
-          <ArticleDetailsContainer>
-            <ArticleDetail>
-              שם כותב המאמר
-              <AccountCircle sx={{ height: "14px" }} />
-            </ArticleDetail>
-          </ArticleDetailsContainer>
-        </ArticleTextContainer>
-      </ArticleContainer>
-      <ArticleContainer>
-        <ArticlePic src={articlepic} />
-        <ArticleTextContainer>
-          <ArticleTitle>כותרת יחסית קצרה</ArticleTitle>
-          <ArticleDetailsContainer>
-            <ArticleDetail>
-              שם כותב המאמר
-              <AccountCircle sx={{ height: "14px" }} />
-            </ArticleDetail>
-            <ArticleDetail>
-              תאריך כתיבה
-              <CalendarMonth sx={{ height: "14px" }} />
-            </ArticleDetail>
-          </ArticleDetailsContainer>
-        </ArticleTextContainer>
-      </ArticleContainer>
-      {showCard && <Article setShowCard={setShowCard} />}
-      <ArticleContainer
-        onClick={() =>
-          console.log("https://yomkipurwar.mod.gov.il/Pages/default.aspx")
-        }
-      >
-        <ArticlePic src={articlepic} />
-        <ArticleTextContainer>
-          <ArticleTitle>אתר כלים חינוכיים של אמ"ן</ArticleTitle>
-        </ArticleTextContainer>
-      </ArticleContainer>
+      {aritcles.map((article) => {
+        return (
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <ArticleContainer
+              onClick={() => {
+                setShowCard(true);
+                setArticleI(article);
+              }}
+            >
+              {article.pic ? (
+                <ArticlePic src={article.pic} />
+              ) : (
+                <ArticlePic src={articlepic} />
+              )}
+              <ArticleTextContainer>
+                <ArticleTitle>{article.title}</ArticleTitle>
+                <ArticleDetailsContainer>
+                  <ArticleDetail>
+                    {article.type}
+                    <img
+                      src={require("../../assets/pictures/clock.svg")}
+                      style={{ height: "14px", marginLeft: "5px" }}
+                    />
+                  </ArticleDetail>
+                </ArticleDetailsContainer>
+              </ArticleTextContainer>
+            </ArticleContainer>
+            {showCard && (
+              <Article setShowCard={setShowCard} article={articleI} />
+            )}
+          </div>
+        );
+      })}
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <ArticleContainer
+          style={{ alignItems: "center" }}
+          onClick={() => console.log("https://www.4u2023.com/")}
+        >
+          <ArticlePic src={require("../../assets/pictures/kelim.png")} />
+          <ArticleTextContainer>
+            <ArticleTitle>כלים חינוכיים של אמ"ן</ArticleTitle>
+          </ArticleTextContainer>
+        </ArticleContainer>
+      </div>
     </>
   );
 }

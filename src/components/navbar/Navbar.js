@@ -8,9 +8,9 @@ export default function Navbar({ items, selected, setSelected }) {
       isSelected &&
       `
         color: #99b882;
-        border-bottom: 2.5px solid #99b882;
     `}
   `;
+  // fill: ${({ isSelected }) => (isSelected ? "#99b882" : "#797979")};
   const Icon = styled.img`
     width: 25px;
     height: 25px;
@@ -28,7 +28,10 @@ export default function Navbar({ items, selected, setSelected }) {
           style={{ display: "inline", textAlign: "center" }}
           onClick={() => handleChange(item.id)}
         >
-          <Icon src={item.icon} />
+          <Icon
+            src={selected == item.id ? item.iconSel : item.icon}
+            isSelected={selected == item.id}
+          />
           <Item isSelected={selected == item.id}>{item.heb}</Item>
         </div>
       ))}

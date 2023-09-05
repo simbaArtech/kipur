@@ -18,6 +18,8 @@ export const ArticleTextContainer = styled.div`
 `;
 
 export const ArticleContainer = styled.div`
+  width: 300px;
+  border-radius: 10px;
   background: #43443e;
   display: flex;
   flex-direction: row-reverse;
@@ -43,6 +45,7 @@ export const ArticleDetail = styled.div`
 export const ArticlePic = styled.img`
   width: 5rem;
   height: 5rem;
+  margin-left: 10px;
   object-fit: cover;
   border-radius: 12px;
 `;

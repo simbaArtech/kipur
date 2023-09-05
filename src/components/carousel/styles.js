@@ -5,7 +5,7 @@ export const CardWrapper = styled.div``;
 export const CardTitle = styled.div`
   color: white;
   position: relative;
-  bottom: 55px;
+  bottom: 35px;
   width: 85%;
   margin: auto;
   font-size: 1rem;

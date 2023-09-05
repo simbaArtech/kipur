@@ -6,15 +6,14 @@ export const SemiTitle = styled.div`
   color: white;
   text-align: right;
   padding: 1rem;
-  `;
-  // border-bottom: 3px solid #657c54;
+`;
+// border-bottom: 3px solid #657c54;
 export const TitleLabel = styled.div`
   display: flex;
   flex-direction: row-reverse;
   align-items: baseline;
   justify-content: flex-start;
   margin-bottom: 10px;
-  border-bottom: 3px solid #657c54;
   padding-left: 2rem;
 `;
 export const PersonalCircle = styled.img`
