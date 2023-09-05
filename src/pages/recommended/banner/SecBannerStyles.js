@@ -18,7 +18,7 @@ export const Banner = styled.div`
   margin-left: 0.5rem;
   padding-top: 2rem;
   width: 90%;
-  margin-top: 10rem;
+  margin-top: 17rem;
   box-shadow: 0px 0px 0px 3px #99b882;
   border-radius: 10px;
   direction: rtl;
@@ -37,7 +37,7 @@ export const SemiTitle = styled.p`
 `;
 
 export const CloseButton = styled.div`
-  width: 50px;
+  width: 115px;
   height: 30px;
   background-color: white;
   top: 0;

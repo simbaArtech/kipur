@@ -36,12 +36,16 @@ export const SemiTitle = styled.p`
   line-height: 1.5;
 `;
 
-export const CloseButton = styled.button`
+export const CloseButton = styled.div`
   width: 50px;
   height: 30px;
-  background-color: #99b882;
+  background-color: white;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 3px #99b882;
   border-radius: 10px;
-  color: white;
+  color: black;
   position: relative;
 `;

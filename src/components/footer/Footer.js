@@ -42,7 +42,7 @@ export default function Footer({ card }) {
       text: `ליצירת קשר כתבו למייל 
       artech.artech@gmail.com
       `,
-      style: { height: "35%" },
+      style: { height: "25%", marginTop: '17rem' },
     },
     {
       name: "אודות",
@@ -91,7 +91,7 @@ export default function Footer({ card }) {
           </div>
         </FooterContainer>
       )}
-      {showPopUp && <SecBanner />}
+      {showPopUp && <SecBanner setShowPopUp={setShowPopUp} label={textPop} />}
     </>
   );
 }
