@@ -352,7 +352,7 @@
         id: 'E10',
         letter: 'A',
         clues: ['Ac10', 'Dn11'],
-        label: null
+        label: 11
       },
       {
         id: 'E11',

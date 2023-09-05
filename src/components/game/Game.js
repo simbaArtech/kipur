@@ -214,6 +214,8 @@ import { GRID_DATA } from "./consts";
         <div className="crossword">
           {/* <Clues clues={ this.state.clues } setActiveClueBoxes={ this.setActiveClueBoxes } activeClue={ this.state.activeClue } setActiveClue={ this.setActiveClue } setBoxInFocus={ this.setBoxInFocus } /> */}
           <Board grid={ this.state.grid } allClues={ this.state.clues } clues={ this.state.clues } setActiveClueBoxes={ this.setActiveClueBoxes } highlightedBoxes={ this.state.activeClueBoxes } setActiveClue = { this.setActiveClue } setBoxInFocus={ this.setBoxInFocus } boxInFocus={ this.state.boxInFocus }/>
+          <Clues clues={ this.state.clues } setActiveClueBoxes={ this.setActiveClueBoxes } activeClue={ this.state.activeClue } setActiveClue={ this.setActiveClue } setBoxInFocus={ this.setBoxInFocus } />
+          {/* <div className="text">לחצו על המשבצות והתחילו בתשבץ</div> */}
         </div>
       );
     }
@@ -244,15 +246,13 @@ import { GRID_DATA } from "./consts";
     
     render() {
       return (
-        <div className="clue-lists">
+        <div className="clue-lists text">
           <div className="clue-list-wrapper">
-            <h2>Across</h2>
             <ol className="clue-list">
               { this.state.across.map((clueData) => <Clue key={ clueData.id } clueID={ clueData.id } clueText={ clueData.clue } clueNumber={ clueData.number } clueBoxes={ clueData.boxes } setActiveClueBoxes={ this.props.setActiveClueBoxes } setActiveClue={ this.props.setActiveClue } isActive={ this.props.activeClue.indexOf(clueData.id) > -1 } setBoxInFocus={ this.props.setBoxInFocus }/>) }
             </ol>
           </div>
           <div className="clue-list-wrapper">
-            <h2>Down</h2>
             <ol className="clue-list">
               { this.state.down.map((clueData) => <Clue key={ clueData.id } clueID={ clueData.id } clueText={ clueData.clue } clueNumber={ clueData.number } clueBoxes={ clueData.boxes } setActiveClueBoxes={ this.props.setActiveClueBoxes } setActiveClue={ this.props.setActiveClue } isActive={ this.props.activeClue.indexOf(clueData.id) > -1 } setBoxInFocus={ this.props.setBoxInFocus }/>)
               }
@@ -285,15 +285,13 @@ import { GRID_DATA } from "./consts";
       this.props.setActiveClueBoxes(this.props.clueBoxes);
       this.props.setActiveClue(activeClue);
       this.props.setBoxInFocus(this.props.clueBoxes[0]);
-    }
+    } 
     
     render() {
       return (
-        <li className={`clue ${ this.state.active ? 'active' : ''}`}>
-          <button className="clue-button" onClick={ this.handleClick }>
-            <span className="clue-number">{ this.props.clueNumber }.</span>
+        <li className={`clue ${ this.state.active ? 'active' : ''}`} style={{display: !this.state.active && 'none'}}>
+
             <span className="clue-text">{ this.props.clueText }</span>
-          </button>
         </li>
       );
     }
@@ -302,11 +300,14 @@ import { GRID_DATA } from "./consts";
   class Board extends React.Component {
     constructor(props) {
       super(props);
+
     }
     
     render() {
+      console.log(this.props.id)
       return (
         <div className="crossword-board">
+          
           { this.props.grid.map((box) => {
             const { id, letter, clues, label } = box;
             return <Box key={ id } id={ id } letter={ letter } boxClues = { clues } label={ label } allClues={ this.props.allClues } isHighlighted={ this.props.highlightedBoxes.indexOf(id) > -1 } setActiveClueBoxes={ this.props.setActiveClueBoxes } setActiveClue={ this.props.setActiveClue } setBoxInFocus={ this.props.setBoxInFocus } isInFocus={ this.props.boxInFocus == id }/>
@@ -322,7 +323,7 @@ import { GRID_DATA } from "./consts";
       super(props);
       this.state = {
         highlight: props.isHighlighted,
-        isInFocus: props.isInFocus
+        isInFocus: props.isInFocus,
       };
    
       this.handleFocus = this.handleFocus.bind(this);
@@ -358,6 +359,7 @@ import { GRID_DATA } from "./consts";
       let visibleLabel;
       let input;
       
+      
       if (this.props.label) {
         visibleLabel = <span className="box-label">{ this.props.label }</span>
       }
@@ -367,9 +369,12 @@ import { GRID_DATA } from "./consts";
       }
       
      return (
-      <div className={ `box ${!this.props.letter ? ' blank' : ''}` }>
-         { visibleLabel }
-         { input }
+      <div>
+        <div className={ `box ${!this.props.letter ? ' blank' : ''}` }>
+          { visibleLabel }
+          { input }
+        </div>
+        {/* {activeClue && <h1>{activeClue}</h1>} */}
       </div>
      );    
     }
