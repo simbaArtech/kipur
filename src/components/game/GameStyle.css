@@ -1,8 +1,6 @@
-
 * {
   box-sizing: border-box;
 }
-
 
 .crossword {
   display: flex;
@@ -26,16 +24,14 @@
   display: flex;
 }
 
-
-
 .active {
   color: #aaa5a5;
 }
 .text {
-    color: white;
-    font-weight: bold;
-    position: relative;
-    top: -2rem
+  color: white;
+  font-weight: bold;
+  position: relative;
+  top: -2rem;
 }
 
 .clue-number {
@@ -44,10 +40,10 @@
   font-weight: 600;
 }
 .clue-text {
-    color: white;
-    font-weight: bold;
-    margin-bottom: -5rem;
-    width: 100rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: -5rem;
+  width: 100rem;
 }
 
 .crossword-board {
@@ -66,19 +62,19 @@
   height: 1.7rem;
   border: 1px solid #000;
   text-align: center;
-  &:not(:nth-child(12n+1)) {
+  &:not(:nth-child(12n + 1)) {
     border-left: 0;
   }
-  &:not(:nth-last-child(-n+12)) {
+  &:not(:nth-last-child(-n + 12)) {
     border-bottom: 0;
   }
 }
 
 .box-input {
   width: 1.7rem;
-  height:1.7rem;
+  height: 1.7rem;
   padding-left: 0.5rem;
-  &:nth-last-child(-n+11) {
+  &:nth-last-child(-n + 11) {
     height: 1.7rem;
   }
   &:focus {
@@ -90,10 +86,10 @@
   position: absolute;
   font-size: 10px;
   left: 18.2px;
-  top: 1px
+  top: 1px;
 }
 
-.blank { 
+.blank {
   background: #333;
 }
 
@@ -106,7 +102,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .clue-lists {
     display: flex;
     flex-direction: column;
@@ -123,11 +119,22 @@
 
 .visually-hidden {
   position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    padding:0 !important;
-    border:0 !important;
-    height: 1px !important;
-    width: 1px !important;
-    overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.bdika {
+  background-color: #99b882;
+  border-radius: 10px;
+  color: white;
+  top: 0;
+  font-size: 15px;
+  padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+  width: fit-content;
+  height: fit-content;
 }
