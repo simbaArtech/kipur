@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import BadResolution from "./components/badResolution/BadResolution";
 import TimeLine from "./pages/timeline/TimeLine";
-import Game from "./components/game/Game";
+import Crossword from "./components/game/Game";
 
 function App() {
   const [selected, setSelected] = useState("recommended");
@@ -53,7 +53,7 @@ function App() {
         ) : selected == "timeline" ? (
           <TimeLine />
         ) : (
-          selected == "game" && <Game />
+          selected == "game" && <Crossword  />
         )}
         <Footer selected={selected} setSelected={setSelected} />
         <Navbar items={items} selected={selected} setSelected={setSelected} />

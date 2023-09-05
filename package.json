@@ -14,6 +14,7 @@
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
+    "react-crossword": "^0.2.0",
     "react-dom": "^18.2.0",
     "react-elastic-carousel": "^0.11.5",
     "react-material-ui-carousel": "^3.4.2",
