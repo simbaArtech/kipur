@@ -72,7 +72,13 @@ export default function Carousel() {
         spaceBetween={30}
         centeredSlides={true}
         pagination={{ clickable: true }}
-        coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2.5 }}
+        coverflowEffect={{
+          rotate: 15,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+          slideShadows: true,
+        }}
         modules={[EffectCoverflow, Navigation, Pagination, Autoplay]}
       >
         {aritclesForCarousel.map((item) => (
@@ -90,7 +96,7 @@ export default function Carousel() {
                   style={{
                     width: "257px",
                     height: "160px",
-                    borderRadius: "11px",
+                    borderRadius: "15px",
                     top: "0",
                     left: "-3px",
                     padding: "0",

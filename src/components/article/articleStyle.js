@@ -99,7 +99,7 @@ export const BackBtn = styled.div`
 export const CardHeaderLogo = styled.img`
   width: 7rem;
   position: absolute;
-  top: 2rem;
+  top: 0.75rem;
   right: 1.5rem;
 `;
 
