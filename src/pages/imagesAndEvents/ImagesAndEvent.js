@@ -74,6 +74,7 @@ export default function ImagesAndEvents() {
           return (
             <div style={{ display: "flex", justifyContent: "center" }}>
               <ArticleContainer
+                style={{ alignItems: "center" }}
                 onClick={() => {
                   setShowCard(true);
                   setArticleI(article);
@@ -86,7 +87,7 @@ export default function ImagesAndEvents() {
                 )}
                 <ArticleTextContainer>
                   <ArticleTitle>{article.title}</ArticleTitle>
-                  <ArticleDetailsContainer>
+                  {/* <ArticleDetailsContainer>
                     <ArticleDetail>
                       {article.type}
                       <img
@@ -94,7 +95,7 @@ export default function ImagesAndEvents() {
                         style={{ height: "14px", marginLeft: "5px" }}
                       />
                     </ArticleDetail>
-                  </ArticleDetailsContainer>
+                  </ArticleDetailsContainer> */}
                 </ArticleTextContainer>
               </ArticleContainer>
               {showCard && (

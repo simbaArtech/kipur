@@ -22,7 +22,8 @@ export default function SortButtons({ labels, setSelectedLabel }) {
   };
   const unselectedStyle = {
     margin: "auto",
-    width: "4.8rem",
+    width: "2rem",
+    fontSize: "15px",
     padding: "2px 0px",
     background: "none",
   };

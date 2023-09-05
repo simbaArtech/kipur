@@ -12,6 +12,7 @@ import {
   ArticleDetail,
 } from "../../components/general";
 import Article from "../../components/article/Article";
+import SecBanner from "./banner/SecBanner";
 
 const aritcles = [
   {
@@ -45,6 +46,7 @@ const aritcles = [
 export default function Recommended() {
   const [showCard, setShowCard] = useState(false);
   const [articleI, setArticleI] = useState();
+  const [showPopUp, setShowPopUp] = useState(false);
 
   return (
     <>
@@ -86,7 +88,7 @@ export default function Recommended() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <ArticleContainer
           style={{ alignItems: "center" }}
-          onClick={() => console.log("https://www.4u2023.com/")}
+          onClick={() => setShowPopUp(true)}
         >
           <ArticlePic src={require("../../assets/pictures/kelim.png")} />
           <ArticleTextContainer>
@@ -94,6 +96,7 @@ export default function Recommended() {
           </ArticleTextContainer>
         </ArticleContainer>
       </div>
+      {showPopUp && <SecBanner setShowPopUp={setShowPopUp} />}
     </>
   );
 }

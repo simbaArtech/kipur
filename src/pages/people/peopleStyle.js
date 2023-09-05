@@ -29,8 +29,8 @@ export const PersonalName = styled.div`
   text-align: center;
 `;
 export const PersonalContainer = styled.div`
-  margin-right: 1.2rem;
-  margin-left: 1.2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 `;
 export const PersonalitiesContainer = styled.div`
   display: flex;

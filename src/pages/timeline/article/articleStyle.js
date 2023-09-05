@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   position: absolute;
   top: 0;
-  height: 100%;
   width: 100%;
   z-index: 1;
+  height: 100%;
+  background-color: white;
 `;
 
 export const CardImage = styled.img`
