@@ -60,7 +60,7 @@ function App() {
         ) : (
           selected == "game" && <Game />
         )}
-        <Footer selected={selected} setSelected={setSelected} />
+        <Footer />
         <Navbar items={items} selected={selected} setSelected={setSelected} />
       </div>
     </>

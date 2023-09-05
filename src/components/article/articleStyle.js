@@ -34,8 +34,19 @@ export const CardTitle = styled.div`
   font-weight: bold;
   padding-right: 12px;
   margin-top: 2rem;
-  margin-bottom: 1rem;
   font-size: 1.2rem;
+`;
+export const CardMiniTitle = styled.div`
+  color: #99b882;
+  width: 250px;
+  text-align: right;
+  direction: rtl;
+  margin: auto;
+  margin-bottom: 10px;
+  border-right: 3px solid #99b882;
+  font-weight: bold;
+  padding-right: 12px;
+  font-size: 0.8rem;
 `;
 
 export const UselessHorizontalLine = styled.div`
@@ -100,4 +111,14 @@ export const PersonalCircle = styled.img`
   position: absolute;
   top: 10%;
   left: 30%;
+`;
+
+export const UnderPic = styled.div`
+  color: white;
+  position: absolute;
+  top: 40%;
+  direction: rtl;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 `;

@@ -44,24 +44,7 @@ export default function Footer({ card }) {
   return (
     <>
       {card ? (
-        <CardFooterContainer>
-          <Logos src={logos} />
-          פותח ועוצב ע"י תחום ארטק, מערך הדרכה אמ"ן
-          <div style={containerStyle}>
-            {labels.map((label) => (
-              <div
-                key={label}
-                style={selectedLabel == label ? selectedStyle : unselectedStyle}
-                onClick={() => {
-                  setSelectedLabel(label);
-                }}
-              >
-                <img src={label.icon}></img>
-                {label.name}
-              </div>
-            ))}
-          </div>
-        </CardFooterContainer>
+        ""
       ) : (
         <FooterContainer>
           <Logos src={logos} />
