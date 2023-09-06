@@ -9,6 +9,7 @@ import Navbar from "./components/navbar/Navbar";
 import BadResolution from "./components/badResolution/BadResolution";
 import TimeLine from "./pages/timeline/TimeLine";
 import Crossword from "./components/game/Game";
+import FirstTimeBanner from "./components/firstBanner/FirstBanner";
 
 function App() {
   const [selected, setSelected] = useState("recommended");
@@ -46,6 +47,7 @@ function App() {
   ];
   return (
     <>
+      <FirstTimeBanner />
       {window.innerWidth > 500 && <BadResolution />}
       <Header />
       <div style={{ background: "#32332F" }}>
@@ -66,7 +68,5 @@ function App() {
     </>
   );
 }
-
-// ) : selected == "events" ? (<Events />
 
 export default App;

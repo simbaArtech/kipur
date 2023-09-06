@@ -227,9 +227,8 @@ import { Button } from "bootstrap";
                       inputWord += document.getElementById(`input${cell}`).value;
                     })
                     if (inputWord === clue.answer) {
-                      console.log("hi")
                       boxes.map((cell) => {
-                        document.getElementById(`input${cell}`).classList.add("right");
+                        document.getElementById(`input${cell}`).setAttribute("backgroundColor", "green");
                       })
                     }
                 }
@@ -238,6 +237,7 @@ import { Button } from "bootstrap";
             }
             
           }
+          // if(box.letter === data.value)
 
           //   console.log("hi")
         }
