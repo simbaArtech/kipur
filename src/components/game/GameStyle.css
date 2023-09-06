@@ -1,6 +1,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Almoni"
 }
 
 
@@ -74,6 +75,10 @@
   }
 }
 
+.right {
+    background-color: green !important;
+}
+
 .box-input {
   width: 1.7rem;
   height:1.7rem;
@@ -94,7 +99,14 @@
 }
 
 .blank { 
-  background: #333;
+  background: black;
+}
+
+.buttonCheck {
+    background-color: #99B882;
+    color: white;
+    
+
 }
 
 .highlight {

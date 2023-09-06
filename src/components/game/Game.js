@@ -2,6 +2,7 @@ import React from "react";
 import './GameStyle.css'
 
 import { GRID_DATA } from "./consts";
+import { Button } from "bootstrap";
   
   const CLUE_DATA = {
     'Ac1': {
@@ -208,6 +209,41 @@ import { GRID_DATA } from "./consts";
         boxInFocus: box
       });
     }
+
+    handleCheckAnswers () {
+      {GRID_DATA.map((box, index) => {
+        const data = document.getElementById(`input${box.id}`)
+        if (data) {
+          if (GRID_DATA[index].label) {
+            const cluesIndex = GRID_DATA[index].clues;
+            if (cluesIndex) {
+              cluesIndex.map((clueIndex) => {
+                const clue = CLUE_DATA[clueIndex];
+                if (clue) {
+                  const boxes = clue.boxes;
+                  if (boxes) {
+                    let inputWord = '';
+                    boxes.map((cell) => {
+                      inputWord += document.getElementById(`input${cell}`).value;
+                    })
+                    if (inputWord === clue.answer) {
+                      console.log("hi")
+                      boxes.map((cell) => {
+                        document.getElementById(`input${cell}`).classList.add("right");
+                      })
+                    }
+                }
+                }
+              })
+            }
+            
+          }
+
+          //   console.log("hi")
+        }
+        })
+      }
+    }
     
     render() {
       return (
@@ -215,6 +251,7 @@ import { GRID_DATA } from "./consts";
           {/* <Clues clues={ this.state.clues } setActiveClueBoxes={ this.setActiveClueBoxes } activeClue={ this.state.activeClue } setActiveClue={ this.setActiveClue } setBoxInFocus={ this.setBoxInFocus } /> */}
           <Board grid={ this.state.grid } allClues={ this.state.clues } clues={ this.state.clues } setActiveClueBoxes={ this.setActiveClueBoxes } highlightedBoxes={ this.state.activeClueBoxes } setActiveClue = { this.setActiveClue } setBoxInFocus={ this.setBoxInFocus } boxInFocus={ this.state.boxInFocus }/>
           <Clues clues={ this.state.clues } setActiveClueBoxes={ this.setActiveClueBoxes } activeClue={ this.state.activeClue } setActiveClue={ this.setActiveClue } setBoxInFocus={ this.setBoxInFocus } />
+          <button onClick={this.handleCheckAnswers} className="buttonCheck">בדיקה</button>
           {/* <div className="text">לחצו על המשבצות והתחילו בתשבץ</div> */}
         </div>
       );
@@ -304,7 +341,6 @@ import { GRID_DATA } from "./consts";
     }
     
     render() {
-      console.log(this.props.id)
       return (
         <div className="crossword-board">
           
@@ -365,7 +401,7 @@ import { GRID_DATA } from "./consts";
       }
       
       if (this.props.letter) {  
-        input = <input type="text" maxLength="1" className={ `box-input ${this.state.highlight ? 'highlight' : ''}` } onFocus={ this.handleFocus } ref={(input) => { this.textInput = input }} />
+        input = <input id={`input${this.props.id}`} type="text" maxLength="1" className={ `box-input ${this.state.highlight ? 'highlight' : ''}` } onFocus={ this.handleFocus } ref={(input) => { this.textInput = input }} />
       }
       
      return (
