@@ -1,5 +1,6 @@
 import React from "react";
 import './GameStyle.css'
+import logo from "../../assets/pictures/crosswordFull.svg.png";
 
 import { GRID_DATA } from "./consts";
 import { Button } from "bootstrap";
@@ -203,8 +204,6 @@ class Crossword extends React.Component {
     this.setState({
       showData: true
     });
-
-    console.log(this.state.showData)
   }
 
   setActiveClue(clue) {
@@ -242,6 +241,11 @@ class Crossword extends React.Component {
                         document.getElementById(`input${cell}`).classList.add("right");
                         document.getElementById(`input${cell}`).classList.remove("highlight");
                       })
+                    } else {
+                      boxes.map((cell) => {
+                        document.getElementById(`input${cell}`).classList.add("false");
+                        document.getElementById(`input${cell}`).classList.remove("highlight");
+                      })
                     }
                   }
                 }
@@ -257,7 +261,7 @@ class Crossword extends React.Component {
   render() {
     return (
       <div className="crossword">
-        {/* <Clues clues={ this.state.clues } setActiveClueBoxes={ this.setActiveClueBoxes } activeClue={ this.state.activeClue } setActiveClue={ this.setActiveClue } setBoxInFocus={ this.setBoxInFocus } /> */}
+        <img className="crossword-img" src={logo} />
         <Board grid={this.state.grid} allClues={this.state.clues} clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} highlightedBoxes={this.state.activeClueBoxes} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} boxInFocus={this.state.boxInFocus} />
         <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} />
         <button onClick={this.handleCheckAnswers} className="buttonCheck">בדיקה</button>
@@ -534,7 +538,7 @@ class Box extends React.Component {
     }
 
     if (this.props.letter) {
-      input = <input id={`input${this.props.id}`} style={{ direction: 'rtl', textAlign: 'center' }} value={this.showData && this.props.letter} type="text" maxLength="1" className={`box-input ${this.state.highlight ? 'highlight' : ''}`} onFocus={this.handleFocus} ref={(input) => { this.textInput = input }} onChange={(e) => { handleMovement(this.props, e) }} onKeyDown={(e) => { if (e.keyCode === 8 && !e.target.value) { handleMovement(this.props, e) } }} />
+      input = <input id={`input${this.props.id}`} style={{ direction: 'rtl', textAlign: 'center' }} type="text" maxLength="1" className={`box-input ${this.state.highlight ? 'highlight' : ''}`} onFocus={this.handleFocus} ref={(input) => { this.textInput = input }} onChange={(e) => { handleMovement(this.props, e) }} onKeyDown={(e) => { if (e.keyCode === 8 && !e.target.value) { handleMovement(this.props, e) } }} />
     }
 
     return (
