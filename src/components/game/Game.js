@@ -187,7 +187,7 @@ class Crossword extends React.Component {
       activeClue: ['Ac1'],
       boxInFocus: CLUE_DATA['Ac1'].boxes[0],
       showData: false,
-      disable: true,
+      showDisable: true,
       showAnswer: false
     };
 
@@ -195,8 +195,7 @@ class Crossword extends React.Component {
     this.setActiveClue = this.setActiveClue.bind(this);
     this.setBoxInFocus = this.setBoxInFocus.bind(this);
     this.setShowData = this.setShowData.bind(this);
-    this.setDisable = this.setDisable.bind(this);
-    this.setShowAnswer = this.setDisable.bind(this);
+    this.setShowDisable = this.setShowDisable.bind(this);
   }
 
   setActiveClueBoxes(boxes) {
@@ -214,9 +213,9 @@ class Crossword extends React.Component {
       showAnswer: true
     });
   }
-  setDisable() {
+  setShowDisable() {
     this.setState({
-      disable: false
+      showDisable: false
     });
   }
 
@@ -233,6 +232,21 @@ class Crossword extends React.Component {
   }
 
   handleCheckAnswers() {
+    // !this.state.disable ? (this.handleCheckAnswers, this.setShowAnswer) : ""
+    let isDisabled = false
+    GRID_DATA.map((box, index) => {
+      const data = document.getElementById(`input${box.id}`)
+      if (data) {
+        if(!data.value) {
+          isDisabled = true;
+        }
+      }
+    })
+    if (!isDisabled) {
+      this.setShowDisable()
+    } else {
+      return;
+    }
     {
       GRID_DATA.map((box, index) => {
         const data = document.getElementById(`input${box.id}`)
@@ -249,7 +263,6 @@ class Crossword extends React.Component {
                     boxes.map((cell) => {
                       inputWord += document.getElementById(`input${cell}`).value;
                     })
-                    console.log(inputWord)
                     if (inputWord === clue.answer) {
                       boxes.map((cell) => {
                         document.getElementById(`input${cell}`).classList.add("right");
@@ -278,8 +291,8 @@ class Crossword extends React.Component {
         <Board grid={this.state.grid} allClues={this.state.clues} clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} highlightedBoxes={this.state.activeClueBoxes} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} boxInFocus={this.state.boxInFocus} /> 
         {this.state.showData && <img className="crossword-img" src={logo} />}
         {!this.state.showData ? <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} /> : ""}
-        <div onClick={() => !this.state.disable ? (this.handleCheckAnswers, this.setShowAnswer) : ""} className="buttonCheck">בדיקה</div>
-        {this.state.showAnswer ? <div onClick={this.setShowData} className="buttonCheck">חשיפת התשובות</div> : ""}
+        <div onClick={this.handleCheckAnswers} className="buttonCheck">בדיקה</div>
+        {!this.state.showDisable ? <div onClick={this.setShowData} className="buttonCheck">חשיפת התשובות</div> : ""}
         {/* <div className="text">לחצו על המשבצות והתחילו בתשבץ</div> */}
       </div>
     );
