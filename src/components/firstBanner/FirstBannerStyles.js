@@ -22,15 +22,17 @@ export const Banner = styled.div`
   box-shadow: 0px 0px 0px 3px #99b882;
   border-radius: 10px;
   direction: rtl;
+  position: relative;
 `;
 
 export const Title = styled.h1`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-right: 1.2rem;
 `;
 
 export const SemiTitle = styled.p`
   width: 85%;
+  position: relative;
   margin-top: 2rem;
   margin-right: 1.2rem;
   line-height: 1.5;

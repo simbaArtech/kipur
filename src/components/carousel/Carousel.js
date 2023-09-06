@@ -7,10 +7,25 @@ import "./styles.css";
 import { DarkOnImage } from "../../pages/timeline/TimeLineStyles";
 import { CardTitle, CardWrapper, StyledSwiperSlide } from "./styles";
 import Article from "../article/Article";
+import { useEffect } from "react";
 
 export default function Carousel() {
   const [showCard, setShowCard] = useState(false);
   const [articleI, setArticleI] = useState();
+  const swiperRef = useRef(null);
+  const [width, setWidth] = useState();
+  const [height, setHeight] = useState();
+
+  useEffect(() => {
+    setWidth(getDimensions().width);
+    setHeight(getDimensions().height);
+  }, [window.innerWidth, window.innerHeight]);
+
+  const getDimensions = () => {
+    const width = swiperRef.current.offsetWidth;
+    const height = swiperRef.current.offsetHeight;
+    return { width, height };
+  };
 
   const aritclesForCarousel = [
     {
@@ -89,16 +104,16 @@ export default function Carousel() {
             }}
           >
             <CardWrapper>
-              <div className="swiper-image">
+              <div className="swiper-image" ref={swiperRef}>
                 <img src={item.pic} />
                 <DarkOnImage
                   src={require("../../assets/pictures/forTimeline.png")}
                   style={{
-                    width: "257px",
-                    height: "160px",
+                    width,
+                    height,
                     borderRadius: "15px",
                     top: "0",
-                    left: "-3px",
+                    left: "0",
                     padding: "0",
                   }}
                 />
