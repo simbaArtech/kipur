@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dani3li12.github.io",
+  "homepage": " https://simbaartech.github.io/kipur",
   "dependencies": {
     "@irvanster/react-crossword-x": "github:irvanster/react-crossword-x",
     "@jaredreisinger/react-crossword": "^5.2.0",
