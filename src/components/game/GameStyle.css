@@ -43,7 +43,7 @@
 .clue-text {
   color: white;
   font-weight: bold;
-  margin-bottom: -5rem;
+  margin-bottom: -1rem;
   width: 100rem;
 }
 
@@ -125,7 +125,7 @@
     text-align: center;
   }
   .clue-list-wrapper {
-    max-width: 45%;
+    max-width: 89%;
   }
 }
 
