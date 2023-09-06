@@ -342,7 +342,6 @@ class Board extends React.Component {
   }
 
   render() {
-    console.log(this.props.id);
     return (
       <div className="crossword-board">
         {this.props.grid.map((box) => {
@@ -415,15 +414,150 @@ class Box extends React.Component {
       visibleLabel = <span className="box-label">{this.props.label}</span>;
     }
 
+    function getNextChar(char, isNext) {
+      return isNext
+        ? String.fromCharCode(char.charCodeAt(0) + 1)
+        : String.fromCharCode(char.charCodeAt(0) - 1);
+    }
+
+    function handleMovement(props, e) {
+      if (e.target.value) {
+        if (props.id[1] === "1" && !props.id[2]) {
+          try {
+            document
+              .getElementById(`input${getNextChar(props.id[0], true)}1`)
+              .focus();
+          } catch {
+            return;
+          }
+        } else if (
+          !sessionStorage.getItem("prev2") ||
+          sessionStorage.getItem("prev")[0] === sessionStorage.getItem("prev2")[0]
+        ) {
+          try {
+            const number = props.id[2]
+              ? Number(props.id[1] * 10) + Number(props.id[2])
+              : Number(props.id[1]);
+            document.getElementById(`input${props.id[0]}${number - 1}`).focus();
+          } catch {
+            try {
+              document
+                .getElementById(
+                  `input${getNextChar(props.id[0], true)}${props.id[1]}${
+                    props.id[2] ? props.id[2] : ""
+                  }`
+                )
+                .focus();
+            } catch {
+              return;
+            }
+          }
+        } else {
+          try {
+            document
+              .getElementById(
+                `input${getNextChar(props.id[0], true)}${props.id[1]}${
+                  props.id[2] ? props.id[2] : ""
+                }`
+              )
+              .focus();
+          } catch {
+            try {
+              const number = props.id[2]
+                ? Number(props.id[1] * 10) + Number(props.id[2])
+                : Number(props.id[1]);
+              document
+                .getElementById(`input${props.id[0]}${number - 1}`)
+                .focus();
+            } catch {
+              return;
+            }
+          }
+        }
+      } else if (e.type !== "change" || e.nativeEvent.data) {
+        if (props.id[1] === "1" && props.id[2] === "2") {
+          try {
+            document
+              .getElementById(`input${getNextChar(props.id[0])}12`)
+              .focus();
+          } catch {
+            return;
+          }
+        } else if (
+          !sessionStorage.getItem("prev2") ||
+          sessionStorage.getItem("prev")[0] === sessionStorage.getItem("prev2")[0]
+        ) {
+          try {
+            const number = props.id[2]
+              ? Number(props.id[1] * 10) + Number(props.id[2])
+              : Number(props.id[1]);
+            document.getElementById(`input${props.id[0]}${number + 1}`).focus();
+          } catch {
+            try {
+              document
+                .getElementById(
+                  `input${getNextChar(props.id[0])}${props.id[1]}${
+                    props.id[2] ? props.id[2] : ""
+                  }`
+                )
+                .focus();
+            } catch {
+              return;
+            }
+          }
+        } else {
+          try {
+            document
+              .getElementById(
+                `input${getNextChar(props.id[0])}${props.id[1]}${
+                  props.id[2] ? props.id[2] : ""
+                }`
+              )
+              .focus();
+          } catch {
+            try {
+              const number = props.id[2]
+                ? Number(props.id[1] * 10) + Number(props.id[2])
+                : Number(props.id[1]);
+              document
+                .getElementById(`input${props.id[0]}${number + 1}`)
+                .focus();
+            } catch {
+              return;
+            }
+          }
+        }
+      }
+      if (
+        sessionStorage.getItem("prev") &&
+        document.getElementById(`input${props.id}`)
+      ) {
+        sessionStorage.setItem("prev2", sessionStorage.getItem("prev"));
+        sessionStorage.setItem("prev", props.id);
+      } else {
+        sessionStorage.setItem("prev", props.id);
+      }
+    }
+
     if (this.props.letter) {
       input = (
         <input
+          id={`input${this.props.id}`}
           type="text"
           maxLength="1"
           className={`box-input ${this.state.highlight ? "highlight" : ""}`}
           onFocus={this.handleFocus}
+          style={{ direction: "rtl", textAlign: "center" }}
           ref={(input) => {
             this.textInput = input;
+          }}
+          onChange={(e) => {
+            handleMovement(this.props, e);
+          }}
+          onKeyDown={(e) => {
+            if (e.keyCode === 8 && !e.target.value) {
+              handleMovement(this.props, e);
+            }
           }}
         />
       );
