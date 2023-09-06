@@ -28,12 +28,17 @@ export default function People() {
   const containerStyle = {
     display: "flex",
     flexDirection: "row-reverse",
+    textAlign: "center",
     color: "white",
     fontWeight: "bold",
+    justifyContent: "flex-start",
     fontSize: "0.7rem",
+    padding: "0.5rem",
+    paddingTop: "1rem",
   };
   const selectedStyle = {
-    margin: "auto",
+    // margin: "auto",
+    marginRight: "0.25rem",
     color: "white",
     width: "fit-content",
     padding: "2px 12px",
@@ -42,9 +47,11 @@ export default function People() {
     fontSize: "15px",
   };
   const unselectedStyle = {
-    margin: "auto",
+    // margin: "auto",
+    marginRight: "0.25rem",
     width: "4.5rem",
     fontSize: "15px",
+    textAlign: "center",
     padding: "2px 0px",
     background: "white",
     color: "black",
@@ -61,13 +68,13 @@ export default function People() {
           }}
           style={showWar ? selectedStyle : unselectedStyle}
         >
-          {showWar ? "שבויים" : "שבויי המלחמה"}
+          {showWar ? "שבויי מלחמה" : "שבויים"}
         </SemiTitle>
         <SemiTitle
           style={!showWar ? selectedStyle : unselectedStyle}
           onClick={() => setShowWar((prevState) => !prevState)}
         >
-          {!showWar ? "חללים" : "חללי המלחמה"}
+          {!showWar ? "חללי מלחמה" : "חללים"}
         </SemiTitle>
       </div>
       {showWar &&
