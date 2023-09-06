@@ -14,14 +14,16 @@ export const Wrapper = styled.div`
 
 export const Banner = styled.div`
   background-color: white;
-  height: 65%;
-  margin-left: 0.5rem;
+  height: 500px;
+  top: -5rem;
+  left: 1.2rem;
   padding-top: 2rem;
   width: 90%;
   margin-top: 10rem;
   box-shadow: 0px 0px 0px 3px #99b882;
   border-radius: 10px;
   direction: rtl;
+  position: relative;
 `;
 
 export const Title = styled.h1`
@@ -31,7 +33,10 @@ export const Title = styled.h1`
 
 export const SemiTitle = styled.p`
   width: 85%;
-  margin-top: 2rem;
+  height: 20rem;
+  overflow: scroll;
+  position: relative;
+  // margin-top: 2rem;
   margin-right: 1.2rem;
   line-height: 1.5;
 `;
