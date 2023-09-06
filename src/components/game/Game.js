@@ -187,15 +187,15 @@ class Crossword extends React.Component {
       activeClue: ['Ac1'],
       boxInFocus: CLUE_DATA['Ac1'].boxes[0],
       showData: false,
-      showDisable: true,
-      showAnswer: false
+      showAnswer: false,
+      showError: false
     };
 
     this.setActiveClueBoxes = this.setActiveClueBoxes.bind(this);
     this.setActiveClue = this.setActiveClue.bind(this);
     this.setBoxInFocus = this.setBoxInFocus.bind(this);
     this.setShowData = this.setShowData.bind(this);
-    this.setShowDisable = this.setShowDisable.bind(this);
+    this.setShowError = this.setShowError.bind(this);
   }
 
   setActiveClueBoxes(boxes) {
@@ -213,9 +213,10 @@ class Crossword extends React.Component {
       showAnswer: true
     });
   }
-  setShowDisable() {
+  setShowError() {
+    console.log('handleCheckAnswers called');
     this.setState({
-      showDisable: false
+      showError: true
     });
   }
 
@@ -239,15 +240,11 @@ class Crossword extends React.Component {
       if (data) {
         if(!data.value) {
           isDisabled = true;
+          return
         }
       }
     })
     if (!isDisabled) {
-      this.setShowDisable()
-    } else {
-      return;
-    }
-    {
       GRID_DATA.map((box, index) => {
         const data = document.getElementById(`input${box.id}`)
         if (data) {
@@ -282,6 +279,11 @@ class Crossword extends React.Component {
           }
         }
       })
+    } else {
+    this.setState({
+      showError: true,
+    });
+    return;
     }
   }
 
@@ -292,7 +294,8 @@ class Crossword extends React.Component {
         {this.state.showData && <img className="crossword-img" src={logo} />}
         {!this.state.showData ? <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} /> : ""}
         <div onClick={this.handleCheckAnswers} className="buttonCheck">בדיקה</div>
-        {!this.state.showDisable ? <div onClick={this.setShowData} className="buttonCheck">חשיפת התשובות</div> : ""}
+        <div onClick={this.setShowData} className="buttonCheck">חשיפת התשובות</div>
+        {this.state.showError ? <div>***מלאו את כל הטבלה</div> : null }
         {/* <div className="text">לחצו על המשבצות והתחילו בתשבץ</div> */}
       </div>
     );
