@@ -109,10 +109,11 @@ export default function Carousel() {
                 <DarkOnImage
                   src={require("../../assets/pictures/forTimeline.png")}
                   style={{
+                    position: 'relative',
                     width,
                     height,
                     borderRadius: "15px",
-                    top: "0",
+                    top: "-10rem",
                     left: "0",
                     padding: "0",
                   }}
