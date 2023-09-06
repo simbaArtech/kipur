@@ -112,6 +112,9 @@
 .buttonCheck {
     background-color: #99B882;
     color: white;
+    border-radius: 10px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
     
 
 }

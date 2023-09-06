@@ -186,13 +186,17 @@ class Crossword extends React.Component {
       activeClueBoxes: CLUE_DATA['Ac1'].boxes,
       activeClue: ['Ac1'],
       boxInFocus: CLUE_DATA['Ac1'].boxes[0],
-      showData: false
+      showData: false,
+      disable: true,
+      showAnswer: false
     };
 
     this.setActiveClueBoxes = this.setActiveClueBoxes.bind(this);
     this.setActiveClue = this.setActiveClue.bind(this);
     this.setBoxInFocus = this.setBoxInFocus.bind(this);
     this.setShowData = this.setShowData.bind(this);
+    this.setDisable = this.setDisable.bind(this);
+    this.setShowAnswer = this.setDisable.bind(this);
   }
 
   setActiveClueBoxes(boxes) {
@@ -203,6 +207,16 @@ class Crossword extends React.Component {
   setShowData() {
     this.setState({
       showData: true
+    });
+  }
+  setShowAnswer() {
+    this.setState({
+      showAnswer: true
+    });
+  }
+  setDisable() {
+    this.setState({
+      disable: false
     });
   }
 
@@ -261,11 +275,11 @@ class Crossword extends React.Component {
   render() {
     return (
       <div className="crossword">
-        <img className="crossword-img" src={logo} />
-        <Board grid={this.state.grid} allClues={this.state.clues} clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} highlightedBoxes={this.state.activeClueBoxes} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} boxInFocus={this.state.boxInFocus} />
-        <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} />
-        <button onClick={this.handleCheckAnswers} className="buttonCheck">בדיקה</button>
-        <button onClick={this.setShowData} className="buttonCheck">חשיפת התשובות</button>
+        <Board grid={this.state.grid} allClues={this.state.clues} clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} highlightedBoxes={this.state.activeClueBoxes} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} boxInFocus={this.state.boxInFocus} /> 
+        {this.state.showData && <img className="crossword-img" src={logo} />}
+        {!this.state.showData ? <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} /> : ""}
+        <div onClick={() => !this.state.disable ? (this.handleCheckAnswers, this.setShowAnswer) : ""} className="buttonCheck">בדיקה</div>
+        {this.state.showAnswer ? <div onClick={this.setShowData} className="buttonCheck">חשיפת התשובות</div> : ""}
         {/* <div className="text">לחצו על המשבצות והתחילו בתשבץ</div> */}
       </div>
     );

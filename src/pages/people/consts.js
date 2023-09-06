@@ -63,14 +63,6 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/gurion.jpg"),
     text: "",
   },
-  {
-    article: false,
-    name: "סגן לוינגר עמוס",
-    years: "1952-1973",
-    unit: "חיל המודיעין, 8200",
-    text: "",
-    pic: require("../../assets/pictures/gurion.jpg"),
-  },
 ];
 
 export const personalities = [
