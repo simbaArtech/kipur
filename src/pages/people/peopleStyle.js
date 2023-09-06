@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SemiTitle = styled.div`
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
   text-align: right;
   padding: 1rem;
