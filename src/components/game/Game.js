@@ -177,9 +177,20 @@ const CLUE_DATA = {
 
 };
 
+
+let arrayRight = [];
+let arrayFalse = [];
+
 class Crossword extends React.Component {
   constructor(props) {
     super(props);
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
+    
     this.state = {
       grid: GRID_DATA,
       clues: CLUE_DATA,
@@ -199,6 +210,13 @@ class Crossword extends React.Component {
   }
 
   setActiveClueBoxes(boxes) {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
+    // boxes.map((box) => {console.log(document.getElementById(`input${box}`))})
     this.setState({
       activeClueBoxes: boxes
     });
@@ -221,30 +239,36 @@ class Crossword extends React.Component {
   }
 
   setActiveClue(clue) {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
     this.setState({
       activeClue: clue
     });
   }
 
   setBoxInFocus(box) {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
     this.setState({
       boxInFocus: box
     });
   }
 
   handleCheckAnswers() {
-    // !this.state.disable ? (this.handleCheckAnswers, this.setShowAnswer) : ""
-    let isDisabled = false
-    GRID_DATA.map((box, index) => {
-      const data = document.getElementById(`input${box.id}`)
-      if (data) {
-        if(!data.value) {
-          isDisabled = true;
-          return
-        }
-      }
-    })
-    if (!isDisabled) {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
       GRID_DATA.map((box, index) => {
         const data = document.getElementById(`input${box.id}`)
         if (data) {
@@ -262,13 +286,18 @@ class Crossword extends React.Component {
                     })
                     if (inputWord === clue.answer) {
                       boxes.map((cell) => {
-                        document.getElementById(`input${cell}`).classList.add("right");
-                        document.getElementById(`input${cell}`).classList.remove("highlight");
+                        const inputCell = document.getElementById(`input${cell}`)
+                        inputCell.classList.remove("highlight");
+                        inputCell.classList.add("right");
+                        arrayRight.push(cell)
                       })
                     } else {
                       boxes.map((cell) => {
-                        document.getElementById(`input${cell}`).classList.add("false");
-                        document.getElementById(`input${cell}`).classList.remove("highlight");
+                        const inputCell = document.getElementById(`input${cell}`)
+                        inputCell.classList.remove("highlight");
+                        inputCell.classList.add("false");
+                        arrayFalse.push(cell)
+                       
                       })
                     }
                   }
@@ -279,18 +308,18 @@ class Crossword extends React.Component {
           }
         }
       })
-    } else {
-    this.setState({
-      showError: true,
-    });
-    return;
-    }
   }
 
   render() {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
     return (
       <div className="crossword">
-        <Board grid={this.state.grid} allClues={this.state.clues} clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} highlightedBoxes={this.state.activeClueBoxes} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} boxInFocus={this.state.boxInFocus} /> 
+        <Board grid={this.state.grid} allClues={this.state.clues} clues={this.state.clues} highlightedBoxes={this.state.activeClueBoxes} setActiveClueBoxes={this.setActiveClueBoxes}  setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} boxInFocus={this.state.boxInFocus} /> 
         {this.state.showData && <img className="crossword-img" src={logo} />}
         {!this.state.showData ? <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} /> : ""}
         <div onClick={this.handleCheckAnswers} className="buttonCheck">בדיקה</div>
@@ -305,6 +334,12 @@ class Crossword extends React.Component {
 class Clues extends React.Component {
   constructor(props) {
     super(props);
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
     const cluesAcross = [];
     const cluesDown = [];
 
@@ -326,6 +361,12 @@ class Clues extends React.Component {
   }
 
   render() {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
     return (
       <div className="clue-lists text">
         <div className="clue-list-wrapper">
@@ -350,6 +391,12 @@ class Clue extends React.Component {
     this.state = {
       active: props.isActive
     };
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
 
     this.handleClick = this.handleClick.bind(this);
   }
@@ -361,6 +408,12 @@ class Clue extends React.Component {
   }
 
   handleClick() {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
     const activeClue = [];
     activeClue.push(this.props.clueID);
     this.props.setActiveClueBoxes(this.props.clueBoxes);
@@ -385,6 +438,12 @@ class Board extends React.Component {
   }
 
   render() {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
     return (
       <div className="crossword-board">
 
@@ -401,6 +460,12 @@ class Board extends React.Component {
 class Box extends React.Component {
   constructor(props) {
     super(props);
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
     this.state = {
       highlight: props.isHighlighted,
       isInFocus: props.isInFocus,
@@ -417,6 +482,12 @@ class Box extends React.Component {
   }
 
   componentDidUpdate() {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
     if (this.state.isInFocus) {
       this.textInput.focus();
     }
@@ -424,8 +495,14 @@ class Box extends React.Component {
 
 
 
-  handleFocus(event) {
-    this.props.setActiveClue(this.props.boxClues);
+  async handleFocus(event) {
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
+    await  this.props.setActiveClue(this.props.boxClues);
 
     let boxesToHighlight = [];
 
@@ -441,18 +518,38 @@ class Box extends React.Component {
     let visibleLabel;
     let input;
 
+    if(arrayFalse) {
+      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+    } 
+    if(arrayRight) {
+      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+    }
+
+
 
     if (this.props.label) {
       visibleLabel = <span className="box-label">{this.props.label}</span>
     }
 
     function getNextChar(char, isNext) {
+      if(arrayFalse) {
+        arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+      } 
+      if(arrayRight) {
+        arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+      }
       return isNext
-        ? String.fromCharCode(char.charCodeAt(0) + 1)
-        : String.fromCharCode(char.charCodeAt(0) - 1);
+      ? String.fromCharCode(char.charCodeAt(0) + 1)
+      : String.fromCharCode(char.charCodeAt(0) - 1);
     }
 
     function handleMovement(props, e) {
+      if(arrayFalse) {
+        arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+      } 
+      if(arrayRight) {
+        arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+      }
       if (e.target.value) {
         if (props.id[1] === "1" && !props.id[2]) {
           try {
@@ -568,7 +665,17 @@ class Box extends React.Component {
     }
 
     if (this.props.letter) {
-      input = <input id={`input${this.props.id}`} style={{ direction: 'rtl', textAlign: 'center' }} type="text" maxLength="1" className={`box-input ${this.state.highlight ? 'highlight' : ''}`} onFocus={this.handleFocus} ref={(input) => { this.textInput = input }} onChange={(e) => { handleMovement(this.props, e) }} onKeyDown={(e) => { if (e.keyCode === 8 && !e.target.value) { handleMovement(this.props, e) } }} />
+      input = <input onClick={() => {if(arrayFalse) {
+        arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+      } 
+      if(arrayRight) {
+        arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+      }}} id={`input${this.props.id}`} style={{ direction: 'rtl', textAlign: 'center' }} type="text" maxLength="1" className={`box-input ${this.state.highlight ? 'highlight' : ''}`} onFocus={this.handleFocus} ref={(input) => { this.textInput = input }} onChange={(e) => { handleMovement(this.props, e) }} onKeyDown={(e) => {if(arrayFalse) {
+        arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+      } 
+      if(arrayRight) {
+        arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+      } if (e.keyCode === 8 && !e.target.value) { handleMovement(this.props, e) } }} />
     }
 
     return (
