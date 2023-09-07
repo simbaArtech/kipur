@@ -319,6 +319,7 @@ class Crossword extends React.Component {
     }
     return (
       <div className="crossword">
+        <div style={{color: 'white', direction: "rtl", marginTop: '3rem'}}>*נכתב ע"י סגן ל` מהיחידה הטכנולוגית</div>
         <Board grid={this.state.grid} allClues={this.state.clues} clues={this.state.clues} highlightedBoxes={this.state.activeClueBoxes} setActiveClueBoxes={this.setActiveClueBoxes}  setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} boxInFocus={this.state.boxInFocus} /> 
         {this.state.showData && <img className="crossword-img" src={logo} />}
         {!this.state.showData ? <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} /> : ""}
