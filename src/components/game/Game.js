@@ -280,9 +280,6 @@ class Crossword extends React.Component {
         }
       })
     } else {
-    this.setState({
-      showError: true,
-    });
     return;
     }
   }
