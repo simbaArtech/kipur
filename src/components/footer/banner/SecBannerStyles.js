@@ -14,14 +14,15 @@ export const Wrapper = styled.div`
 
 export const Banner = styled.div`
   background-color: white;
-  height: 65%;
-  margin-left: 0.5rem;
-  padding-top: 2rem;
+  height: 300px !important;
+  left: 1.2rem;
+  padding-top: 1rem;
   width: 90%;
-  margin-top: 10rem;
+  top: 0;
   box-shadow: 0px 0px 0px 3px #99b882;
   border-radius: 10px;
   direction: rtl;
+  position: relative;
 `;
 
 export const Title = styled.h1`
@@ -31,17 +32,16 @@ export const Title = styled.h1`
 
 export const SemiTitle = styled.p`
   width: 85%;
-  margin-top: 2rem;
   margin-right: 1.2rem;
   line-height: 1.5;
 `;
 
 export const CloseButton = styled.div`
-  width: 50px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   background-color: white;
   top: 0;
-  display: flex;
+  // display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 0px 3px #99b882;
