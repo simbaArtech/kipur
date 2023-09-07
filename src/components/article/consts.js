@@ -3,18 +3,6 @@ export const aritcles = [
   {
     article: true,
     type: "לפני המלחמה",
-    title: "לקט צי סובייטי",
-    text: (
-      <>
-        <img src={require("../../assets/pictures/during1.png")} />
-        <img src={require("../../assets/pictures/during2.png")} />
-      </>
-    ),
-    pic: require("../../assets/pictures/during1.png"),
-  },
-  {
-    article: true,
-    type: "לפני המלחמה",
     title: `ניצי הקונספציה בתקופתו של ראש אמ"ן אהרון יריב`,
     miniTitle: `"אהרל'ה היה מגיע כנראה לאותה מסקנה, אך מציגה אחרת"`,
     text: (

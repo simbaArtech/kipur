@@ -731,7 +731,7 @@ export const personalities = [
     article: false,
     type: `לפני המלחמה`,
     name: "אהרן יריב",
-    pic: require("../../assets/pictures/ahron.jpg"),
+    pic: require("../../assets/pictures/ahronesh.jpg"),
     text: (
       <>
         אהרן יריב היה איש צבא ומדינאי. הוא היה אלוף בצה"ל, חבר כנסת ושר בממשלות

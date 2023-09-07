@@ -83,7 +83,7 @@ export default function Footer({ card }) {
               >
                 <img
                   src={label.icon}
-                  style={{ width: "20px", height: "20px" }}
+                  style={{ width: "15px", height: "15px" }}
                 ></img>
                 {label.name}
               </div>
