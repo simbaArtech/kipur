@@ -21,10 +21,9 @@ export default function Article({ setShowCard, article }) {
   return (
     <>
       <Wrapper>
-        {console.log(article)}
         <BackBtn onClick={() => setShowCard(false)}>
           <ArrowIcon
-            sx={{ color: "white", width: "1rem", paddingLeft: "5px" }}
+            sx={{ color: "white", width: "1rem", paddingLeft: "5px", marginLeft: '0.2rem' }}
           />
         </BackBtn>
         <CardHeaderLogo src={logo} />

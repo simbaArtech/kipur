@@ -448,8 +448,8 @@ class Board extends React.Component {
       <div className="crossword-board">
 
         {this.props.grid.map((box) => {
-          const { id, letter, clues, label } = box;
-          return <Box key={id} id={id} letter={letter} boxClues={clues} label={label} allClues={this.props.allClues} isHighlighted={this.props.highlightedBoxes.indexOf(id) > -1} setActiveClueBoxes={this.props.setActiveClueBoxes} setActiveClue={this.props.setActiveClue} setBoxInFocus={this.props.setBoxInFocus} isInFocus={this.props.boxInFocus == id} />
+          const { id, letter, clues, label, clueDirection } = box;
+          return <Box key={id} id={id} letter={letter} clueDirection={clueDirection} boxClues={clues} label={label} allClues={this.props.allClues} isHighlighted={this.props.highlightedBoxes.indexOf(id) > -1} setActiveClueBoxes={this.props.setActiveClueBoxes} setActiveClue={this.props.setActiveClue} setBoxInFocus={this.props.setBoxInFocus} isInFocus={this.props.boxInFocus == id} />
         })
         }
       </div>
@@ -495,20 +495,18 @@ class Box extends React.Component {
 
 
 
-  async handleFocus(event) {
-    if(arrayFalse) {
-      arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
-    } 
-    if(arrayRight) {
-      arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
-    }
-    await  this.props.setActiveClue(this.props.boxClues);
-
+  handleFocus(event) {
+    this.props.setActiveClue(this.props.boxClues);
+    const dir = this.props.clueDirection
     let boxesToHighlight = [];
-
-    for (const clue of this.props.boxClues) {
-      boxesToHighlight = boxesToHighlight.concat(this.props.allClues[clue].boxes);
+    if (dir === 'A' || dir === 'D') {
+      sessionStorage.setItem("dir", dir)
+      boxesToHighlight = boxesToHighlight.concat(this.props.allClues[this.props.boxClues[0]].boxes);
     }
+    // for (const clue of this.props.boxClues) {
+    //   console.log(clue)
+    //   boxesToHighlight = boxesToHighlight.concat(this.props.allClues[clue].boxes);
+    // }
 
     this.props.setActiveClueBoxes(boxesToHighlight);
     this.props.setBoxInFocus(event.target.id);
@@ -544,124 +542,136 @@ class Box extends React.Component {
     }
 
     function handleMovement(props, e) {
-      if(arrayFalse) {
-        arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
-      } 
-      if(arrayRight) {
-        arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
-      }
-      if (e.target.value) {
-        if (props.id[1] === "1" && !props.id[2]) {
-          try {
-            document
-              .getElementById(`input${getNextChar(props.id[0], true)}1`)
-              .focus();
-          } catch {
-            return;
-          }
-        } else if (
-          !sessionStorage.getItem("prev2") ||
-          sessionStorage.getItem("prev")[0] === sessionStorage.getItem("prev2")[0]
-        ) {
-          try {
-            const number = props.id[2]
-              ? Number(props.id[1] * 10) + Number(props.id[2])
-              : Number(props.id[1]);
-            document.getElementById(`input${props.id[0]}${number - 1}`).focus();
-          } catch {
-            try {
-              document
-                .getElementById(
-                  `input${getNextChar(props.id[0], true)}${props.id[1]}${props.id[2] ? props.id[2] : ""
-                  }`
-                )
-                .focus();
-            } catch {
-              return;
-            }
-          }
-        } else {
-          try {
-            document
-              .getElementById(
-                `input${getNextChar(props.id[0], true)}${props.id[1]}${props.id[2] ? props.id[2] : ""
-                }`
-              )
-              .focus();
-          } catch {
-            try {
-              const number = props.id[2]
-                ? Number(props.id[1] * 10) + Number(props.id[2])
-                : Number(props.id[1]);
-              document
-                .getElementById(`input${props.id[0]}${number - 1}`)
-                .focus();
-            } catch {
-              return;
-            }
-          }
-        }
-      } else if (e.type !== "change" || e.nativeEvent.data) {
-        if (props.id[1] === "1" && props.id[2] === "2") {
-          try {
-            document
-              .getElementById(`input${getNextChar(props.id[0])}12`)
-              .focus();
-          } catch {
-            return;
-          }
-        } else if (
-          !sessionStorage.getItem("prev2") ||
-          sessionStorage.getItem("prev")[0] === sessionStorage.getItem("prev2")[0]
-        ) {
-          try {
-            const number = props.id[2]
-              ? Number(props.id[1] * 10) + Number(props.id[2])
-              : Number(props.id[1]);
-            document.getElementById(`input${props.id[0]}${number + 1}`).focus();
-          } catch {
-            try {
-              document
-                .getElementById(
-                  `input${getNextChar(props.id[0])}${props.id[1]}${props.id[2] ? props.id[2] : ""
-                  }`
-                )
-                .focus();
-            } catch {
-              return;
-            }
-          }
-        } else {
-          try {
-            document
-              .getElementById(
-                `input${getNextChar(props.id[0])}${props.id[1]}${props.id[2] ? props.id[2] : ""
-                }`
-              )
-              .focus();
-          } catch {
-            try {
-              const number = props.id[2]
-                ? Number(props.id[1] * 10) + Number(props.id[2])
-                : Number(props.id[1]);
-              document
-                .getElementById(`input${props.id[0]}${number + 1}`)
-                .focus();
-            } catch {
-              return;
-            }
-          }
-        }
-      }
-      if (
-        sessionStorage.getItem("prev") &&
-        document.getElementById(`input${props.id}`)
-      ) {
-        sessionStorage.setItem("prev2", sessionStorage.getItem("prev"));
-        sessionStorage.setItem("prev", props.id);
-      } else {
-        sessionStorage.setItem("prev", props.id);
-      }
+      const clue = props.boxClues[0];
+      const movementRange = CLUE_DATA[clue].boxes;
+      let indexCell = Number(movementRange.indexOf(props.id));
+      // console.log(`input${movementRange[indexCell+1]}`)
+      document.getElementById(`input${movementRange[indexCell+1]}`).focus()
+      // document.getElementById(movementRange[indexCell+1]).focus()
+     
+      // movementRange.map((cell, index) => {
+      //   if (cell === props.id) {
+      //      indexCell = index;
+      //   }
+      // })
+      // movementRange.map((cell, index) => {
+      //   if (cell === props.id) {
+      //     return index;
+      //   }
+      // })
+      // console.log(movementRange[indexCell]) //התא שממנו זזים
+      // if (e.target.value) {
+      //   if (props.id[1] === "1" && !props.id[2]) {
+      //     try {
+      //       document
+      //         .getElementById(`input${getNextChar(props.id[0], true)}1`)
+      //         .focus();
+      //     } catch {
+      //       return;
+      //     }
+      //   } else if (
+      //     !sessionStorage.getItem("prev2") ||
+      //     sessionStorage.getItem("prev")[0] === sessionStorage.getItem("prev2")[0]
+      //   ) {
+      //     try {
+      //       const number = props.id[2]
+      //         ? Number(props.id[1] * 10) + Number(props.id[2])
+      //         : Number(props.id[1]);
+      //       document.getElementById(`input${props.id[0]}${number - 1}`).focus();
+      //     } catch {
+      //       try {
+      //         document
+      //           .getElementById(
+      //             `input${getNextChar(props.id[0], true)}${props.id[1]}${props.id[2] ? props.id[2] : ""
+      //             }`
+      //           )
+      //           .focus();
+      //       } catch {
+      //         return;
+      //       }
+      //     }
+      //   } else {
+      //     try {
+      //       document
+      //         .getElementById(
+      //           `input${getNextChar(props.id[0], true)}${props.id[1]}${props.id[2] ? props.id[2] : ""
+      //           }`
+      //         )
+      //         .focus();
+      //     } catch {
+      //       try {
+      //         const number = props.id[2]
+      //           ? Number(props.id[1] * 10) + Number(props.id[2])
+      //           : Number(props.id[1]);
+      //         document
+      //           .getElementById(`input${props.id[0]}${number - 1}`)
+      //           .focus();
+      //       } catch {
+      //         return;
+      //       }
+      //     }
+      //   }
+      // } else if (e.type !== "change" || e.nativeEvent.data) {
+      //   if (props.id[1] === "1" && props.id[2] === "2") {
+      //     try {
+      //       document
+      //         .getElementById(`input${getNextChar(props.id[0])}12`)
+      //         .focus();
+      //     } catch {
+      //       return;
+      //     }
+      //   } else if (
+      //     !sessionStorage.getItem("prev2") ||
+      //     sessionStorage.getItem("prev")[0] === sessionStorage.getItem("prev2")[0]
+      //   ) {
+      //     try {
+      //       const number = props.id[2]
+      //         ? Number(props.id[1] * 10) + Number(props.id[2])
+      //         : Number(props.id[1]);
+      //       document.getElementById(`input${props.id[0]}${number + 1}`).focus();
+      //     } catch {
+      //       try {
+      //         document
+      //           .getElementById(
+      //             `input${getNextChar(props.id[0])}${props.id[1]}${props.id[2] ? props.id[2] : ""
+      //             }`
+      //           )
+      //           .focus();
+      //       } catch {
+      //         return;
+      //       }
+      //     }
+      //   } else {
+      //     try {
+      //       document
+      //         .getElementById(
+      //           `input${getNextChar(props.id[0])}${props.id[1]}${props.id[2] ? props.id[2] : ""
+      //           }`
+      //         )
+      //         .focus();
+      //     } catch {
+      //       try {
+      //         const number = props.id[2]
+      //           ? Number(props.id[1] * 10) + Number(props.id[2])
+      //           : Number(props.id[1]);
+      //         document
+      //           .getElementById(`input${props.id[0]}${number + 1}`)
+      //           .focus();
+      //       } catch {
+      //         return;
+      //       }
+      //     }
+      //   }
+      // }
+      // if (
+      //   sessionStorage.getItem("prev") &&
+      //   document.getElementById(`input${props.id}`)
+      // ) {
+      //   sessionStorage.setItem("prev2", sessionStorage.getItem("prev"));
+      //   sessionStorage.setItem("prev", props.id);
+      // } else {
+      //   sessionStorage.setItem("prev", props.id);
+      // }
     }
 
     if (this.props.letter) {
