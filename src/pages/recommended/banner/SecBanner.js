@@ -17,7 +17,7 @@ const SecBanner = ({ setShowPopUp }) => {
 
   return (
     <Wrapper style={{ display: showBanner ? "block" : "" }}>
-      <Banner style={{ height: "25%" }}>
+      <Banner style={{ height: "30%" }}>
         <SemiTitle style={{ fontSize: "20px" }}>
           כניסה לכלים חינוכיים תעביר אותך לאתר אחר
         </SemiTitle>

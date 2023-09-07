@@ -6,7 +6,7 @@ export const warPrisoners = [
     years: "1952-1973",
     unit: "חיל המודיעין, 8200",
     text: "",
-    pic: require("../../assets/pictures/gurion.jpg"),
+    pic: require("../../assets/pictures/naim.jpeg"),
   },
   {
     article: false,
@@ -14,7 +14,7 @@ export const warPrisoners = [
     years: "1952-1973",
     text: "",
     unit: "חיל המודיעין, 8200",
-    pic: require("../../assets/pictures/gurion.jpg"),
+    pic: require("../../assets/pictures/unkown.png"),
   },
   {
     article: false,
@@ -22,7 +22,7 @@ export const warPrisoners = [
     years: "1952-1973",
     text: "",
     unit: "חיל המודיעין, 8200",
-    pic: require("../../assets/pictures/gurion.jpg"),
+    pic: require("../../assets/pictures/david.jpeg"),
   },
   {
     article: false,
@@ -30,7 +30,7 @@ export const warPrisoners = [
     years: "1952-1973",
     unit: 'חיל המודיעין, מוד"ש - אוגדה 252',
     text: "",
-    pic: require("../../assets/pictures/gurion.jpg"),
+    pic: require("../../assets/pictures/unkown.png"),
   },
   {
     article: false,
@@ -38,7 +38,7 @@ export const warPrisoners = [
     years: "1952-1973",
     unit: "חיל המודיעין, 8200",
     text: "",
-    pic: require("../../assets/pictures/gurion.jpg"),
+    pic: require("../../assets/pictures/unkown.png"),
   },
   {
     article: false,
@@ -46,7 +46,7 @@ export const warPrisoners = [
     years: "1952-1973",
     unit: "חיל המודיעין, 8200",
     text: "",
-    pic: require("../../assets/pictures/gurion.jpg"),
+    pic: require("../../assets/pictures/zoker.jpeg"),
   },
   {
     article: false,
@@ -54,23 +54,15 @@ export const warPrisoners = [
     years: "1952-1973",
     unit: 'חיל המודיעין, פד"ם',
     text: "",
-    pic: require("../../assets/pictures/gurion.jpg"),
+    pic: require("../../assets/pictures/unkown.png"),
   },
   {
     article: false,
     name: 'סמ"ר שמריך/צמריק משה/מוסא',
     years: "1952-1973",
     unit: "חיל המודיעין, 8200",
-    pic: require("../../assets/pictures/gurion.jpg"),
+    pic: require("../../assets/pictures/shimrih.jpeg"),
     text: "",
-  },
-  {
-    article: false,
-    name: "סגן לוינגר עמוס",
-    years: "1952-1973",
-    unit: "חיל המודיעין, 8200",
-    text: "",
-    pic: require("../../assets/pictures/gurion.jpg"),
   },
 ];
 

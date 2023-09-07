@@ -114,10 +114,10 @@ export const PersonalCircle = styled.img`
 `;
 
 export const UnderPic = styled.div`
-  color: white;
-  position: fixed;
+  color: black;
   direction: rtl;
   top: 0;
+  background: none;
   width: 100%;
   display: flex;
   justify-content: space-around;

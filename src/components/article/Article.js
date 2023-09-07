@@ -38,9 +38,9 @@ export default function Article({ setShowCard, article }) {
             }
           />
           {article.article ? "" : <PersonalCircle src={article.pic} />}
-          {article.underPic ? <UnderPic>{article.underPic}</UnderPic> : ""}
         </div>
         <CardContainer>
+        {article.underPic ? <UnderPic>{article.underPic}</UnderPic> : ""}
           {article.article ? (
             <>
               <CardTitle>{article.title}</CardTitle>

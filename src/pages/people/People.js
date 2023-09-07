@@ -81,12 +81,15 @@ export default function People() {
         warPrisoners.map((prisoner) => (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <ArticleContainer
-              onClick={() => {
-                setShowCardO(true);
-                setPersonI(prisoner);
-              }}
+            // onClick={() => {
+            //   setShowCardO(true);
+            //   setPersonI(prisoner);
+            // }}
             >
-              <ArticlePic src={prisoner.pic} />
+              <ArticlePic
+                src={prisoner.pic}
+                style={{ width: "4.5rem", height: "4.5rem" }}
+              />
               <ArticleTextContainer>
                 <ArticleTitle>{prisoner.name}</ArticleTitle>
                 <ArticleTitle>{prisoner.years}</ArticleTitle>

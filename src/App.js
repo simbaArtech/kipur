@@ -52,18 +52,31 @@ function App() {
       <Header />
       <div style={{ background: "#32332F" }}>
         {selected == "recommended" ? (
-          <Recommended />
+          <>
+            <Recommended />
+            <Footer />
+          </>
         ) : selected == "people" ? (
-          <People />
+          <>
+            <People />
+            <Footer />
+          </>
         ) : selected == "images" ? (
-          <ImagesAndEvents />
+          <>
+            <ImagesAndEvents />
+            <Footer />
+          </>
         ) : selected == "timeline" ? (
           <TimeLine />
         ) : (
-          selected == "game" && <Crossword  />
+          selected == "game" && (
+            <>
+              <Crossword />
+              <Footer />
+            </>
+          )
         )}
       </div>
-      <Footer />
       <Navbar items={items} selected={selected} setSelected={setSelected} />
     </>
   );
