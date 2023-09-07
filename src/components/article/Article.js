@@ -24,7 +24,12 @@ export default function Article({ setShowCard, article }) {
         {console.log(article)}
         <BackBtn onClick={() => setShowCard(false)}>
           <ArrowIcon
-            sx={{ color: "white", width: "1rem", paddingLeft: "5px" }}
+            sx={{
+              color: "white",
+              width: "1rem",
+              paddingLeft: "5px",
+              marignLeft: "0.2rem",
+            }}
           />
         </BackBtn>
         <CardHeaderLogo src={logo} />
@@ -40,7 +45,7 @@ export default function Article({ setShowCard, article }) {
           {article.article ? "" : <PersonalCircle src={article.pic} />}
         </div>
         <CardContainer>
-        {article.underPic ? <UnderPic>{article.underPic}</UnderPic> : ""}
+          {article.underPic ? <UnderPic>{article.underPic}</UnderPic> : ""}
           {article.article ? (
             <>
               <CardTitle>{article.title}</CardTitle>

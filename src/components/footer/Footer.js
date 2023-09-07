@@ -42,7 +42,7 @@ export default function Footer({ card }) {
       text: `ליצירת קשר כתבו למייל 
       artechb15@gmail.com
       `,
-      style: { height: "30%", position: "absolute", marginTop: "17rem" },
+      style: { height: "31%", position: "absolute", marginTop: "17rem" },
     },
     {
       name: "אודות",
