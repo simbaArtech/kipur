@@ -25,30 +25,58 @@ export default function People() {
   const [showCardT, setShowCardT] = useState(false);
   const [showWar, setShowWar] = useState(true);
 
+  const containerStyle = {
+    display: "flex",
+    flexDirection: "row-reverse",
+    textAlign: "center",
+    color: "white",
+    fontWeight: "bold",
+    justifyContent: "flex-start",
+    fontSize: "0.7rem",
+    padding: "0.5rem",
+    paddingTop: "1rem",
+  };
+  const selectedStyle = {
+    // margin: "auto",
+    marginRight: "0.25rem",
+    color: "white",
+    width: "fit-content",
+    padding: "2px 12px",
+    background: "#657c54",
+    borderRadius: "20vw",
+    fontSize: "15px",
+  };
+  const unselectedStyle = {
+    // margin: "auto",
+    marginRight: "0.25rem",
+    width: "4.5rem",
+    fontSize: "15px",
+    textAlign: "center",
+    padding: "2px 0px",
+    background: "white",
+    color: "black",
+    borderRadius: "20vw",
+    border: "2px solid #657c54",
+  };
+
   return (
     <>
-      <TitleLabel>
+      <div style={containerStyle}>
         <SemiTitle
           onClick={() => {
             setShowWar((prevState) => !prevState);
           }}
-          style={{
-            borderBottom: showWar ? "6px solid #657c54" : "",
-            color: showWar ? "#657c54" : "white",
-          }}
+          style={showWar ? selectedStyle : unselectedStyle}
         >
-          שבויי מלחמה
+          {showWar ? "שבויי מלחמה" : "שבויים"}
         </SemiTitle>
         <SemiTitle
-          style={{
-            borderBottom: !showWar ? "6px solid #657c54" : "",
-            color: !showWar ? "#657c54" : "white",
-          }}
+          style={!showWar ? selectedStyle : unselectedStyle}
           onClick={() => setShowWar((prevState) => !prevState)}
         >
-          חללים
+          {!showWar ? "חללי מלחמה" : "חללים"}
         </SemiTitle>
-      </TitleLabel>
+      </div>
       {showWar &&
         warPrisoners.map((prisoner) => (
           <div style={{ display: "flex", justifyContent: "center" }}>

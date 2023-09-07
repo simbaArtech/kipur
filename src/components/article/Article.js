@@ -21,6 +21,7 @@ export default function Article({ setShowCard, article }) {
   return (
     <>
       <Wrapper>
+        {console.log(article)}
         <BackBtn onClick={() => setShowCard(false)}>
           <ArrowIcon
             sx={{ color: "white", width: "1rem", paddingLeft: "5px" }}
@@ -37,24 +38,6 @@ export default function Article({ setShowCard, article }) {
             }
           />
           {article.article ? "" : <PersonalCircle src={article.pic} />}
-          {article.article ? (
-            ""
-          ) : (
-            <div
-              style={{
-                position: "absolute",
-                width: "100%",
-                top: "27%",
-                webkitTextStroke: "1px #99b882",
-                letterSpacing: "2px",
-                display: "flex",
-                justifyContent: "space-around",
-                color: "#99b882",
-              }}
-            >
-              {article.name}
-            </div>
-          )}
           {article.underPic ? <UnderPic>{article.underPic}</UnderPic> : ""}
         </div>
         <CardContainer>
@@ -74,8 +57,14 @@ export default function Article({ setShowCard, article }) {
             </>
           ) : (
             <>
-              <CardTitle>{article.unit}</CardTitle>
+              <CardTitle>{article.name}</CardTitle>
+              <CardTitle style={{ marginTop: 0 }}>{article.unit}</CardTitle>
               <CardMiniTitle>{article.years}</CardMiniTitle>
+              <UselessDotsCOntainer>
+                <UselessDot />
+                <UselessDot />
+                <UselessDot />
+              </UselessDotsCOntainer>
             </>
           )}
           <TextContainer>{article.text}</TextContainer>

@@ -32,6 +32,10 @@ export const Title = styled.h1`
 
 export const SemiTitle = styled.p`
   width: 85%;
+  height: 20rem;
+  overflow: scroll;
+  position: relative;
+  // margin-top: 2rem;
   margin-right: 1.2rem;
   line-height: 1.5;
 `;

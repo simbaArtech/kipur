@@ -40,9 +40,9 @@ export default function Footer({ card }) {
       icon: require("../../assets/pictures/email.png"),
       title: `צרו קשר`,
       text: `ליצירת קשר כתבו למייל 
-      artech.artech@gmail.com
+      artechb15@gmail.com
       `,
-      style: { height: "25%", marginTop: '17rem' },
+      style: { height: "25%", position: "absolute", marginTop: "17rem"},
     },
     {
       name: "אודות",
