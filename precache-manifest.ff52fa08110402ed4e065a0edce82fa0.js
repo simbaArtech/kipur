@@ -1,27 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "63abe2d98cb448035388",
-    "url": "/kipur/static/css/main.a0f3d301.chunk.css"
+    "revision": "f76d172e4794fe5e437a",
+    "url": "/kipur/static/css/main.c38123b2.chunk.css"
   },
   {
-    "revision": "63abe2d98cb448035388",
-    "url": "/kipur/static/js/main.63abe2d9.chunk.js"
+    "revision": "f76d172e4794fe5e437a",
+    "url": "/kipur/static/js/main.f76d172e.chunk.js"
   },
   {
-    "revision": "6fec053d32be9f449c44",
-    "url": "/kipur/static/js/1.6fec053d.chunk.js"
+    "revision": "a5a369cade9a9a95f09e",
+    "url": "/kipur/static/js/1.a5a369ca.chunk.js"
   },
   {
-    "revision": "e0a094784eb7f96fc689",
-    "url": "/kipur/static/css/2.ce6c8ee2.chunk.css"
+    "revision": "67a8bf3a9cba63d58d6c",
+    "url": "/kipur/static/css/2.5db8415c.chunk.css"
   },
   {
-    "revision": "e0a094784eb7f96fc689",
-    "url": "/kipur/static/js/2.e0a09478.chunk.js"
+    "revision": "67a8bf3a9cba63d58d6c",
+    "url": "/kipur/static/js/2.67a8bf3a.chunk.js"
   },
   {
-    "revision": "450d6e7a20ebd9bb3225",
-    "url": "/kipur/static/js/runtime~main.450d6e7a.js"
+    "revision": "07e6e78a56d9b0e7d0e4",
+    "url": "/kipur/static/js/runtime~main.07e6e78a.js"
   },
   {
     "revision": "fea3e17284b170eb57beaab7826b6e24",
@@ -30,10 +30,6 @@ self.__precacheManifest = [
   {
     "revision": "ac2d0bc05777b29468d68b3551ecd560",
     "url": "/kipur/static/media/cardImage.ac2d0bc0.jpg"
-  },
-  {
-    "revision": "de56fa8f68315881fe0df38b9382ce5e",
-    "url": "/kipur/static/media/ahron.de56fa8f.jpg"
   },
   {
     "revision": "182a0295f76b41be53cca889fb611939",
@@ -52,6 +48,10 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/forTimeline.7c7d03a2.png"
   },
   {
+    "revision": "de56fa8f68315881fe0df38b9382ce5e",
+    "url": "/kipur/static/media/ahron.de56fa8f.jpg"
+  },
+  {
     "revision": "870f5ea5c89a0ceebc9cb66964b7a567",
     "url": "/kipur/static/media/konenot.870f5ea5.jpeg"
   },
@@ -68,6 +68,10 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/clear.3d95b1e9.svg"
   },
   {
+    "revision": "e450158fee3e1b92281cc5fc6cb6e128",
+    "url": "/kipur/static/media/crosswordFull.svg.e450158f.png"
+  },
+  {
     "revision": "379f355d2cc596f2c28da7b457ce25f6",
     "url": "/kipur/static/media/AlmoniLight.379f355d.ttf"
   },
@@ -82,6 +86,22 @@ self.__precacheManifest = [
   {
     "revision": "1d92c961630799bb0ed74ab59a02ad66",
     "url": "/kipur/static/media/kelim.1d92c961.png"
+  },
+  {
+    "revision": "82c0f9568526cbfa1f1bafd4b093bcf0",
+    "url": "/kipur/static/media/naim.82c0f956.jpeg"
+  },
+  {
+    "revision": "fa7a2b198fef41c06357174550a07be2",
+    "url": "/kipur/static/media/david.fa7a2b19.jpeg"
+  },
+  {
+    "revision": "4eaf08d38baf30b142cfe24dd3477fec",
+    "url": "/kipur/static/media/zoker.4eaf08d3.jpeg"
+  },
+  {
+    "revision": "e2255e7462e06f70a83da675ccecceab",
+    "url": "/kipur/static/media/shimrih.e2255e74.jpeg"
   },
   {
     "revision": "1453c46d9fce756932bddc1f777298fb",
@@ -114,6 +134,10 @@ self.__precacheManifest = [
   {
     "revision": "aa0fd8da57665b2fd75dee7eb30725dd",
     "url": "/kipur/static/media/yehoda.aa0fd8da.png"
+  },
+  {
+    "revision": "519877888a4c855ac9f07f84a1b270a2",
+    "url": "/kipur/static/media/ahronesh.51987788.jpg"
   },
   {
     "revision": "a95adb1ab1fed9adaa4a57e384e10de3",
@@ -368,7 +392,7 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/crossword.868308c6.svg"
   },
   {
-    "revision": "b7d131df4b26bce73aa7211207904cfd",
+    "revision": "1cd311f1f07b7c0350952b8448636018",
     "url": "/kipur/index.html"
   }
 ];
