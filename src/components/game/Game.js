@@ -4,6 +4,7 @@ import logo from "../../assets/pictures/crosswordFull.svg.png";
 
 import { GRID_DATA } from "./consts";
 import { Button } from "bootstrap";
+import { type } from "os";
 
 const CLUE_DATA = {
   'Ac1': {
@@ -262,6 +263,27 @@ class Crossword extends React.Component {
     });
   }
 
+  showAns() {
+    const range = sessionStorage.getItem("movementRange");
+    const arrayRange =  range.split(",")
+    arrayRange.map((box) => {
+      GRID_DATA.map((cell) => {
+        if(box === cell.id) {
+          document.getElementById(`input${box}`).value =  cell.letter
+        }
+      })
+    }) 
+  }
+  showAllData() {
+    console.log(GRID_DATA)
+      GRID_DATA.map((cell) => {
+        if(cell.letter) {
+          document.getElementById(`input${cell.id}`).value = cell.letter
+        }
+        }
+      ) 
+  }
+
   handleCheckAnswers() {
     if(arrayFalse) {
       arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
@@ -323,7 +345,8 @@ class Crossword extends React.Component {
         {this.state.showData && <img className="crossword-img" src={logo} />}
         {!this.state.showData ? <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} /> : ""}
         <div onClick={this.handleCheckAnswers} className="buttonCheck">בדיקה</div>
-        <div onClick={this.setShowData} className="buttonCheck">חשיפת התשובות</div>
+        <div onClick={this.showAns} className="buttonCheck">רמז</div>
+        <div onClick={this.showAllData} className="buttonCheck">חשיפת התשובות</div>
         {this.state.showError ? <div>***מלאו את כל הטבלה</div> : null }
         {/* <div className="text">לחצו על המשבצות והתחילו בתשבץ</div> */}
       </div>
@@ -508,8 +531,7 @@ class Box extends React.Component {
     //   boxesToHighlight = boxesToHighlight.concat(this.props.allClues[clue].boxes);
     // }
 
-    this.props.setActiveClueBoxes(boxesToHighlight);
-    this.props.setBoxInFocus(event.target.id);
+    
   }
 
   render() {
@@ -530,162 +552,90 @@ class Box extends React.Component {
     }
 
     function getNextChar(char, isNext) {
-      if(arrayFalse) {
-        arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
-      } 
-      if(arrayRight) {
-        arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
-      }
+      // if(arrayFalse) {
+      //   arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
+      // } 
+      // if(arrayRight) {
+      //   arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
+      // }
       return isNext
       ? String.fromCharCode(char.charCodeAt(0) + 1)
       : String.fromCharCode(char.charCodeAt(0) - 1);
     }
 
-    function handleMovement(props, e) {
-      const clue = props.boxClues[0];
-      const movementRange = CLUE_DATA[clue].boxes;
-      let indexCell = Number(movementRange.indexOf(props.id));
-      // console.log(`input${movementRange[indexCell+1]}`)
-      document.getElementById(`input${movementRange[indexCell+1]}`).focus()
-      // document.getElementById(movementRange[indexCell+1]).focus()
-     
-      // movementRange.map((cell, index) => {
-      //   if (cell === props.id) {
-      //      indexCell = index;
-      //   }
-      // })
-      // movementRange.map((cell, index) => {
-      //   if (cell === props.id) {
-      //     return index;
-      //   }
-      // })
-      // console.log(movementRange[indexCell]) //התא שממנו זזים
-      // if (e.target.value) {
-      //   if (props.id[1] === "1" && !props.id[2]) {
-      //     try {
-      //       document
-      //         .getElementById(`input${getNextChar(props.id[0], true)}1`)
-      //         .focus();
-      //     } catch {
-      //       return;
-      //     }
-      //   } else if (
-      //     !sessionStorage.getItem("prev2") ||
-      //     sessionStorage.getItem("prev")[0] === sessionStorage.getItem("prev2")[0]
-      //   ) {
-      //     try {
-      //       const number = props.id[2]
-      //         ? Number(props.id[1] * 10) + Number(props.id[2])
-      //         : Number(props.id[1]);
-      //       document.getElementById(`input${props.id[0]}${number - 1}`).focus();
-      //     } catch {
-      //       try {
-      //         document
-      //           .getElementById(
-      //             `input${getNextChar(props.id[0], true)}${props.id[1]}${props.id[2] ? props.id[2] : ""
-      //             }`
-      //           )
-      //           .focus();
-      //       } catch {
-      //         return;
-      //       }
-      //     }
-      //   } else {
-      //     try {
-      //       document
-      //         .getElementById(
-      //           `input${getNextChar(props.id[0], true)}${props.id[1]}${props.id[2] ? props.id[2] : ""
-      //           }`
-      //         )
-      //         .focus();
-      //     } catch {
-      //       try {
-      //         const number = props.id[2]
-      //           ? Number(props.id[1] * 10) + Number(props.id[2])
-      //           : Number(props.id[1]);
-      //         document
-      //           .getElementById(`input${props.id[0]}${number - 1}`)
-      //           .focus();
-      //       } catch {
-      //         return;
-      //       }
-      //     }
-      //   }
-      // } else if (e.type !== "change" || e.nativeEvent.data) {
-      //   if (props.id[1] === "1" && props.id[2] === "2") {
-      //     try {
-      //       document
-      //         .getElementById(`input${getNextChar(props.id[0])}12`)
-      //         .focus();
-      //     } catch {
-      //       return;
-      //     }
-      //   } else if (
-      //     !sessionStorage.getItem("prev2") ||
-      //     sessionStorage.getItem("prev")[0] === sessionStorage.getItem("prev2")[0]
-      //   ) {
-      //     try {
-      //       const number = props.id[2]
-      //         ? Number(props.id[1] * 10) + Number(props.id[2])
-      //         : Number(props.id[1]);
-      //       document.getElementById(`input${props.id[0]}${number + 1}`).focus();
-      //     } catch {
-      //       try {
-      //         document
-      //           .getElementById(
-      //             `input${getNextChar(props.id[0])}${props.id[1]}${props.id[2] ? props.id[2] : ""
-      //             }`
-      //           )
-      //           .focus();
-      //       } catch {
-      //         return;
-      //       }
-      //     }
-      //   } else {
-      //     try {
-      //       document
-      //         .getElementById(
-      //           `input${getNextChar(props.id[0])}${props.id[1]}${props.id[2] ? props.id[2] : ""
-      //           }`
-      //         )
-      //         .focus();
-      //     } catch {
-      //       try {
-      //         const number = props.id[2]
-      //           ? Number(props.id[1] * 10) + Number(props.id[2])
-      //           : Number(props.id[1]);
-      //         document
-      //           .getElementById(`input${props.id[0]}${number + 1}`)
-      //           .focus();
-      //       } catch {
-      //         return;
-      //       }
-      //     }
-      //   }
-      // }
-      // if (
-      //   sessionStorage.getItem("prev") &&
-      //   document.getElementById(`input${props.id}`)
-      // ) {
-      //   sessionStorage.setItem("prev2", sessionStorage.getItem("prev"));
-      //   sessionStorage.setItem("prev", props.id);
-      // } else {
-      //   sessionStorage.setItem("prev", props.id);
-      // }
+    function move(id) {
+      try {
+
+        document.getElementById(id).focus()
+      } catch {
+
+        console.log("hi")
+      }
     }
 
+    function handleMovement(props, e) {
+      sessionStorage.setItem("done", false)
+      const range = sessionStorage.getItem("movementRange");
+      const arrayRange =  range.split(",")
+      // console.log(props.id)
+      if(e.keyCode === 8 || e.target.value === '') {
+        try {
+
+          let indexCell = Number(arrayRange.indexOf(props.id));
+          setTimeout(() => {
+            const elementToFocus = document.getElementById(`input${arrayRange[indexCell - 1]}`);
+            if (elementToFocus) {
+              elementToFocus.focus();
+              sessionStorage.setItem("done", true)
+            }
+          }, 100);
+        } catch {
+        }
+        //on delete
+        // console.log("hihihihi")
+        // document.getElementById(`input${arrayRange[indexCell - 1]}`).focus()
+      } else if (e.type="onChange" && e.target.value !== '') {
+       
+          let indexCell = Number(arrayRange.indexOf(props.id));
+            if (indexCell + 1 < arrayRange.length) {
+                document.getElementById(`input${arrayRange[indexCell+1]}`).focus()
+            } else {
+              return ;
+            }
+           
+            if (
+              sessionStorage.getItem("prev") &&
+              document.getElementById(`input${props.id}`)
+            ) {
+              sessionStorage.setItem("prev2", sessionStorage.getItem("prev"));
+              sessionStorage.setItem("prev", props.id);
+            } else {
+              sessionStorage.setItem("prev", props.id);
+            }
+      }
+        }
+
+
+          
+         
+
+
+    function handleClick(props, e) {
+      document.getElementById(e.target.id).focus()
+      const clue = props.boxClues[0];
+      const movementRange = CLUE_DATA[clue].boxes;
+      sessionStorage.setItem("movementRange", movementRange)
+      props.setActiveClueBoxes(sessionStorage.getItem("movementRange").split(","));
+      props.setBoxInFocus(e.target.id);
+    }
+
+    
     if (this.props.letter) {
-      input = <input onClick={() => {if(arrayFalse) {
-        arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
-      } 
-      if(arrayRight) {
-        arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
-      }}} id={`input${this.props.id}`} style={{ direction: 'rtl', textAlign: 'center' }} type="text" maxLength="1" className={`box-input ${this.state.highlight ? 'highlight' : ''}`} onFocus={this.handleFocus} ref={(input) => { this.textInput = input }} onChange={(e) => { handleMovement(this.props, e) }} onKeyDown={(e) => {if(arrayFalse) {
-        arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
-      } 
-      if(arrayRight) {
-        arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
-      } if (e.keyCode === 8 && !e.target.value) { handleMovement(this.props, e) } }} />
+      input = <input value={this.ref} onClick={(e) => handleClick(this.props, e)} id={`input${this.props.id}`} style={{ direction: 'rtl', textAlign: 'center' }} type="text" maxLength="1" className={`box-input ${this.state.highlight ? 'highlight' : ''}`} onFocus={this.handleFocus} ref={(input) => { this.textInput = input }} onChange={(e) => { handleMovement(this.props, e) }}  onKeyDown={(e) => {
+        if (e.keyCode === 8 && !e.target.value) {
+          handleMovement(this.props, e);
+        }
+      }}/>
     }
 
     return (
