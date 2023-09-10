@@ -217,7 +217,6 @@ class Crossword extends React.Component {
     if(arrayRight) {
       arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
     }
-    // boxes.map((box) => {console.log(document.getElementById(`input${box}`))})
     this.setState({
       activeClueBoxes: boxes
     });
@@ -232,13 +231,7 @@ class Crossword extends React.Component {
       showAnswer: true
     });
   }
-  setShowError() {
-    console.log('handleCheckAnswers called');
-    this.setState({
-      showError: true
-    });
-  }
-
+ 
   setActiveClue(clue) {
     if(arrayFalse) {
       arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
@@ -343,12 +336,9 @@ class Crossword extends React.Component {
         <Board grid={this.state.grid} allClues={this.state.clues} clues={this.state.clues} highlightedBoxes={this.state.activeClueBoxes} setActiveClueBoxes={this.setActiveClueBoxes}  setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} boxInFocus={this.state.boxInFocus} /> 
         {this.state.showData && <img className="crossword-img" src={logo} />}
         <div className="text">{sessionStorage.getItem("clue")}</div>
-        {/* {!this.state.showData ? <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} /> : ""} */}
-        <div onClick={this.handleCheckAnswers} className="buttonCheck">בדיקה</div>
         <div onClick={this.showAns} className="buttonCheck">רמז</div>
         <div onClick={this.showAllData} className="buttonCheck">חשיפת התשובות</div>
         {this.state.showError ? <div>***מלאו את כל הטבלה</div> : null }
-        {/* <div className="text">לחצו על המשבצות והתחילו בתשבץ</div> */}
       </div>
     );
   }
@@ -529,12 +519,6 @@ class Box extends React.Component {
       sessionStorage.setItem("dir", dir)
       boxesToHighlight = boxesToHighlight.concat(this.props.allClues[this.props.boxClues[0]].boxes);
     }
-    // for (const clue of this.props.boxClues) {
-    //   console.log(clue)
-    //   boxesToHighlight = boxesToHighlight.concat(this.props.allClues[clue].boxes);
-    // }
-
-    
   }
 
   render() {
@@ -554,28 +538,6 @@ class Box extends React.Component {
       visibleLabel = <span className="box-label">{this.props.label}</span>
     }
 
-    function getNextChar(char, isNext) {
-      // if(arrayFalse) {
-      //   arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
-      // } 
-      // if(arrayRight) {
-      //   arrayRight.map((cell)=> document.getElementById(`input${cell}`).classList.add("right"))
-      // }
-      return isNext
-      ? String.fromCharCode(char.charCodeAt(0) + 1)
-      : String.fromCharCode(char.charCodeAt(0) - 1);
-    }
-
-    function move(id) {
-      try {
-
-        document.getElementById(id).focus()
-      } catch {
-
-        console.log("hi")
-      }
-    }
-
     function handleMovement(props, e) {
       sessionStorage.setItem("done", false)
       const range = sessionStorage.getItem("movementRange");
@@ -592,7 +554,6 @@ class Box extends React.Component {
         }, 100);
         return;
       }
-      // console.log(props.id)
       if(e.keyCode === 8 || e.target.value === '') {
         try {
 
@@ -606,9 +567,6 @@ class Box extends React.Component {
           }, 100);
         } catch {
         }
-        //on delete
-        // console.log("hihihihi")
-        // document.getElementById(`input${arrayRange[indexCell - 1]}`).focus()
       } else if (e.type="onChange" && e.target.value !== '') {
        
           let indexCell = Number(arrayRange.indexOf(props.id));
@@ -679,7 +637,6 @@ class Box extends React.Component {
           {visibleLabel}
           {input}
         </div>
-        {/* {activeClue && <h1>{activeClue}</h1>} */}
       </div>
     );
   }
