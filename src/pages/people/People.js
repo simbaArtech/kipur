@@ -42,7 +42,8 @@ export default function People() {
     color: "white",
     width: "fit-content",
     padding: "2px 12px",
-    background: "#657c54",
+    background: "white",
+    color: 'black',
     borderRadius: "20vw",
     fontSize: "15px",
   };
@@ -53,7 +54,7 @@ export default function People() {
     fontSize: "15px",
     textAlign: "center",
     padding: "2px 0px",
-    background: "white",
+    background: "#657c54",
     color: "black",
     borderRadius: "20vw",
     border: "2px solid #657c54",

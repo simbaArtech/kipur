@@ -11,23 +11,23 @@ export default function SortButtons({ labels, setSelectedLabel }) {
     fontWeight: "bold",
     fontSize: "0.7rem",
     padding: "0.5rem",
-    paddingTop: '1rem'
+    paddingTop: "1rem",
   };
   const selectedStyle = {
+    color: "black",
     margin: "auto",
-    color: "white",
     width: "fit-content",
     padding: "2px 12px",
-    background: "#657c54",
-    borderRadius: '20vw',
-    fontSize: '15px',
+    background: "white",
+    borderRadius: "20vw",
+    fontSize: "15px",
   };
   const unselectedStyle = {
     margin: "auto",
     width: "4.5rem",
     fontSize: "15px",
     padding: "2px 0px",
-    background: "white",
+    background: "#657c54",
     color: "black",
     borderRadius: "20vw",
     border: "2px solid #657c54",
@@ -44,7 +44,7 @@ export default function SortButtons({ labels, setSelectedLabel }) {
             setSelected(label);
           }}
         >
-          {selected ==  label ? label : label.split(' ')[0]}
+          {selected == label ? label : label.split(" ")[0]}
         </div>
       ))}
     </div>
