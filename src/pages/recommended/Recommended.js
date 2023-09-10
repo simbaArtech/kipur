@@ -11,8 +11,13 @@ import {
   ArticleTitle,
   ArticleDetail,
 } from "../../components/general";
-import Article from "../../components/article/Article";
+import Article from "../article/Article";
 import SecBanner from "./banner/SecBanner";
+import Navbar from "../../components/navbar/Navbar";
+import items from "../../consts/const";
+import { usePage } from "../../context/PageContext";
+import { useArticle } from "../../context/ArticleContext";
+import { useNavigate } from "react-router";
 
 const aritcles = [
   {
@@ -152,9 +157,12 @@ const aritcles = [
 ];
 
 export default function Recommended() {
+  const [page, setPage] = usePage();
   const [showCard, setShowCard] = useState(false);
   const [articleI, setArticleI] = useState();
   const [showPopUp, setShowPopUp] = useState(false);
+  const [article, setArticle] = useArticle();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -165,8 +173,8 @@ export default function Recommended() {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <ArticleContainer
               onClick={() => {
-                setShowCard(true);
-                setArticleI(article);
+                setArticle(article);
+                navigate('/article');
               }}
             >
               {article.pic ? (
@@ -187,9 +195,9 @@ export default function Recommended() {
                 </ArticleDetailsContainer>
               </ArticleTextContainer>
             </ArticleContainer>
-            {showCard && (
+            {/* {showCard && (
               <Article setShowCard={setShowCard} article={articleI} />
-            )}
+            )} */}
           </div>
         );
       })}
@@ -205,6 +213,7 @@ export default function Recommended() {
         </ArticleContainer>
       </div>
       {showPopUp && <SecBanner setShowPopUp={setShowPopUp} />}
+      <Navbar items={items} page={page} setPage={setPage} />
     </>
   );
 }

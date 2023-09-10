@@ -16,14 +16,22 @@ import {
   PersonalitiesContainer,
   SeeAll,
 } from "./peopleStyle";
-import Article from "../../components/article/Article";
+import Article from "../article/Article";
 import { warPrisoners, slainPeople } from "../people/consts";
+import items from "../../consts/const";
+import { usePage } from "../../context/PageContext";
+import Navbar from "../../components/navbar/Navbar";
+import { useArticle } from "../../context/ArticleContext";
+import { useNavigate } from "react-router";
 
 export default function People() {
+  const [page, setPage] = usePage();
   const [personI, setPersonI] = useState();
   const [showCardO, setShowCardO] = useState(false);
   const [showCardT, setShowCardT] = useState(false);
   const [showWar, setShowWar] = useState(true);
+  const [article, setArticle] = useArticle();
+  const navigate = useNavigate();
 
   const containerStyle = {
     display: "flex",
@@ -83,8 +91,8 @@ export default function People() {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <ArticleContainer
               onClick={() => {
-                setShowCardO(true);
-                setPersonI(prisoner);
+                setArticle(prisoner);
+                navigate('/article');
               }}
             >
               <ArticlePic
@@ -101,14 +109,14 @@ export default function People() {
             </ArticleContainer>
           </div>
         ))}
-      {showCardO && <Article setShowCard={setShowCardO} article={personI} />}
+      {/* {showCardO && <Article setShowCard={setShowCardO} article={personI} />} */}
       {!showWar &&
         slainPeople.map((person) => (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <ArticleContainer
               onClick={() => {
-                setShowCardT(true);
-                setPersonI(person);
+                setArticle(person);
+                navigate('/article');
               }}
             >
               <ArticlePic src={person.pic} />
@@ -122,7 +130,8 @@ export default function People() {
             </ArticleContainer>
           </div>
         ))}
-      {showCardT && <Article setShowCard={setShowCardT} article={personI} />}
+      {/* {showCardT && <Article setShowCard={setShowCardT} article={personI} />} */}
+      <Navbar items={items} page={page} setPage={setPage} />
     </>
   );
 }

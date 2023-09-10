@@ -12,8 +12,12 @@ import {
 } from "./TimeLineStyles";
 import { data } from "./consts";
 import Article from "../timeline/article/Article";
+import Navbar from "../../components/navbar/Navbar";
+import items from "../../consts/const";
+import { usePage } from "../../context/PageContext";
 
 export default function TimeLine() {
+  const [page, setPage] = usePage();
   const [selectedItem, setSelectedItem] = useState(0);
   const [article, setArticle] = useState();
   const [showDesc, setShowDesc] = useState(false);
@@ -86,6 +90,7 @@ export default function TimeLine() {
         </StyledCarousel>
       </Container>
       {showDesc && <Article setShowCard={setShowDesc} article={article} />}
+      <Navbar items={items} page={page} setPage={setPage} />
     </>
   );
 }

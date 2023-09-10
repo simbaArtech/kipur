@@ -1,0 +1,658 @@
+'Log files:
+/Users/noamdelmar/Desktop/Noam/Simba/kipur/C:\Users\noamdelmar~1\AppData\Roaming\npm-cache/_logs/2023-09-10T17_26_18_977Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: react-elastic-carousel@0.11.5
+Found: react@18.2.0
+node_modules/react
+  react@"^18.2.0" from the root project
+  peer react@">=16.8.0" from @emotion/react@11.11.1
+  node_modules/@emotion/react
+    peer @emotion/react@"^11.0.0-rc.0" from @emotion/styled@11.11.0
+    node_modules/@emotion/styled
+      peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@5.13.2
+      node_modules/@mui/styled-engine
+        @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+        node_modules/@mui/system
+          @mui/system@"^5.14.5" from @mui/material@5.14.5
+          node_modules/@mui/material
+            peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+            node_modules/@mui/icons-material
+              @mui/icons-material@"^5.11.16" from the root project
+              @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+              node_modules/react-material-ui-carousel
+                react-material-ui-carousel@"^3.4.2" from the root project
+            @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+          node_modules/@mui/icons-material
+            @mui/icons-material@"^5.11.16" from the root project
+            @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @emotion/styled@"^11.6.0" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    peerOptional @emotion/react@"^11.5.0" from @mui/material@5.14.5
+    node_modules/@mui/material
+      peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+      node_modules/@mui/icons-material
+        @mui/icons-material@"^5.11.16" from the root project
+        @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    peerOptional @emotion/react@"^11.4.1" from @mui/styled-engine@5.13.2
+    node_modules/@mui/styled-engine
+      @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+          node_modules/@mui/icons-material
+            @mui/icons-material@"^5.11.16" from the root project
+            @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+    peerOptional @emotion/react@"^11.5.0" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    @emotion/react@"^11.7.1" from react-material-ui-carousel@3.4.2
+    node_modules/react-material-ui-carousel
+      react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@">=16.8.0" from @emotion/styled@11.11.0
+  node_modules/@emotion/styled
+    peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.14.5
+    node_modules/@mui/material
+      peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+      node_modules/@mui/icons-material
+        @mui/icons-material@"^5.11.16" from the root project
+        @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@5.13.2
+    node_modules/@mui/styled-engine
+      @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+          node_modules/@mui/icons-material
+            @mui/icons-material@"^5.11.16" from the root project
+            @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+    peerOptional @emotion/styled@"^11.3.0" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    @emotion/styled@"^11.6.0" from react-material-ui-carousel@3.4.2
+    node_modules/react-material-ui-carousel
+      react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@">=16.8.0" from @emotion/use-insertion-effect-with-fallbacks@1.0.1
+  node_modules/@emotion/use-insertion-effect-with-fallbacks
+    @emotion/use-insertion-effect-with-fallbacks@"^1.0.1" from @emotion/react@11.11.1
+    node_modules/@emotion/react
+      peer @emotion/react@"^11.0.0-rc.0" from @emotion/styled@11.11.0
+      node_modules/@emotion/styled
+        peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.14.5
+        node_modules/@mui/material
+          peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+          node_modules/@mui/icons-material
+            @mui/icons-material@"^5.11.16" from the root project
+            @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@5.13.2
+        node_modules/@mui/styled-engine
+          @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+          node_modules/@mui/system
+            @mui/system@"^5.14.5" from @mui/material@5.14.5
+            node_modules/@mui/material
+              peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+              node_modules/@mui/icons-material
+                @mui/icons-material@"^5.11.16" from the root project
+                @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+                node_modules/react-material-ui-carousel
+                  react-material-ui-carousel@"^3.4.2" from the root project
+              @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+              node_modules/react-material-ui-carousel
+                react-material-ui-carousel@"^3.4.2" from the root project
+            @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+        peerOptional @emotion/styled@"^11.3.0" from @mui/system@5.14.5
+        node_modules/@mui/system
+          @mui/system@"^5.14.5" from @mui/material@5.14.5
+          node_modules/@mui/material
+            peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+            node_modules/@mui/icons-material
+              @mui/icons-material@"^5.11.16" from the root project
+              @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+              node_modules/react-material-ui-carousel
+                react-material-ui-carousel@"^3.4.2" from the root project
+            @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @emotion/styled@"^11.6.0" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      peerOptional @emotion/react@"^11.5.0" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      peerOptional @emotion/react@"^11.4.1" from @mui/styled-engine@5.13.2
+      node_modules/@mui/styled-engine
+        @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+        node_modules/@mui/system
+          @mui/system@"^5.14.5" from @mui/material@5.14.5
+          node_modules/@mui/material
+            peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+            node_modules/@mui/icons-material
+              @mui/icons-material@"^5.11.16" from the root project
+              @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+              node_modules/react-material-ui-carousel
+                react-material-ui-carousel@"^3.4.2" from the root project
+            @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+      peerOptional @emotion/react@"^11.5.0" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+          node_modules/@mui/icons-material
+            @mui/icons-material@"^5.11.16" from the root project
+            @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @emotion/react@"^11.7.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    @emotion/use-insertion-effect-with-fallbacks@"^1.0.1" from @emotion/styled@11.11.0
+    node_modules/@emotion/styled
+      peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@5.13.2
+      node_modules/@mui/styled-engine
+        @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+        node_modules/@mui/system
+          @mui/system@"^5.14.5" from @mui/material@5.14.5
+          node_modules/@mui/material
+            peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+            node_modules/@mui/icons-material
+              @mui/icons-material@"^5.11.16" from the root project
+              @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+              node_modules/react-material-ui-carousel
+                react-material-ui-carousel@"^3.4.2" from the root project
+            @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+          node_modules/@mui/icons-material
+            @mui/icons-material@"^5.11.16" from the root project
+            @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @emotion/styled@"^11.6.0" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@"^18.2.0" from @irvanster/react-crossword-x@0.0.9
+  node_modules/@irvanster/react-crossword-x
+    @irvanster/react-crossword-x@"github:irvanster/react-crossword-x" from the root project
+  peer react@"^18.2.0" from @jaredreisinger/react-crossword@5.2.0
+  node_modules/@jaredreisinger/react-crossword
+    @jaredreisinger/react-crossword@"^5.2.0" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/base@5.0.0-beta.11
+  node_modules/@mui/base
+    @mui/base@"5.0.0-beta.11" from @mui/material@5.14.5
+    node_modules/@mui/material
+      peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+      node_modules/@mui/icons-material
+        @mui/icons-material@"^5.11.16" from the root project
+        @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/icons-material@5.14.3
+  node_modules/@mui/icons-material
+    @mui/icons-material@"^5.11.16" from the root project
+    @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+    node_modules/react-material-ui-carousel
+      react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/material@5.14.5
+  node_modules/@mui/material
+    peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+    node_modules/@mui/icons-material
+      @mui/icons-material@"^5.11.16" from the root project
+      @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+    node_modules/react-material-ui-carousel
+      react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/private-theming@5.14.5
+  node_modules/@mui/private-theming
+    @mui/private-theming@"^5.14.5" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/styled-engine@5.13.2
+  node_modules/@mui/styled-engine
+    @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/system@5.14.5
+  node_modules/@mui/system
+    @mui/system@"^5.14.5" from @mui/material@5.14.5
+    node_modules/@mui/material
+      peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+      node_modules/@mui/icons-material
+        @mui/icons-material@"^5.11.16" from the root project
+        @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+    node_modules/react-material-ui-carousel
+      react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/utils@5.14.5
+  node_modules/@mui/utils
+    @mui/utils@"^5.14.5" from @mui/base@5.0.0-beta.11
+    node_modules/@mui/base
+      @mui/base@"5.0.0-beta.11" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+    @mui/utils@"^5.14.5" from @mui/material@5.14.5
+    node_modules/@mui/material
+      peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+      node_modules/@mui/icons-material
+        @mui/icons-material@"^5.11.16" from the root project
+        @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    @mui/utils@"^5.14.5" from @mui/private-theming@5.14.5
+    node_modules/@mui/private-theming
+      @mui/private-theming@"^5.14.5" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+          node_modules/@mui/icons-material
+            @mui/icons-material@"^5.11.16" from the root project
+            @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+            node_modules/react-material-ui-carousel
+              react-material-ui-carousel@"^3.4.2" from the root project
+          @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+    @mui/utils@"^5.14.5" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/system@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@"^16.8.0 || ^17.0.0-rc.1 || ^18.0.0" from @react-aria/ssr@3.7.1
+  node_modules/@react-aria/ssr
+    @react-aria/ssr@"^3.5.0" from @restart/ui@1.6.6
+    node_modules/@restart/ui
+      @restart/ui@"^1.6.3" from react-bootstrap@2.8.0
+      node_modules/react-bootstrap
+        react-bootstrap@"^2.8.0" from the root project
+  peer react@">=16.8.0" from @restart/hooks@0.4.11
+  node_modules/@restart/hooks
+    @restart/hooks@"^0.4.9" from @restart/ui@1.6.6
+    node_modules/@restart/ui
+      @restart/ui@"^1.6.3" from react-bootstrap@2.8.0
+      node_modules/react-bootstrap
+        react-bootstrap@"^2.8.0" from the root project
+    @restart/hooks@"^0.4.9" from react-bootstrap@2.8.0
+    node_modules/react-bootstrap
+      react-bootstrap@"^2.8.0" from the root project
+  peer react@">=16.14.0" from @restart/ui@1.6.6
+  node_modules/@restart/ui
+    @restart/ui@"^1.6.3" from react-bootstrap@2.8.0
+    node_modules/react-bootstrap
+      react-bootstrap@"^2.8.0" from the root project
+  peer react@">=16.14.0" from uncontrollable@8.0.4
+  node_modules/@restart/ui/node_modules/uncontrollable
+    uncontrollable@"^8.0.1" from @restart/ui@1.6.6
+    node_modules/@restart/ui
+      @restart/ui@"^1.6.3" from react-bootstrap@2.8.0
+      node_modules/react-bootstrap
+        react-bootstrap@"^2.8.0" from the root project
+  peer react@"^18.0.0" from @testing-library/react@13.4.0
+  node_modules/@testing-library/react
+    @testing-library/react@"^13.4.0" from the root project
+  peer react@">=16.8 || ^17.0.0" from framer-motion@4.1.17
+  node_modules/framer-motion
+    framer-motion@"^4.1.17" from react-material-ui-carousel@3.4.2
+    node_modules/react-material-ui-carousel
+      react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@">=0.14.0" from prop-types-extra@1.1.1
+  node_modules/prop-types-extra
+    prop-types-extra@"^1.1.0" from react-bootstrap@2.8.0
+    node_modules/react-bootstrap
+      react-bootstrap@"^2.8.0" from the root project
+  peer react@">=16.14.0" from react-bootstrap@2.8.0
+  node_modules/react-bootstrap
+    react-bootstrap@"^2.8.0" from the root project
+  peer react@">=16.4.1" from react-crossword@0.2.0
+  node_modules/react-crossword
+    react-crossword@"^0.2.0" from the root project
+  peer react@"^18.2.0" from react-dom@18.2.0
+  node_modules/react-dom
+    react-dom@"^18.2.0" from the root project
+    peer react-dom@"^18.2.0" from @irvanster/react-crossword-x@0.0.9
+    node_modules/@irvanster/react-crossword-x
+      @irvanster/react-crossword-x@"github:irvanster/react-crossword-x" from the root project
+    peer react-dom@"^18.2.0" from @jaredreisinger/react-crossword@5.2.0
+    node_modules/@jaredreisinger/react-crossword
+      @jaredreisinger/react-crossword@"^5.2.0" from the root project
+    peer react-dom@"^17.0.0 || ^18.0.0" from @mui/base@5.0.0-beta.11
+    node_modules/@mui/base
+      @mui/base@"5.0.0-beta.11" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+    peer react-dom@"^17.0.0 || ^18.0.0" from @mui/material@5.14.5
+    node_modules/@mui/material
+      peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+      node_modules/@mui/icons-material
+        @mui/icons-material@"^5.11.16" from the root project
+        @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    peer react-dom@">=16.14.0" from @restart/ui@1.6.6
+    node_modules/@restart/ui
+      @restart/ui@"^1.6.3" from react-bootstrap@2.8.0
+      node_modules/react-bootstrap
+        react-bootstrap@"^2.8.0" from the root project
+    peer react-dom@"^18.0.0" from @testing-library/react@13.4.0
+    node_modules/@testing-library/react
+      @testing-library/react@"^13.4.0" from the root project
+    peer react-dom@">=16.8 || ^17.0.0" from framer-motion@4.1.17
+    node_modules/framer-motion
+      framer-motion@"^4.1.17" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    peer react-dom@">=16.14.0" from react-bootstrap@2.8.0
+    node_modules/react-bootstrap
+      react-bootstrap@"^2.8.0" from the root project
+    peer react-dom@">=16.4.1" from react-crossword@0.2.0
+    node_modules/react-crossword
+      react-crossword@"^0.2.0" from the root project
+    peer react-dom@"^17.0.2 || ^18.0.0" from react-material-ui-carousel@3.4.2
+    node_modules/react-material-ui-carousel
+      react-material-ui-carousel@"^3.4.2" from the root project
+    peer react-dom@">=16.8" from react-router-dom@6.15.0
+    node_modules/react-router-dom
+      react-router-dom@"^6.10.0" from the root project
+    peer react-dom@">=16.6.0" from react-transition-group@4.4.5
+    node_modules/react-transition-group
+      react-transition-group@"^4.4.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+        node_modules/@mui/icons-material
+          @mui/icons-material@"^5.11.16" from the root project
+          @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+          node_modules/react-material-ui-carousel
+            react-material-ui-carousel@"^3.4.2" from the root project
+        @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      react-transition-group@"^4.4.5" from react-bootstrap@2.8.0
+      node_modules/react-bootstrap
+        react-bootstrap@"^2.8.0" from the root project
+    peer react-dom@">= 16.8.0" from styled-components@5.3.11
+    node_modules/styled-components
+      styled-components@"^5.3.10" from the root project
+      styled-components@"^5.3.6" from @irvanster/react-crossword-x@0.0.9
+      node_modules/@irvanster/react-crossword-x
+        @irvanster/react-crossword-x@"github:irvanster/react-crossword-x" from the root project
+      styled-components@"^5.3.6" from @jaredreisinger/react-crossword@5.2.0
+      node_modules/@jaredreisinger/react-crossword
+        @jaredreisinger/react-crossword@"^5.2.0" from the root project
+      peer styled-components@">= 2" from babel-plugin-styled-components@2.1.4
+      node_modules/babel-plugin-styled-components
+        babel-plugin-styled-components@">= 1.12.0" from styled-components@5.3.11
+      peer styled-components@"^5.1.0" from react-elastic-carousel@0.11.5
+      node_modules/react-elastic-carousel
+        react-elastic-carousel@"^0.11.5" from the root project
+  peer react@"^17.0.1 || ^18.0.0" from react-material-ui-carousel@3.4.2
+  node_modules/react-material-ui-carousel
+    react-material-ui-carousel@"^3.4.2" from the root project
+  peer react@">=16.8" from react-router@6.15.0
+  node_modules/react-router
+    react-router@"6.15.0" from react-router-dom@6.15.0
+    node_modules/react-router-dom
+      react-router-dom@"^6.10.0" from the root project
+  peer react@">=16.8" from react-router-dom@6.15.0
+  node_modules/react-router-dom
+    react-router-dom@"^6.10.0" from the root project
+  peer react@">=16.6.0" from react-transition-group@4.4.5
+  node_modules/react-transition-group
+    react-transition-group@"^4.4.5" from @mui/material@5.14.5
+    node_modules/@mui/material
+      peer @mui/material@"^5.0.0" from @mui/icons-material@5.14.3
+      node_modules/@mui/icons-material
+        @mui/icons-material@"^5.11.16" from the root project
+        @mui/icons-material@"^5.4.1" from react-material-ui-carousel@3.4.2
+        node_modules/react-material-ui-carousel
+          react-material-ui-carousel@"^3.4.2" from the root project
+      @mui/material@"^5.4.1" from react-material-ui-carousel@3.4.2
+      node_modules/react-material-ui-carousel
+        react-material-ui-carousel@"^3.4.2" from the root project
+    react-transition-group@"^4.4.5" from react-bootstrap@2.8.0
+    node_modules/react-bootstrap
+      react-bootstrap@"^2.8.0" from the root project
+  peer react@">= 16.8.0" from styled-components@5.3.11
+  node_modules/styled-components
+    styled-components@"^5.3.10" from the root project
+    styled-components@"^5.3.6" from @irvanster/react-crossword-x@0.0.9
+    node_modules/@irvanster/react-crossword-x
+      @irvanster/react-crossword-x@"github:irvanster/react-crossword-x" from the root project
+    styled-components@"^5.3.6" from @jaredreisinger/react-crossword@5.2.0
+    node_modules/@jaredreisinger/react-crossword
+      @jaredreisinger/react-crossword@"^5.2.0" from the root project
+    peer styled-components@">= 2" from babel-plugin-styled-components@2.1.4
+    node_modules/babel-plugin-styled-components
+      babel-plugin-styled-components@">= 1.12.0" from styled-components@5.3.11
+    peer styled-components@"^5.1.0" from react-elastic-carousel@0.11.5
+    node_modules/react-elastic-carousel
+      react-elastic-carousel@"^0.11.5" from the root project
+  peer react@">=15.0.0" from uncontrollable@7.2.1
+  node_modules/uncontrollable
+    uncontrollable@"^7.2.1" from react-bootstrap@2.8.0
+    node_modules/react-bootstrap
+      react-bootstrap@"^2.8.0" from the root project
+
+Could not resolve dependency:
+peer react@"15 - 17" from react-elastic-carousel@0.11.5
+node_modules/react-elastic-carousel
+  react-elastic-carousel@"^0.11.5" from the root project
+
+Conflicting peer dependency: react@17.0.2
+node_modules/react
+  peer react@"15 - 17" from react-elastic-carousel@0.11.5
+  node_modules/react-elastic-carousel
+    react-elastic-carousel@"^0.11.5" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.

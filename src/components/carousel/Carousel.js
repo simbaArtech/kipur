@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/swiper.min.css";
 import "swiper/modules/pagination/pagination.min.css";
@@ -6,15 +6,16 @@ import { Pagination, Navigation, Autoplay, EffectCoverflow } from "swiper";
 import "./styles.css";
 import { DarkOnImage } from "../../pages/timeline/TimeLineStyles";
 import { CardTitle, CardWrapper, StyledSwiperSlide } from "./styles";
-import Article from "../article/Article";
-import { useEffect } from "react";
+import Article from "../../pages/article/Article";
+import { useArticle } from "../../context/ArticleContext";
+import { useNavigate } from "react-router";
 
 export default function Carousel() {
-  const [showCard, setShowCard] = useState(false);
-  const [articleI, setArticleI] = useState();
   const swiperRef = useRef(null);
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
+  const [article, setArticle] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setWidth(getDimensions().width);
@@ -234,8 +235,8 @@ export default function Carousel() {
         {aritclesForCarousel.map((item) => (
           <StyledSwiperSlide
             onClick={() => {
-              setShowCard(true);
-              setArticleI(item);
+              setArticle(item);
+              navigate('/article');
             }}
           >
             <CardWrapper>
@@ -260,7 +261,7 @@ export default function Carousel() {
           </StyledSwiperSlide>
         ))}
       </Swiper>
-      {showCard && <Article setShowCard={setShowCard} article={articleI} />}
+      {/* {showCard && <Article setShowCard={setShowCard} article={articleI} />} */}
     </>
   );
 }

@@ -19,22 +19,25 @@ import {
   PersonalitiesContainer,
 } from "../people/peopleStyle";
 
-import Article from "../../components/article/Article";
-import { aritcles } from "../../components/article/consts";
+import Article from "../article/Article";
+import { aritcles } from "../article/consts";
 import { personalities } from "../people/consts";
 import items from "../../consts/const";
 import { usePage } from "../../context/PageContext";
+import { useArticle } from "../../context/ArticleContext";
+import { useNavigate } from "react-router";
 
 export default function ImagesAndEvents() {
+  const [page, setPage] = usePage();
   const [showCardO, setShowCardO] = useState(false);
-  const [showCard, setShowCard] = useState(false);
   const [articleI, setArticleI] = useState();
   const [pageLabel, setPageLabel] = useState("לפני המלחמה");
   const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "בעקבות המלחמה"];
+  const [article, setArticle] = useArticle();
+  const navigate = useNavigate();
 
   const [filteredArticles, setFilteredArticles] = useState(aritcles);
   const [filteredItems, setFilteredItems] = useState(personalities);
-  const [page, setPage] = usePage();
   useEffect(() => {
     const filtered = aritcles.filter((item) => item.type === pageLabel);
     setFilteredArticles(filtered);
@@ -58,17 +61,14 @@ export default function ImagesAndEvents() {
                 <PersonalCircle
                   src={person.pic}
                   onClick={() => {
-                    setShowCardO(true);
-                    setArticleI(person);
+                    setArticle(person);
+                  navigate('/article');
                   }}
                 />
                 <PersonalName>{person.name}</PersonalName>
               </PersonalContainer>
             );
           })}
-          {showCardO && (
-            <Article setShowCard={setShowCardO} article={articleI} />
-          )}
         </PersonalitiesContainer>
         <TitleLabel>
           <SemiTitle>אירועים</SemiTitle>
@@ -78,8 +78,8 @@ export default function ImagesAndEvents() {
             <div style={{ display: "flex", justifyContent: "center" }}>
               <ArticleContainer
                 onClick={() => {
-                  setShowCard(true);
-                  setArticleI(article);
+                  setArticle(article);
+                  navigate('/article');
                 }}
               >
                 {article.pic ? (
@@ -100,9 +100,6 @@ export default function ImagesAndEvents() {
                   </ArticleDetailsContainer> */}
                 </ArticleTextContainer>
               </ArticleContainer>
-              {showCard && (
-                <Article setShowCard={setShowCard} article={articleI} />
-              )}
             </div>
           );
         })}

@@ -1,0 +1,115 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@9.6.7
+2 info using node@v18.17.1
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 0ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/Users/noamdelmar/Desktop/Noam/Simba/kipur/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 1ms
+11 timing config:load:file:/Users/noamdelmar/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 1ms
+13 timing config:load:file:/usr/local/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:setEnvs Completed in 0ms
+16 timing config:load Completed in 5ms
+17 timing npm:load:configload Completed in 5ms
+18 timing npm:load:mkdirpcache Completed in 0ms
+19 timing npm:load:mkdirplogs Completed in 0ms
+20 verbose title npm i
+21 verbose argv "i"
+22 timing npm:load:setTitle Completed in 6ms
+23 timing config:load:flatten Completed in 1ms
+24 timing npm:load:display Completed in 1ms
+25 verbose logfile logs-max:10 dir:/Users/noamdelmar/Desktop/Noam/Simba/kipur/C:\Users\noamdelmar~1\AppData\Roaming\npm-cache/_logs/2023-09-10T17_26_18_977Z-
+26 verbose logfile /Users/noamdelmar/Desktop/Noam/Simba/kipur/C:\Users\noamdelmar~1\AppData\Roaming\npm-cache/_logs/2023-09-10T17_26_18_977Z-debug-0.log
+27 timing npm:load:logFile Completed in 5ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 18ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 472ms
+34 timing idealTree:userRequests Completed in 1ms
+35 silly idealTree buildDeps
+36 timing idealTree:#root Completed in 0ms
+37 silly fetch manifest react@15 - 17
+38 http fetch GET 200 https://registry.npmjs.org/react 1398ms (cache miss)
+39 silly fetch manifest react-dom@15 - 17
+40 http fetch GET 200 https://registry.npmjs.org/npm 2343ms (cache miss)
+41 http fetch GET 200 https://registry.npmjs.org/react-dom 831ms (cache miss)
+42 timing idealTree Completed in 2751ms
+43 timing command:i Completed in 2782ms
+44 notice
+44 notice New [31mmajor[39m version of npm available! [31m9.6.7[39m -> [32m10.1.0[39m
+44 notice Changelog: [36mhttps://github.com/npm/cli/releases/tag/v10.1.0[39m
+44 notice Run [32mnpm install -g npm@10.1.0[39m to update!
+44 notice
+45 verbose stack Error: could not resolve
+45 verbose stack     at PlaceDep.failPeerConflict (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/place-dep.js:503:25)
+45 verbose stack     at new PlaceDep (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/place-dep.js:157:21)
+45 verbose stack     at #buildDepStep (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:933:18)
+45 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:196:7)
+45 verbose stack     at async Promise.all (index 1)
+45 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:159:5)
+45 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:147:5)
+45 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli.js:89:5)
+46 verbose cwd /Users/noamdelmar/Desktop/Noam/Simba/kipur
+47 verbose Darwin 21.4.0
+48 verbose node v18.17.1
+49 verbose npm  v9.6.7
+50 error code ERESOLVE
+51 error ERESOLVE could not resolve
+52 error
+53 error While resolving: [1mreact-elastic-carousel[22m@[1m0.11.5[22m
+53 error Found: [1mreact[22m@[1m18.2.0[22m[2m[22m
+53 error [2mnode_modules/react[22m
+53 error   [1mreact[22m@"[1m^18.2.0[22m" from the root project
+53 error   [35mpeer[39m [1mreact[22m@"[1m>=16.8.0[22m" from [1m@emotion/react[22m@[1m11.11.1[22m[2m[22m
+53 error   [2mnode_modules/@emotion/react[22m
+53 error     [35mpeer[39m [1m@emotion/react[22m@"[1m^11.0.0-rc.0[22m" from [1m@emotion/styled[22m@[1m11.11.0[22m[2m[22m
+53 error     [2mnode_modules/@emotion/styled[22m
+53 error       peerOptional [1m@emotion/styled[22m@"[1m^11.3.0[22m" from [1m@mui/material[22m@[1m5.14.5[22m[2m[22m
+53 error       [2mnode_modules/@mui/material[22m
+53 error         [35mpeer[39m [1m@mui/material[22m@"[1m^5.0.0[22m" from [1m@mui/icons-material[22m@[1m5.14.3[22m[2m[22m
+53 error         [2mnode_modules/@mui/icons-material[22m
+53 error         1 more (react-material-ui-carousel)
+53 error       3 more (@mui/styled-engine, @mui/system, react-material-ui-carousel)
+53 error     peerOptional [1m@emotion/react[22m@"[1m^11.5.0[22m" from [1m@mui/material[22m@[1m5.14.5[22m[2m[22m
+53 error     [2mnode_modules/@mui/material[22m
+53 error       [35mpeer[39m [1m@mui/material[22m@"[1m^5.0.0[22m" from [1m@mui/icons-material[22m@[1m5.14.3[22m[2m[22m
+53 error       [2mnode_modules/@mui/icons-material[22m
+53 error         [1m@mui/icons-material[22m@"[1m^5.11.16[22m" from the root project
+53 error         1 more (react-material-ui-carousel)
+53 error       1 more (react-material-ui-carousel)
+53 error     3 more (@mui/styled-engine, @mui/system, react-material-ui-carousel)
+53 error   27 more (@emotion/styled, ...)
+53 error
+53 error Could not resolve dependency:
+53 error [35mpeer[39m [1mreact[22m@"[1m15 - 17[22m" from [1mreact-elastic-carousel[22m@[1m0.11.5[22m[2m[22m
+53 error [2mnode_modules/react-elastic-carousel[22m
+53 error   [1mreact-elastic-carousel[22m@"[1m^0.11.5[22m" from the root project
+53 error
+53 error Conflicting peer dependency: [1mreact[22m@[1m17.0.2[22m[2m[22m
+53 error [2mnode_modules/react[22m
+53 error   [35mpeer[39m [1mreact[22m@"[1m15 - 17[22m" from [1mreact-elastic-carousel[22m@[1m0.11.5[22m[2m[22m
+53 error   [2mnode_modules/react-elastic-carousel[22m
+53 error     [1mreact-elastic-carousel[22m@"[1m^0.11.5[22m" from the root project
+53 error
+53 error Fix the upstream dependency conflict, or retry
+53 error this command with --force or --legacy-peer-deps
+53 error to accept an incorrect (and potentially broken) dependency resolution.
+54 error
+54 error
+54 error For a full report see:
+54 error /Users/noamdelmar/Desktop/Noam/Simba/kipur/C:\Users\noamdelmar~1\AppData\Roaming\npm-cache/_logs/2023-09-10T17_26_18_977Z-eresolve-report.txt
+55 verbose exit 1
+56 timing npm Completed in 2918ms
+57 verbose unfinished npm timer reify 1694366779107
+58 verbose unfinished npm timer reify:loadTrees 1694366779136
+59 verbose unfinished npm timer idealTree:buildDeps 1694366779609
+60 verbose unfinished npm timer idealTree:node_modules/react-elastic-carousel 1694366779609
+61 verbose code 1
+62 error A complete log of this run can be found in: /Users/noamdelmar/Desktop/Noam/Simba/kipur/C:\Users\noamdelmar~1\AppData\Roaming\npm-cache/_logs/2023-09-10T17_26_18_977Z-debug-0.log
