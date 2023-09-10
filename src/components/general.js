@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SemiTitle = styled.div`
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: white;
   text-align: right;
   margin: 1rem;
@@ -39,13 +39,13 @@ export const ArticleDetail = styled.div`
   display: flex;
   align-items: center;
   color: #99b882;
-  font-size: 0.8rem;
+  font-size: 1rem;
 `;
 
 export const ArticlePic = styled.img`
-  width: 5rem;
-  height: 5rem;
+  width: 80px;
+  height: 80px;
   margin-left: 10px;
-  object-fit: cover;
   border-radius: 12px;
+  object-fit: cover;
 `;

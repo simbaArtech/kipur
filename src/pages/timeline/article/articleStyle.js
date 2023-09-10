@@ -26,7 +26,7 @@ export const CardContainer = styled.div`
 
 export const CardTitle = styled.div`
   color: #99b882;
-  width: 250px;
+  width: 300px;
   text-align: right;
   direction: rtl;
   margin: auto;
@@ -38,7 +38,7 @@ export const CardTitle = styled.div`
 `;
 export const CardMiniTitle = styled.div`
   color: #99b882;
-  width: 250px;
+  width: 300px;
   text-align: right;
   direction: rtl;
   margin: auto;
@@ -46,7 +46,7 @@ export const CardMiniTitle = styled.div`
   border-right: 3px solid #99b882;
   font-weight: bold;
   padding-right: 12px;
-  font-size: 0.8rem;
+  font-size: 1rem;
 `;
 
 export const UselessHorizontalLine = styled.div`
@@ -82,8 +82,8 @@ export const TextContainer = styled.div`
   line-height: 1.5;
   direction: rtl;
   color: black;
-  font-weight: bold;
-  font-size: 14px;
+  font-family: "Assistant";
+  font-size: 1rem;
   margin-bottom: 3rem;
 `;
 
@@ -92,16 +92,19 @@ export const BackBtn = styled.div`
   top: 2rem;
   left: 1.5rem;
   z-index: 1;
-  width: 25px;
-  height: 25px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background: #606060;
   border-radius: 50%;
 `;
 export const CardHeaderLogo = styled.img`
   width: 7rem;
   position: absolute;
-  top: 0.75rem;
-  right: 1.5rem;
+  top: 0.55rem;
+  right: 0.5rem;
 `;
 
 export const PersonalCircle = styled.img`

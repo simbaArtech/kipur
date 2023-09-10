@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   display: flex;
   position: fixed;
   bottom: 0;
+  padding: 0.25rem;
   width: 100%;
   justify-content: space-around;
   flex-direction: row-reverse;

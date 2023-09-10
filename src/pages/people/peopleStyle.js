@@ -24,7 +24,7 @@ export const PersonalCircle = styled.img`
 `;
 export const PersonalName = styled.div`
   color: white;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
 `;

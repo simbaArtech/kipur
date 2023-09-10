@@ -21,7 +21,7 @@ export default function Article({ setShowCard, article }) {
       <Wrapper>
         <BackBtn onClick={() => setShowCard(false)}>
           <ArrowIcon
-            sx={{ color: "white", width: "1rem", paddingLeft: "5px" }}
+            sx={{ color: "white", width: "1.5rem", paddingLeft: "5px" }}
           />
         </BackBtn>
         <CardHeaderLogo src={logo} />
@@ -30,7 +30,14 @@ export default function Article({ setShowCard, article }) {
         </div>
         <CardContainer>
           <>
-            <CardTitle>{article.date}</CardTitle>
+            <CardTitle
+              style={{
+                webkitTextStroke: "1px #99b882",
+                webkitLetterSpacing: "2px",
+              }}
+            >
+              {article.date}
+            </CardTitle>
             <CardMiniTitle>{article.title}</CardMiniTitle>
             <UselessDotsCOntainer>
               <UselessDot />

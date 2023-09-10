@@ -101,7 +101,8 @@ export const ClickForMore = styled.div`
   align-items: center;
   display: flex;
   direction: rtl;
+  font-size: 15px;
   color: white;
-  bottom: 10%;
+  bottom: 11%;
   right: 3%;
 `;

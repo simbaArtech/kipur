@@ -21,14 +21,12 @@ export default function Article({ setShowCard, article }) {
   return (
     <>
       <Wrapper>
-        {console.log(article)}
         <BackBtn onClick={() => setShowCard(false)}>
           <ArrowIcon
             sx={{
               color: "white",
-              width: "1rem",
+              width: "1.5rem",
               paddingLeft: "5px",
-              marignLeft: "0.2rem",
             }}
           />
         </BackBtn>
@@ -48,7 +46,14 @@ export default function Article({ setShowCard, article }) {
           {article.underPic ? <UnderPic>{article.underPic}</UnderPic> : ""}
           {article.article ? (
             <>
-              <CardTitle>{article.title}</CardTitle>
+              <CardTitle
+                style={{
+                  webkitTextStroke: "1px #99b882",
+                  webkitLetterSpacing: "2px",
+                }}
+              >
+                {article.title}
+              </CardTitle>
               {article.miniTitle ? (
                 <CardMiniTitle>{article.miniTitle}</CardMiniTitle>
               ) : (
@@ -62,7 +67,14 @@ export default function Article({ setShowCard, article }) {
             </>
           ) : (
             <>
-              <CardTitle>{article.name}</CardTitle>
+              <CardTitle
+                style={{
+                  webkitTextStroke: "1px #99b882",
+                  webkitLetterSpacing: "2px",
+                }}
+              >
+                {article.name}
+              </CardTitle>
               <CardTitle style={{ marginTop: 0 }}>{article.unit}</CardTitle>
               <CardMiniTitle>{article.years}</CardMiniTitle>
               <UselessDotsCOntainer>

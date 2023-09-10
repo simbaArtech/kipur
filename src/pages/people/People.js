@@ -32,7 +32,7 @@ export default function People() {
     color: "white",
     fontWeight: "bold",
     justifyContent: "flex-start",
-    fontSize: "0.7rem",
+    fontSize: "1rem",
     padding: "0.5rem",
     paddingTop: "1rem",
   };
@@ -43,7 +43,7 @@ export default function People() {
     width: "fit-content",
     padding: "2px 12px",
     background: "white",
-    color: 'black',
+    color: "black",
     borderRadius: "20vw",
     fontSize: "15px",
   };
@@ -82,10 +82,10 @@ export default function People() {
         warPrisoners.map((prisoner) => (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <ArticleContainer
-            // onClick={() => {
-            //   setShowCardO(true);
-            //   setPersonI(prisoner);
-            // }}
+              onClick={() => {
+                setShowCardO(true);
+                setPersonI(prisoner);
+              }}
             >
               <ArticlePic
                 src={prisoner.pic}

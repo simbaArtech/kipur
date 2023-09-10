@@ -74,7 +74,7 @@ export default function TimeLine() {
                 <ClickForMore>
                   <img
                     src={require("../../assets/pictures/tap.svg")}
-                    style={{ marginLeft: "4px", width: "20px", height: "20px" }}
+                    style={{ marginLeft: "4px", width: "15px", height: "15px" }}
                   ></img>
                   לחצו להרחבה
                 </ClickForMore>

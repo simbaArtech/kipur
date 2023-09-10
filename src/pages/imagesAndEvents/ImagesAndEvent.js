@@ -74,7 +74,6 @@ export default function ImagesAndEvents() {
           return (
             <div style={{ display: "flex", justifyContent: "center" }}>
               <ArticleContainer
-                style={{ alignItems: "center" }}
                 onClick={() => {
                   setShowCard(true);
                   setArticleI(article);

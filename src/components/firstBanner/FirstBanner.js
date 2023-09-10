@@ -12,8 +12,8 @@ const FirstTimeBanner = () => {
 
   useEffect(() => {
     const hasClosedPopup = sessionStorage.getItem("firstTimeBannerDismissed");
-    if (hasClosedPopup === true) {
-      return;
+    if (hasClosedPopup === "true") {
+      setShowBanner(false);
     }
     return () => {
       sessionStorage.setItem("firstTimeBannerDismissed", "false");
