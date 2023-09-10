@@ -637,7 +637,7 @@
         letter: 'ק',
         clues: ['Ac15', 'Dn15'],
         label: 15,
-        clueDirection: 'A'
+        clueDirection: 'B'
       },
       {
         id: 'H7',

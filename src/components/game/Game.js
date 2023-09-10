@@ -275,7 +275,6 @@ class Crossword extends React.Component {
     }) 
   }
   showAllData() {
-    console.log(GRID_DATA)
       GRID_DATA.map((cell) => {
         if(cell.letter) {
           document.getElementById(`input${cell.id}`).value = cell.letter
@@ -343,7 +342,8 @@ class Crossword extends React.Component {
       <div className="crossword">
         <Board grid={this.state.grid} allClues={this.state.clues} clues={this.state.clues} highlightedBoxes={this.state.activeClueBoxes} setActiveClueBoxes={this.setActiveClueBoxes}  setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} boxInFocus={this.state.boxInFocus} /> 
         {this.state.showData && <img className="crossword-img" src={logo} />}
-        {!this.state.showData ? <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} /> : ""}
+        <div className="text">{sessionStorage.getItem("clue")}</div>
+        {/* {!this.state.showData ? <Clues clues={this.state.clues} setActiveClueBoxes={this.setActiveClueBoxes} activeClue={this.state.activeClue} setActiveClue={this.setActiveClue} setBoxInFocus={this.setBoxInFocus} /> : ""} */}
         <div onClick={this.handleCheckAnswers} className="buttonCheck">בדיקה</div>
         <div onClick={this.showAns} className="buttonCheck">רמז</div>
         <div onClick={this.showAllData} className="buttonCheck">חשיפת התשובות</div>
@@ -365,7 +365,7 @@ class Clues extends React.Component {
     }
     const cluesAcross = [];
     const cluesDown = [];
-
+    
     for (const key in this.props.clues) {
       const clue = this.props.clues[key];
       clue.id = key;
@@ -394,6 +394,7 @@ class Clues extends React.Component {
       <div className="clue-lists text">
         <div className="clue-list-wrapper">
           <ol className="clue-list">
+            
             {this.state.across.map((clueData) => <Clue key={clueData.id} clueID={clueData.id} clueText={clueData.clue} clueNumber={clueData.number} clueBoxes={clueData.boxes} setActiveClueBoxes={this.props.setActiveClueBoxes} setActiveClue={this.props.setActiveClue} isActive={this.props.activeClue.indexOf(clueData.id) > -1} setBoxInFocus={this.props.setBoxInFocus} />)}
           </ol>
         </div>
@@ -431,6 +432,7 @@ class Clue extends React.Component {
   }
 
   handleClick() {
+    
     if(arrayFalse) {
       arrayFalse.map((cell)=> document.getElementById(`input${cell}`).classList.add("false"))
     } 
@@ -522,6 +524,7 @@ class Box extends React.Component {
     this.props.setActiveClue(this.props.boxClues);
     const dir = this.props.clueDirection
     let boxesToHighlight = [];
+    
     if (dir === 'A' || dir === 'D') {
       sessionStorage.setItem("dir", dir)
       boxesToHighlight = boxesToHighlight.concat(this.props.allClues[this.props.boxClues[0]].boxes);
@@ -577,6 +580,18 @@ class Box extends React.Component {
       sessionStorage.setItem("done", false)
       const range = sessionStorage.getItem("movementRange");
       const arrayRange =  range.split(",")
+      if (e.keyCode !== 8 && e.type === "keydown") {
+        e.target.value = e.key
+        
+        let indexCell = Number(arrayRange.indexOf(e.target.id.split("input")[1]));
+        setTimeout(() => {
+          const elementToFocus = document.getElementById(`input${arrayRange[indexCell + 1]}`);
+          if (elementToFocus) {
+            elementToFocus.focus();
+          }
+        }, 100);
+        return;
+      }
       // console.log(props.id)
       if(e.keyCode === 8 || e.target.value === '') {
         try {
@@ -621,12 +636,30 @@ class Box extends React.Component {
 
 
     function handleClick(props, e) {
+      let clue = ''
+      if (props.clueDirection === 'B') {
+        if (sessionStorage.getItem("count") === 'true') {
+          clue = props.boxClues[1];
+          sessionStorage.setItem("count", 'false')
+        } else {
+          sessionStorage.setItem("count", 'true')
+        }
+      }
       document.getElementById(e.target.id).focus()
-      const clue = props.boxClues[0];
+      if(clue === '') {
+        clue = props.boxClues[0];
+        if (props.clueDirection === 'B') {
+          sessionStorage.setItem("count", 'true')
+        } else {
+          sessionStorage.setItem("count", 'false')
+        }
+      }
       const movementRange = CLUE_DATA[clue].boxes;
+      sessionStorage.setItem("clue", CLUE_DATA[clue].clue )
       sessionStorage.setItem("movementRange", movementRange)
       props.setActiveClueBoxes(sessionStorage.getItem("movementRange").split(","));
       props.setBoxInFocus(e.target.id);
+      
     }
 
     
@@ -634,6 +667,8 @@ class Box extends React.Component {
       input = <input value={this.ref} onClick={(e) => handleClick(this.props, e)} id={`input${this.props.id}`} style={{ direction: 'rtl', textAlign: 'center' }} type="text" maxLength="1" className={`box-input ${this.state.highlight ? 'highlight' : ''}`} onFocus={this.handleFocus} ref={(input) => { this.textInput = input }} onChange={(e) => { handleMovement(this.props, e) }}  onKeyDown={(e) => {
         if (e.keyCode === 8 && !e.target.value) {
           handleMovement(this.props, e);
+        } else if(e.target.value !== '') {
+          handleMovement(this.props, e)
         }
       }}/>
     }
