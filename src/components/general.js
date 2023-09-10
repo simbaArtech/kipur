@@ -43,8 +43,8 @@ export const ArticleDetail = styled.div`
 `;
 
 export const ArticlePic = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 80px !important;
+  height: 80px !important;
   margin-left: 10px;
   border-radius: 12px;
   object-fit: cover;

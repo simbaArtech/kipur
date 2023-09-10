@@ -40,6 +40,8 @@
   color: white;
   font-weight: bold;
   position: relative;
+  text-align: center;
+  width: 80%;
   top: -2rem;
 }
 
@@ -80,10 +82,10 @@
 }
 
 .right {
-    background-color: rgb(112, 204, 112) !important;
+    background-color: #D6EBC7 !important;
 }
 .false{
-    background-color: rgb(240, 121, 121) ;
+    background-color: #DC9F9B ;
 }
 
 .box-input {

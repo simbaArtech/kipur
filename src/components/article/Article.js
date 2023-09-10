@@ -23,11 +23,7 @@ export default function Article({ setShowCard, article }) {
       <Wrapper>
         <BackBtn onClick={() => setShowCard(false)}>
           <ArrowIcon
-            sx={{
-              color: "white",
-              width: "1.5rem",
-              paddingLeft: "5px",
-            }}
+            sx={{ color: "white", width: "1rem", paddingLeft: "5px", marginLeft: '0.2rem' }}
           />
         </BackBtn>
         <CardHeaderLogo src={logo} />
