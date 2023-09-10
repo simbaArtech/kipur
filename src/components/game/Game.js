@@ -366,15 +366,15 @@ class Crossword extends React.Component {
           boxInFocus={this.state.boxInFocus}
         />
         {this.state.showData && <img className="crossword-img" src={logo} />}
-        <div onClick={this.handleCheckAnswers} className="buttonCheck">
-          בדיקה
-        </div>
         <div className="text">{sessionStorage.getItem("clue")}</div>
         <div onClick={this.showAns} className="buttonCheck">
           רמז
         </div>
         <div onClick={this.showAllData} className="buttonCheck">
           חשיפת התשובות
+        </div>
+        <div onClick={this.handleCheckAnswers} className="buttonCheck">
+          בדיקה
         </div>
         {this.state.showError ? <div>***מלאו את כל הטבלה</div> : null}
       </div>
