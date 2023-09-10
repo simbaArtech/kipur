@@ -36,15 +36,6 @@ export default function Footer({ card }) {
   };
   const labels = [
     {
-      name: "צרו קשר",
-      icon: require("../../assets/pictures/email.png"),
-      title: `צרו קשר`,
-      text: `ליצירת קשר כתבו למייל 
-      artechb15@gmail.com
-      `,
-      style: { height: "30%", position: "absolute", marginTop: "17rem" },
-    },
-    {
       name: "אודות",
       icon: require("../../assets/pictures/odot.svg"),
       title: `אמ"ן במלחמת יום הכיפורים`,
@@ -71,6 +62,10 @@ export default function Footer({ card }) {
         <FooterContainer>
           <Logos src={logos} />
           פותח ועוצב ע"י תחום ארטק, מערך הדרכה אמ"ן
+          <div style={{direction: 'rtl', display: 'flex', alignItems: 'stretch'}}>
+            <img src={require("../../assets/pictures/email.png")} style={{ width: '15px', height: '15px', marginLeft: '5px'}}/>
+            צרו קשר <a style={{ marginRight: "5px", textDecoration: 'none', color: 'white' }} href="mailto:artechb15@gmail.com">artechb15@gmail.com</a>
+          </div>
           <div style={containerStyle}>
             {labels.map((label) => (
               <div

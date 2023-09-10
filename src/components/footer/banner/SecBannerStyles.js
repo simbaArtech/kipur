@@ -4,11 +4,11 @@ export const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 5;
   background-color: rgb(0, 0, 0, 0.6);
-  padding: 10px;
+  padding: 0.625rem;
   display: none;
 `;
 
@@ -27,7 +27,7 @@ export const Banner = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-right: 1.2rem;
 `;
 

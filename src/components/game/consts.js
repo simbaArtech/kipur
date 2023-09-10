@@ -4,25 +4,25 @@
     //   Row A
       {
         id: 'A1',
-        letter: 'A',
+        letter: 'נ',
         clues: ['Ac4', 'Dn6'],
         label: 6
       },
       {
         id: 'A2',
-        letter: 'A',
+        letter: 'ד',
         clues: ['Ac4'],
         label: null
       },
       {
         id: 'A3',
-        letter: 'I',
+        letter: 'ר',
         clues: ['Ac4', 'Dn5'],
         label: 5
       },
       {
         id: 'A4',
-        letter: 'F',
+        letter: 'י',
         clues: ['Ac4'],
         label: 4
       },
@@ -34,50 +34,50 @@
       },
       {
         id: 'A6',
-        letter: 'A',
+        letter: 'ש',
         clues: ['Ac1'],
         label: null
       },
       {
         id: 'A7',
-        letter: 'A',
+        letter: 'י',
         clues: ['Ac1', 'Dn3'],
         label: 3
       },
       {
         id: 'A8',
-        letter: 'A',
+        letter: 'ד',
         clues: ['Ac1'],
         label: null
       },
       {
         id: 'A9',
-        letter: 'A',
+        letter: 'ו',
         clues: ['Ac1', 'Dn2'],
         label: 2
       },
       {
         id: 'A10',
-        letter: 'A',
+        letter: 'ר',
         clues: ['Ac1'],
         label: null
       },
       {
         id: 'A11',
-        letter: 'A',
+        letter: 'ו',
         clues: ['Ac1'],
         label: null
       },
       {
         id: 'A12',
-        letter: 'A',
+        letter: 'ג',
         clues: ['Ac1', 'Dn1'],
         label: 1
       },
     //   Row B
       {
         id: 'B1',
-        letter: 'A',
+        letter: 'י',
         clues: ['Dn6'],
         label: null
       },
@@ -89,7 +89,7 @@
       },
       {
         id: 'B3',
-        letter: 'A',
+        letter: 'מ',
         clues: ['Dn5'],
         label: null
       },
@@ -113,7 +113,7 @@
       },
       {
         id: 'B7',
-        letter: 'A',
+        letter: 'ת',
         clues: ['Dn3'],
         label: null
       },
@@ -125,7 +125,7 @@
       },
       {
         id: 'B9',
-        letter: 'A',
+        letter: 'נ',
         clues: ['Dn2'],
         label: null
       },
@@ -143,50 +143,50 @@
       },
       {
         id: 'B12',
-        letter: 'A',
+        letter: 'י',
         clues: ['Dn1'],
         label: null
       },
     //   Row C
       {
         id: 'C1',
-        letter: 'A',
+        letter: 'ק',
         clues: ['Ac8', 'Dn6'],
         label: null
       },
       {
         id: 'C2',
-        letter: 'A',
+        letter: 'י',
         clues: ['Ac8'],
         label: null
       },
       {
         id: 'C3',
-        letter: 'A',
+        letter: 'ת',
         clues: ['Ac8', 'Dn5'],
         label: null
       },
       {
         id: 'C4',
-        letter: 'A',
+        letter: 'ו',
         clues: ['Ac8'],
         label: null
       },
       {
         id: 'C5',
-        letter: 'A',
+        letter: 'ר',
         clues: ['Ac8', 'Dn9'],
         label: 9
       },
       {
         id: 'C6',
-        letter: 'A',
+        letter: 'כ',
         clues: ['Ac8'],
         label: null
       },
       {
         id: 'C7',
-        letter: 'A',
+        letter: 'מ',
         clues: ['Ac8', 'Dn3'],
         label: 8
       },
@@ -198,32 +198,32 @@
       },
       {
         id: 'C9',
-        letter: 'A',
+        letter: 'ט',
         clues: ['Ac7', 'Dn2'],
         label: null
       },
       {
         id: 'C10',
-        letter: 'A',
+        letter: 'פ',
         clues: ['Ac7'],
         label: null
       },
       {
         id: 'C11',
-        letter: 'A',
+        letter: 'ו',
         clues: ['Ac7'],
         label: null
       },
       {
         id: 'C12',
-        letter: 'A',
+        letter: 'ש',
         clues: ['Ac7', 'Dn1'],
         label: 7
       },
     // Row D
       {
         id: 'D1',
-        letter: 'A',
+        letter: 'ס',
         clues: ['Dn6'],
         label: null
       },
@@ -235,7 +235,7 @@
       },
       {
         id: 'D3',
-        letter: 'A',
+        letter: 'ה',
         clues: ['Dn5'],
         label: null
       },
@@ -247,7 +247,7 @@
       },
       {
         id: 'D5',
-        letter: 'A',
+        letter: 'ו',
         clues:['Dn9'],
         label: null
       },
@@ -259,7 +259,7 @@
       },
       {
         id: 'D7',
-        letter: 'A',
+        letter: 'נ',
         clues:['Dn3'],
         label: null
       },
@@ -271,7 +271,7 @@
       },
       {
         id: 'D9',
-        letter: 'A',
+        letter: 'י',
         clues: ['Dn2'],
         label: null
       },
@@ -289,14 +289,14 @@
       },
       {
         id: 'D12',
-        letter: 'A',
+        letter: 'ו',
         clues: ['Dn1'],
         label: null
       },
     //   Row E
       {
         id: 'E1',
-        letter: 'A',
+        letter: 'ו',
         clues: ['Dn6'],
         label: null
       },
@@ -308,7 +308,7 @@
       },
       {
         id: 'E3',
-        letter: 'A',
+        letter: 'ג',
         clues: ['Dn5'],
         label: null
       },
@@ -320,7 +320,7 @@
       },
       {
         id: 'E5',
-        letter: 'A',
+        letter: 'ה',
         clues: ['Dn9'],
         label: null
       },
@@ -332,68 +332,68 @@
       },
       {
         id: 'E7',
-        letter: 'A',
+        letter: 'פ',
         clues: ['Ac10', 'Dn3'],
         label: null
       },
       {
         id: 'E8',
-        letter:'A',
+        letter:'ו',
         clues: ['Ac10'],
         label: null
       },
       {
         id: 'E9',
-        letter: 'A',
+        letter: 'ל',
         clues: ['Ac10', 'Dn2'],
         label: null
       },
       {
         id: 'E10',
-        letter: 'A',
+        letter: 'א',
         clues: ['Ac10', 'Dn11'],
         label: 11
       },
       {
         id: 'E11',
-        letter: 'A',
+        letter: 'ב',
         clues: ['Ac10'],
         label: null
       },
       {
         id: 'E12',
-        letter: 'A',
+        letter: 'ר',
         clues: ['Ac10', 'Dn1'],
         label: 10
       },
     //   Row F
         {
         id: 'F1',
-        letter: 'A',
+        letter: 'נ',
         clues: ['Ac12', 'Dn6'],
         label: null
       },
       {
         id: 'F2',
-        letter: 'A',
+        letter: 'א',
         clues: ['Ac12'],
         label: null
       },
       {
         id: 'F3',
-        letter: 'A',
+        letter: 'ו',
         clues:['Ac12', 'Dn5'],
         label: null
       },
       {
         id: 'F4',
-        letter: 'A',
+        letter: 'ר',
         clues:['Ac12'],
         label: null
       },
       {
         id: 'F5',
-        letter: 'A',
+        letter: 'מ',
         clues: ['Ac12', 'Dn9'],
         label: 12
       },
@@ -423,7 +423,7 @@
       },
       {
         id: 'F10',
-        letter: 'A',
+        letter: 'ל',
         clues: ['Dn11'],
         label: null
       },
@@ -454,7 +454,7 @@
       },
       {
         id: 'G3',
-        letter: 'A',
+        letter: 'ל',
         clues: ['Dn5'],
         label: null
       },
@@ -484,68 +484,68 @@
       },
       {
         id: 'G8',
-        letter: 'A',
+        letter: 'ס',
         clues: ['Ac13', 'Dn14'],
         label: 14
       },
       {
         id: 'G9',
-        letter: 'A',
+        letter: 'י',
         clues: ['Ac13'],
         label: null
       },
       {
         id: 'G10',
-        letter: 'A',
+        letter: 'י',
         clues: ['Ac13', 'Dn11'],
         label: null
       },
       {
         id: 'G11',
-        letter: 'A',
+        letter: 'ג',
         clues: ['Ac13'],
         label: null
       },
       {
         id: 'G12',
-        letter: 'A',
+        letter: 'ל',
         clues: ['Ac13', 'Dn13'],
         label: 13
       },
     //   Row H
       {
         id: 'H1',
-        letter: 'A',
+        letter: 'ו',
         clues: ['Ac15', 'Dn17'],
         label: 17
       },
       {
         id: 'H2',
-        letter: 'A',
+        letter: 'ד',
         clues: ['Ac15'],
         label: null
       },
       {
         id: 'H3',
-        letter: 'A',
+        letter: 'נ',
         clues: ['Ac15', 'Dn5'],
         label: null
       },
       {
         id: 'H4',
-        letter: 'A',
+        letter: 'מ',
         clues: ['Ac15', 'Dn16'],
         label: 16
       },
       {
         id: 'H5',
-        letter: 'A',
+        letter: 'ו',
         clues: ['Ac15'],
         label: null
       },
       {
         id: 'H6',
-        letter: 'A',
+        letter: 'ק',
         clues: ['Ac15', 'Dn15'],
         label: 15
       },
@@ -557,7 +557,7 @@
       },
       {
         id: 'H8',
-        letter: 'A',
+        letter: 'ד',
         clues: ['Dn14'],
         label: null
       },
@@ -569,7 +569,7 @@
       },
       {
         id: 'H10',
-        letter: 'A',
+        letter: 'ז',
         clues: ['Dn11'],
         label: null
       },
@@ -581,14 +581,14 @@
       },
       {
         id: 'H12',
-        letter:'A',
+        letter:'ה',
         clues: ['Dn13'],
         label: null
       },
     // Row I
       {
         id: 'I1',
-        letter: 'A',
+        letter: 'י',
         clues: ['Dn17'],
         label: null
       },
@@ -606,7 +606,7 @@
       },
       {
         id: 'I4',
-        letter: 'A',
+        letter: 'פ',
         clues: ['Dn16'],
         label: null
       },
@@ -618,7 +618,7 @@
       },
       {
         id: 'I6',
-        letter: 'A',
+        letter: 'צ',
         clues: ['Dn15'],
         label: null
       },
@@ -630,7 +630,7 @@
       },
       {
         id: 'I8',
-        letter: 'A',
+        letter: 'א',
         clues: ['Dn14'],
         label: null
       },
@@ -642,7 +642,7 @@
       },
       {
         id: 'I10',
-        letter: 'A',
+        letter: 'ע',
         clues: ['Dn11'],
         label: null
       },
@@ -654,32 +654,32 @@
       },
       {
         id: 'I12',
-        letter: 'A',
+        letter: 'פ',
         clues: ['Dn13'],
         label: null
       },
     // Row J
       {
         id: 'J1',
-        letter: 'A',
+        letter: 'צ',
         clues: ['Ac19', 'Dn17'],
         label: null
       },
       {
         id: 'J2',
-        letter: 'A',
+        letter: 'א',
         clues: ['Ac19'],
         label: null
       },
       {
         id: 'J3',
-        letter: 'A',
+        letter: 'ו',
         clues: ['Ac19'],
         label: null
       },
       {
         id: 'J4',
-        letter: 'A',
+        letter: 'ס',
         clues: ['Ac19', 'Dn16'],
         label: 19
       },
@@ -691,51 +691,51 @@
       },
       {
         id: 'J6',
-        letter: 'A',
+        letter: 'ר',
         clues: ['Ac18', 'Dn15'],
         label: null
       },
       {
         id: 'J7',
-        letter: 'A',
+        letter: 'י',
         clues: ['Ac18'],
         label: null
       },
       {
         id: 'J8',
-        letter: 'A',
+        letter: 'מ',
         clues: ['Ac18', 'Dn14'],
         label: null
       },
       {
         id: 'J9',
-        letter: 'A',
+        letter: 'ז',
         clues: ['Ac18'],
         label: null
       },
       {
         id: 'J10',
-        letter: 'A',
+        letter: 'י',
         clues: ['Ac18', 'Dn11'],
         label: null
       },
       {
         id: 'J11',
-        letter: 'A',
+        letter: 'ב',
         clues: ['Ac18'],
         label: null
       },
       {
         id: 'J12',
-        letter: 'A',
+        letter: 'צ',
         clues: ['Ac18', 'Dn13'],
         label: 18
       },
     // Row K
       {
         id: 'K1',
-        letter: 'A',
-        clues: 'Dn17',
+        letter: 'מ',
+        clues: ['Dn17'],
         label: null
       },
       {
@@ -752,8 +752,8 @@
       },
       {
         id: 'K4',
-        letter: 'A',
-        clues: 'Dn16',
+        letter: 'י',
+        clues: ['Dn16'],
         label: null
       },
       {
@@ -764,7 +764,7 @@
       },
       {
         id: 'K6',
-        letter: 'A',
+        letter: 'ד',
         clues: ['Dn15'],
         label: null
       },
@@ -788,7 +788,7 @@
       },
       {
         id: 'K10',
-        letter: 'A',
+        letter: 'ר',
         clues: ['Dn11'],
         label: null
       },
@@ -800,50 +800,50 @@
       },
       {
         id: 'K12',
-        letter: 'A',
+        letter: 'י',
         clues: ['Dn13'],
         label: null
       },
     // Row L
       {
         id: 'L1',
-        letter: 'A',
+        letter: 'נ',
         clues: ['Ac21', 'Dn17'],
         label: null
       },
       {
         id: 'L2',
-        letter: 'A',
+        letter: 'י',
         clues: ['Ac21'],
         label: null
       },
       {
         id: 'L3',
-        letter: 'A',
+        letter: 'י',
         clues: ['Ac21'],
         label: null
       },
       {
         id: 'L4',
-        letter: 'A',
+        letter: 'ד',
         clues: ['Ac21', 'Dn16'],
         label: null
       },
       {
         id: 'L5',
-        letter: 'A',
+        letter: 'ה',
         clues: ['Ac21'],
         label: null
       },
       {
         id: 'L6',
-        letter:'A',
+        letter:'ש',
         clues: ['Ac21', 'Dn15'],
         label: null
       },
       {
         id: 'L7',
-        letter: 'A',
+        letter: 'מ',
         clues: ['Ac21'],
         label: 21
       },
@@ -855,25 +855,25 @@
       },
       {
         id: 'L9',
-        letter: 'A',
+        letter: 'י',
         clues: ['Ac20'],
         label: null
       },
       {
         id: 'L10',
-        letter: 'A',
+        letter: 'א',
         clues: ['Ac20', 'Dn11'],
         label: null
       },
       {
         id: 'L11',
-        letter: 'A',
+        letter: 'ב',
         clues: ['Ac20'],
         label: null
       },
       {
         id: 'L12',
-        letter: 'A',
+        letter: 'צ',
         clues: ['Ac20', 'Dn13'],
         label: 20
       },

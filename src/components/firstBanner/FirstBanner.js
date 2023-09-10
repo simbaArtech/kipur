@@ -11,19 +11,19 @@ const FirstTimeBanner = () => {
   const [showBanner, setShowBanner] = useState(true);
 
   useEffect(() => {
-    localStorage.setItem("firstTimeBannerDismissed", "false");
+    const hasClosedPopup = sessionStorage.getItem("firstTimeBannerDismissed");
+    if (hasClosedPopup === true) {
+      return;
+    }
+    return () => {
+      sessionStorage.setItem("firstTimeBannerDismissed", "false");
+    };
   }, []);
 
   const handleDismiss = () => {
     setShowBanner(false);
-    localStorage.setItem("firstTimeBannerDismissed", "true");
+    sessionStorage.setItem("firstTimeBannerDismissed", "true");
   };
-
-  const shouldShowBanner = localStorage.getItem("firstTimeBannerDismissed");
-
-  if (!shouldShowBanner) {
-    return null;
-  }
 
   return (
     <Wrapper style={{ display: showBanner ? "block" : "" }}>
