@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SortButtons from "../../components/SortButtons";
 import articlepic from "../../assets/pictures/cardImage.jpg";
+import Navbar from "../../components/navbar/Navbar";
 import {
   SemiTitle,
   ArticleDetailsContainer,
@@ -21,29 +22,31 @@ import {
 import Article from "../../components/article/Article";
 import { aritcles } from "../../components/article/consts";
 import { personalities } from "../people/consts";
+import items from "../../consts/const";
+import { usePage } from "../../context/PageContext";
 
 export default function ImagesAndEvents() {
   const [showCardO, setShowCardO] = useState(false);
   const [showCard, setShowCard] = useState(false);
   const [articleI, setArticleI] = useState();
-  const [selectedLabel, setSelectedLabel] = useState("לפני המלחמה");
+  const [pageLabel, setPageLabel] = useState("לפני המלחמה");
   const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "בעקבות המלחמה"];
 
   const [filteredArticles, setFilteredArticles] = useState(aritcles);
   const [filteredItems, setFilteredItems] = useState(personalities);
-
+  const [page, setPage] = usePage();
   useEffect(() => {
-    const filtered = aritcles.filter((item) => item.type === selectedLabel);
+    const filtered = aritcles.filter((item) => item.type === pageLabel);
     setFilteredArticles(filtered);
     const filteredPerson = personalities.filter(
-      (item) => item.type === selectedLabel
+      (item) => item.type === pageLabel
     );
     setFilteredItems(filteredPerson);
-  }, [selectedLabel]);
+  }, [pageLabel]);
 
   return (
     <>
-      <SortButtons labels={labels} setSelectedLabel={setSelectedLabel} />
+      <SortButtons labels={labels} setPageLabel={setPageLabel} />
       <>
         <TitleLabel>
           <SemiTitle>אישים</SemiTitle>
@@ -104,6 +107,7 @@ export default function ImagesAndEvents() {
           );
         })}
       </>
+      <Navbar items={items} page={page} setPage={setPage} />
     </>
   );
 }
