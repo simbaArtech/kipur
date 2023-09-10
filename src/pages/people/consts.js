@@ -8,7 +8,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/timeline31.png"),
     text: (
       <>
-        נפל בשבי המצרי 08/10/1973 ושוחרר ב13/11/1973
+        נפל בשבי המצרי בתאריך: 08/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 13/11/1973
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         היה קצין באוגדה 252 שבסיני, נשלח לתגבר תצפיות לאורך התעלה ימים לפני
@@ -25,7 +28,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת במוצב החרמון בתפקיד מודיעיני ונפל בשבי הסורי במלחמת יום הכיפורים
@@ -39,7 +45,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/10/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/10/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת במוצב החרמון 4 ימים לפני המלחמה, בתפקיד מודיעיני, לאחרונה כתב ספר
@@ -54,10 +63,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/naim.jpeg"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
         <br />
         <p style={{ marginTop: "0.5rem" }} />
-        שירת במוצב החרמון בתפקיד מש"ק קשר
+        שוחרר בתאריך: 06/08/1974 שירת במוצב החרמון בתפקיד מש"ק קשר
       </>
     ),
   },
@@ -68,7 +77,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/david.jpeg"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         היה בשבי במלחמת יום כיפור, שירת בתפקיד מודיעיני
@@ -82,7 +94,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת במוצב החרמון בתפקיד מודיעיני ונפל בשבי הסורי במלחמת יום הכיפורים
@@ -96,7 +111,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי המצרי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי המצרי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת כמש"ק מודיעין וסייר אוויר באוגדה 252 שבסיני. נשלח למוצב ליטוף אשר
@@ -111,7 +129,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         הגיע לשרת במוצב החרמון כמה שבועות לפני המלחמה בתפקיד מפעיל מערכות
@@ -126,7 +147,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/zoker.jpeg"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת במוצב החרמון בתפקיד מודיעיני ונפל בשבי הסורי במלחמה.
@@ -140,7 +164,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי המצרי 08/10/1973 ושוחרר 18/11/1973
+        נפל בשבי המצרי בתאריך: 08/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 18/11/1973
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת בתפקיד צלם ומש"ק מודיעין בפיקוד דרום ונפל בשבי במוצב מפצח אשר נכבש
@@ -155,7 +182,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/shimrih.jpeg"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת במוצב החרמון בתפקיד מודיעיני ונפל בשבי הסורי במלחמת יום הכיפורים
@@ -169,7 +199,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת במוצב החרמון בתפקיד מודיעיני ונפל בשבי
@@ -183,7 +216,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי המצרי 22/10/1973 ושוחרר 17/11/1974
+        נפל בשבי המצרי בתאריך: 22/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 17/11/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת בתפקיד מש"ק מודיעין וסייר אוויר, נפל בשבי המצרי. קיבל צל"ש ראש אמ"ן
@@ -198,7 +234,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         שירת במוצב החרמון בפקיד מפעיל מערכות מודיעין, שירת במוצב החרמון
@@ -213,7 +252,10 @@ export const warPrisoners = [
     pic: require("../../assets/pictures/unkown.png"),
     text: (
       <>
-        נפל בשבי הסורי 06/10/1973 ושוחרר 06/08/1974
+        נפל בשבי הסורי בתאריך: 06/10/1973
+        <br />
+        <p style={{ marginTop: "0.5rem" }} />
+        שוחרר בתאריך: 06/08/1974
         <br />
         <p style={{ marginTop: "0.5rem" }} />
         היה מש"ק מערך בפצ"ן, נפל בשבי הסורי במלחמת יום הכיפורים.
