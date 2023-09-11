@@ -24,7 +24,7 @@ export const ArticleContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 1rem;
-  padding: 7px 26px;
+  padding: 7px;
 `;
 export const ArticleTitle = styled.div`
   color: white;

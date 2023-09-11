@@ -17,9 +17,15 @@ import {
   SeeAll,
 } from "./peopleStyle";
 import Article from "../article/Article";
-import { warPrisoners, slainPeople } from "../people/consts";
+import consts from "../consts";
+import Footer from "../../components/footer/Footer";
+import Navbar from "../../components/navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 export default function People() {
+  const navigate = useNavigate();
+  const warPrisoners = consts.warPrisoners;
+  const slainPeople = consts.slainPeople;
   const [personI, setPersonI] = useState();
   const [showCardO, setShowCardO] = useState(false);
   const [showCardT, setShowCardT] = useState(false);
@@ -30,6 +36,7 @@ export default function People() {
     flexDirection: "row-reverse",
     textAlign: "center",
     color: "white",
+    marginBottom: "0.25rem",
     fontWeight: "bold",
     justifyContent: "flex-start",
     fontSize: "1rem",
@@ -75,7 +82,7 @@ export default function People() {
           style={!showWar ? selectedStyle : unselectedStyle}
           onClick={() => setShowWar((prevState) => !prevState)}
         >
-          {!showWar ? "חללי מלחמה" : "חללים"}
+          {!showWar ? "חללי המלחמה" : "חללים"}
         </SemiTitle>
       </div>
       {showWar &&
@@ -83,8 +90,7 @@ export default function People() {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <ArticleContainer
               onClick={() => {
-                setShowCardO(true);
-                setPersonI(prisoner);
+                navigate(`/article/${prisoner.id}/warPrisoners`);
               }}
             >
               <ArticlePic
@@ -101,14 +107,12 @@ export default function People() {
             </ArticleContainer>
           </div>
         ))}
-      {showCardO && <Article setShowCard={setShowCardO} article={personI} />}
       {!showWar &&
         slainPeople.map((person) => (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <ArticleContainer
               onClick={() => {
-                setShowCardT(true);
-                setPersonI(person);
+                navigate(`/article/${person.id}/slainPeople`);
               }}
             >
               <ArticlePic src={person.pic} />
@@ -122,7 +126,8 @@ export default function People() {
             </ArticleContainer>
           </div>
         ))}
-      {showCardT && <Article setShowCard={setShowCardT} article={personI} />}
+      {!showCardT && !showCardO ? <Navbar selected="people" /> : null}
+      <Footer />
     </>
   );
 }

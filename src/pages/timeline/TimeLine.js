@@ -10,12 +10,14 @@ import {
   TextImageSelected,
   DarkOnImage,
 } from "./TimeLineStyles";
-import { data } from "./consts";
-import Article from "../timeline/article/Article";
+import consts from "../consts";
+import Navbar from "../../components/navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 export default function TimeLine() {
+  const navigate = useNavigate();
+  const data = consts.timeLine;
   const [selectedItem, setSelectedItem] = useState(0);
-  const [article, setArticle] = useState();
   const [showDesc, setShowDesc] = useState(false);
   const imageRef = useRef(null);
 
@@ -39,8 +41,7 @@ export default function TimeLine() {
               style={{ position: "relative" }}
               onClick={() => {
                 if (index === selectedItem) {
-                  setShowDesc(true);
-                  setArticle(item);
+                  navigate(`/article/${item.id}/timeLine`);
                 }
               }}
             >
@@ -50,7 +51,7 @@ export default function TimeLine() {
                 isSelected={index === selectedItem}
                 ref={imageRef}
               />
-              {index !== 41 && index !== 42 ? (
+              {!item.clear ? (
                 <DarkOnImage
                   src={require("../../assets/pictures/forTimeline.png")}
                   isSelected={index === selectedItem}
@@ -85,7 +86,7 @@ export default function TimeLine() {
           ))}
         </StyledCarousel>
       </Container>
-      {showDesc && <Article setShowCard={setShowDesc} article={article} />}
+      <Navbar selected="timeline" />
     </>
   );
 }

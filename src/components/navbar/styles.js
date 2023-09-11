@@ -13,4 +13,5 @@ export const Wrapper = styled.div`
   justify-content: space-around;
   flex-direction: row-reverse;
   font-size: 0.85rem;
+  z-index: 10;
 `;

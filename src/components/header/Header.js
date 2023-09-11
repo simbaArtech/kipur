@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <Container>
-        <Title>אמ"ן במלחמת יום הכיפורים</Title>
+        <Title>פורטל אמ"ן במלחמת יום הכיפורים</Title>
         <Logo src={logo} />
       </Container>
     </>

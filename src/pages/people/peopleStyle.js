@@ -36,6 +36,7 @@ export const PersonalitiesContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   overflow-y: hidden;
+  margin-right: -0.5rem;
 `;
 
 export const SeeAll = styled.div`
