@@ -25,12 +25,14 @@ const videos = [
     type: "7 דקות",
     title: `אמ"ן במנהרת הזמן`,
     src: "https://www.youtube.com/watch?v=65mZD9XQNOg",
+    pic: require("../../assets/pictures/סרטון 2.jpeg"),
   },
   {
     article: false,
     type: "6 דקות",
     title: `לקחים בעקבות מלחמת יום הכיפורים`,
     src: "https://www.youtube.com/watch?v=P-1SJt25jWs",
+    pic: require("../../assets/pictures/סרטון 1.jpeg"),
   },
 ];
 
@@ -39,6 +41,7 @@ export default function Recommended() {
   const [showCard, setShowCard] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
   const [showFullScreen, setShowFullScreen] = useState(false);
+  const [showBanner, setShowBanner] = useState(false);
   const [articles, setArticles] = useState(
     getRandomArticles(consts.aritcles, 5)
   );
@@ -50,7 +53,20 @@ export default function Recommended() {
 
   return (
     <>
-      <Carousel />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+          paddingTop: "1rem",
+        }}
+      >
+        <img
+          onClick={() => setShowBanner(true)}
+          src={require("../../assets/pictures/kelim.png")}
+          style={{ borderRadius: "1rem", width: "340px", height: "auto" }}
+        />
+      </div>
       {/* <SemiTitle>סרטונים מומלצים</SemiTitle>
       {videos.map((article) => {
         return (
@@ -136,6 +152,7 @@ export default function Recommended() {
         );
       })}
       <Footer />
+      {showBanner && <SecBanner setShowPopUp={setShowCard} />}
       {!showCard ? <Navbar selected="recommended" /> : null}
     </>
   );
