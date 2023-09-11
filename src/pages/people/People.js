@@ -76,7 +76,7 @@ export default function People() {
           style={!showWar ? selectedStyle : unselectedStyle}
           onClick={() => setShowWar((prevState) => !prevState)}
         >
-          {!showWar ? "חללי מלחמה" : "חללים"}
+          {!showWar ? "חללי המלחמה" : "חללים"}
         </SemiTitle>
       </div>
       {showWar &&
