@@ -1,27 +1,11 @@
 self.__precacheManifest = [
   {
-<<<<<<<< HEAD:build/precache-manifest.8fd64a419fd1b69d75a0513bd85cebd1.js
-    "revision": "e8c596302d292b9249fe",
-    "url": "/kipur/static/css/main.19b0ad7a.chunk.css"
-  },
-  {
-    "revision": "e8c596302d292b9249fe",
-    "url": "/kipur/static/js/main.e8c59630.chunk.js"
-  },
-  {
-    "revision": "485905692824facbcab8",
-    "url": "/kipur/static/css/1.698e72c7.chunk.css"
-  },
-  {
-    "revision": "485905692824facbcab8",
-    "url": "/kipur/static/js/1.48590569.chunk.js"
-========
-    "revision": "db969c6ae98a251a6d81",
+    "revision": "3f39fd01a266a8ac092d",
     "url": "/kipur/static/css/main.a8589ede.chunk.css"
   },
   {
-    "revision": "db969c6ae98a251a6d81",
-    "url": "/kipur/static/js/main.db969c6a.chunk.js"
+    "revision": "3f39fd01a266a8ac092d",
+    "url": "/kipur/static/js/main.3f39fd01.chunk.js"
   },
   {
     "revision": "ca2eca735c4fec9016b6",
@@ -30,20 +14,14 @@ self.__precacheManifest = [
   {
     "revision": "ca2eca735c4fec9016b6",
     "url": "/kipur/static/js/1.ca2eca73.chunk.js"
->>>>>>>> b3188f9a9e852868d816171fa4470fc13aa516bb:build/precache-manifest.ed01038e997d1ec8fa921cb59a045176.js
   },
   {
     "revision": "a7ce45f57019b886a042",
     "url": "/kipur/static/js/runtime~main.a7ce45f5.js"
   },
   {
-<<<<<<<< HEAD:build/precache-manifest.8fd64a419fd1b69d75a0513bd85cebd1.js
-    "revision": "fea3e17284b170eb57beaab7826b6e24",
-    "url": "/kipur/static/media/logo.fea3e172.webp"
-========
     "revision": "9d05be2cab8d4fda582c5c92728e82c5",
     "url": "/kipur/static/media/unknown.9d05be2c.svg"
->>>>>>>> b3188f9a9e852868d816171fa4470fc13aa516bb:build/precache-manifest.ed01038e997d1ec8fa921cb59a045176.js
   },
   {
     "revision": "ac2d0bc05777b29468d68b3551ecd560",
@@ -570,51 +548,7 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/tap.1993dcf5.svg"
   },
   {
-<<<<<<<< HEAD:build/precache-manifest.8fd64a419fd1b69d75a0513bd85cebd1.js
-    "revision": "ac5456406abc29110fd1fd86649fddae",
-    "url": "/kipur/static/media/home.ac545640.svg"
-  },
-  {
-    "revision": "a7b8d59eb3cc0bd76e24f4506fb6e20f",
-    "url": "/kipur/static/media/homeSel.a7b8d59e.svg"
-  },
-  {
-    "revision": "946b4d41b125102b69ddf450f515e9ae",
-    "url": "/kipur/static/media/storySel.946b4d41.svg"
-  },
-  {
-    "revision": "7ce7e113e7ee5b5b083bce10dc60777d",
-    "url": "/kipur/static/media/story.7ce7e113.svg"
-  },
-  {
-    "revision": "338159b0f874485e2240e82269230f05",
-    "url": "/kipur/static/media/timelineSel.338159b0.svg"
-  },
-  {
-    "revision": "5fbbc7fc5c8212f64cec88faf965c481",
-    "url": "/kipur/static/media/timeline.5fbbc7fc.svg"
-  },
-  {
-    "revision": "8d9e4f808332bf15f8840d89dbd4c6ba",
-    "url": "/kipur/static/media/people.8d9e4f80.svg"
-  },
-  {
-    "revision": "26ea136285ab403a45df3a14cec79a55",
-    "url": "/kipur/static/media/peopleSel.26ea1362.svg"
-  },
-  {
-    "revision": "e20a011365390f3523ab0298a94e859d",
-    "url": "/kipur/static/media/crosswordSel.e20a0113.svg"
-  },
-  {
-    "revision": "868308c65583ff39545ae91d788e5192",
-    "url": "/kipur/static/media/crossword.868308c6.svg"
-  },
-  {
-    "revision": "db11b479e75610af4a591a27cca4520b",
-========
-    "revision": "145f758de7bb87d17ef8611854a263a1",
->>>>>>>> b3188f9a9e852868d816171fa4470fc13aa516bb:build/precache-manifest.ed01038e997d1ec8fa921cb59a045176.js
+    "revision": "c6b677edcd5e141062232cbb5afb6d9b",
     "url": "/kipur/index.html"
   }
 ];

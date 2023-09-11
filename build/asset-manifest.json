@@ -1,7 +1,7 @@
 {
   "main.css": "/kipur/static/css/main.a8589ede.chunk.css",
-  "main.js": "/kipur/static/js/main.db969c6a.chunk.js",
-  "main.js.map": "/kipur/static/js/main.db969c6a.chunk.js.map",
+  "main.js": "/kipur/static/js/main.3f39fd01.chunk.js",
+  "main.js.map": "/kipur/static/js/main.3f39fd01.chunk.js.map",
   "static/css/1.b028d1f9.chunk.css": "/kipur/static/css/1.b028d1f9.chunk.css",
   "static/js/1.ca2eca73.chunk.js": "/kipur/static/js/1.ca2eca73.chunk.js",
   "static/js/1.ca2eca73.chunk.js.map": "/kipur/static/js/1.ca2eca73.chunk.js.map",
@@ -139,26 +139,9 @@
   "static/media/kelim.png": "/kipur/static/media/kelim.1d92c961.png",
   "static/media/forTimeline.png": "/kipur/static/media/forTimeline.7c7d03a2.png",
   "static/media/tap.svg": "/kipur/static/media/tap.1993dcf5.svg",
-<<<<<<< HEAD
-  "static/media/home.svg": "/kipur/static/media/home.ac545640.svg",
-  "static/media/homeSel.svg": "/kipur/static/media/homeSel.a7b8d59e.svg",
-  "static/media/storySel.svg": "/kipur/static/media/storySel.946b4d41.svg",
-  "static/media/story.svg": "/kipur/static/media/story.7ce7e113.svg",
-  "static/media/timelineSel.svg": "/kipur/static/media/timelineSel.338159b0.svg",
-  "static/media/timeline.svg": "/kipur/static/media/timeline.5fbbc7fc.svg",
-  "static/media/people.svg": "/kipur/static/media/people.8d9e4f80.svg",
-  "static/media/peopleSel.svg": "/kipur/static/media/peopleSel.26ea1362.svg",
-  "static/media/crosswordSel.svg": "/kipur/static/media/crosswordSel.e20a0113.svg",
-  "static/media/crossword.svg": "/kipur/static/media/crossword.868308c6.svg",
-  "static/css/main.19b0ad7a.chunk.css.map": "/kipur/static/css/main.19b0ad7a.chunk.css.map",
-  "static/css/1.698e72c7.chunk.css.map": "/kipur/static/css/1.698e72c7.chunk.css.map",
-  "index.html": "/kipur/index.html",
-  "precache-manifest.8fd64a419fd1b69d75a0513bd85cebd1.js": "/kipur/precache-manifest.8fd64a419fd1b69d75a0513bd85cebd1.js",
-=======
   "static/css/main.a8589ede.chunk.css.map": "/kipur/static/css/main.a8589ede.chunk.css.map",
   "static/css/1.b028d1f9.chunk.css.map": "/kipur/static/css/1.b028d1f9.chunk.css.map",
   "index.html": "/kipur/index.html",
-  "precache-manifest.ed01038e997d1ec8fa921cb59a045176.js": "/kipur/precache-manifest.ed01038e997d1ec8fa921cb59a045176.js",
->>>>>>> b3188f9a9e852868d816171fa4470fc13aa516bb
+  "precache-manifest.a9672574523059e58c52a6d36ea9882b.js": "/kipur/precache-manifest.a9672574523059e58c52a6d36ea9882b.js",
   "service-worker.js": "/kipur/service-worker.js"
 }

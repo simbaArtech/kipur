@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/Home";
 import TimeLine from "./pages/timeline/TimeLine";
@@ -21,7 +21,7 @@ function App() {
           paddingBottom: "5rem",
         }}
       >
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route index element={<Home />} />
             <Route path="/home" element={<Home />} />
@@ -32,7 +32,7 @@ function App() {
             <Route path="/article/:id/:type" element={<Article />} />
             <Route path="/game" element={<Game />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     </>
   );

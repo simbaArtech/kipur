@@ -81,7 +81,7 @@ export default function Recommended() {
       {videos.map((video) => {
         return (
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <a href={video.src}>
+            <a style={{ textDecoration: "none" }} href={video.src}>
               <ArticleContainer>
                 {video.pic ? (
                   <ArticlePic src={video.pic} />
