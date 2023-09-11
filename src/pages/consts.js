@@ -6,7 +6,7 @@ const consts = {
       type: "לפני המלחמה",
       title: `ניצני הקונספציה בתקופתו של ראש אמ"ן אהרון יריב`,
       miniTitle: `"אהרל'ה היה מגיע כנראה לאותה מסקנה, אך מציגה אחרת"`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 0,
       text: (
         <>
           תיאור הקונספציה טרם פרוץ מלחמת יום הכיפורים בדרך כלל העמיד במרכז השיח
@@ -60,7 +60,7 @@ const consts = {
       type: "לפני המלחמה",
       title: `כוננות כחול-לבן`,
       miniTitle: `המלחמה שלא באה (עדיין..)`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 1,
       text: (
         <>
           'שם קוד' לצעדי כוננות שננקטו בין אפריל לאוגוסט 1973. הכוננות הוכרזה
@@ -107,7 +107,7 @@ const consts = {
       type: "לפני המלחמה",
       title: `"הצריחים הגבוהים" – תוכנית המלחמה המצרית`,
       miniTitle: `כיבוש רצועה צרה בשטח הישראלי להנעת תהליך מדיני`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 2,
       text: (
         <>
           תוכנית ההתקפה המקורית של הצבא המצרי ("גרניט 2") הייתה כיבוש סיני לעומק
@@ -151,7 +151,7 @@ const consts = {
       type: "לפני המלחמה",
       title: `שיחות קיסינג'ר-איסמעיל`,
       miniTitle: `תהליך שיחות השלום שלא הבשיל`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 3,
       text: (
         <>
           ממשלת גולדה מאיר הצהירה לאורך כל שנות כהונתה בדבר רצונה לכינון הסכם
@@ -187,7 +187,7 @@ const consts = {
       type: `ערב המלחמה`,
       title: `פגישת גולדה – חוסיין`,
       miniTitle: `ההתרעה של המלך שנדחתה על הסף`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 4,
       text: (
         <>
           ב-25 בספטמבר 1973 בשעות הערב, התקיים מפגש בין רוה"מ גולדה מאיר ומלך
@@ -224,7 +224,7 @@ const consts = {
       type: `ערב המלחמה`,
       title: `חקירת קציני המודיעין המצריים (5 באוקטובר)`,
       miniTitle: `"סמכו עלינו, מחר תהיה מלחמה"`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 5,
       text: (
         <>
           מאז סיומה של מלחמת ששת הימים חדרו חוליות מצריות רבות לסיני וחלקן
@@ -277,7 +277,7 @@ const consts = {
     {
       article: true,
       type: `ערב המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 6,
       title: `מספן המודיעין בחיל הים במלחמת יום הכיפורים`,
       text: (
         <>
@@ -337,7 +337,7 @@ const consts = {
       pic: require("../assets/pictures/hailyam.jpeg"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 7,
       article: true,
       miniTitle: `אמצעי ההתרעה שלא התריע`,
       type: `ערב המלחמה`,
@@ -373,7 +373,7 @@ const consts = {
       article: true,
       miniTitle: `פינוי משפחות המומחים הסובייטים מסוריה שהיה אמור להדליק נורה אדומה`,
       type: `ערב המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 8,
       title: `ידיעת הזהב`,
       text: (
         <>
@@ -412,7 +412,7 @@ const consts = {
       miniTitle: `בכיר מקורות היומינט של ישראל במצרים בכל הזמנים`,
       type: `ערב המלחמה`,
       title: `אשרף מרואן`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 9,
       text: (
         <>
           אשרף מרואן, סוכן בכיר שהופעל על ידי המוסד וכונה "המלאך", היה בין
@@ -462,7 +462,7 @@ const consts = {
       miniTitle: `המסמך שהכשיל`,
       type: `ערב המלחמה`,
       title: `'לקט סעיף 40'`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 10,
       text: (
         <>
           "המסמך האחרון" הינו לקט מודיעין שיצא ממחלקת המחקר של אמ"ן ב-5 באוקטובר
@@ -512,7 +512,7 @@ const consts = {
       miniTitle: `תרגיל ההונאה הגדול של המצרים`,
       type: `ערב המלחמה`,
       title: `"תחריר 41"`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 11,
       text: (
         <>
           ביום פתיחת מלחמת יום הכיפורים, ב-6 באוקטובר 1973, בשעות הצהריים מספר
@@ -562,7 +562,7 @@ const consts = {
       article: true,
       type: `מהלך המלחמה`,
       title: `הפתעת הסאגרים`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 12,
       text: (
         <>
           הטנקיסטים במלחמת יום הכיפורים שנעו בסיני לא היו מודעים כלל להימצאות
@@ -589,7 +589,7 @@ const consts = {
     {
       article: true,
       type: `מהלך המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 13,
       title: `בסיס אום חשיבה`,
       text: (
         <>
@@ -641,7 +641,7 @@ const consts = {
     {
       article: true,
       type: `בעקבות המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 14,
       miniTitle: `'פרקליט השטן' אל מול המחקר הצבאי באמ"ן`,
       title: `מחלקת הבקרה באמ"ן`,
       text: (
@@ -686,7 +686,7 @@ const consts = {
     {
       article: true,
       type: `בעקבות המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 15,
       miniTitle: ``,
       title: `הלחץ הציבורי והרקע להקמת ועדת אגרנט`,
       text: (
@@ -745,7 +745,7 @@ const consts = {
   warPrisoners: [
     {
       article: false,
-      id: Math.floor(Math.random() * (10000 + 1)),
+      id: 0,
       name: 'רס"ן אבי וייס',
       unit: "חיל המודיעין, 8200",
       pic: require("../assets/pictures/timeline31.png"),
@@ -767,7 +767,7 @@ const consts = {
     {
       article: false,
       name: "סמל נחום גדעון",
-      id: Math.floor(Math.random() * (10000 + 1)),
+      id: 1,
       unit: "חיל המודיעין, 8200",
       pic: require("../assets/pictures/unknown.svg"),
       text: (
@@ -786,7 +786,7 @@ const consts = {
       article: false,
       name: "סמל זינגר אפרים",
       unit: "חיל המודיעין, 8200",
-      id: Math.floor(Math.random() * (10000 + 1)),
+      id: 2,
       pic: require("../assets/pictures/unknown.svg"),
       text: (
         <>
@@ -805,7 +805,7 @@ const consts = {
       article: false,
       name: "סמל יעקב נעים ",
       unit: "חיל המודיעין, 8200",
-      id: Math.floor(Math.random() * (10000 + 1)),
+      id: 2,
       pic: require("../assets/pictures/naim.jpeg"),
       text: (
         <>
@@ -819,7 +819,7 @@ const consts = {
     {
       article: false,
       name: 'רס"ר ליבוביץ דוד',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 3,
       unit: "חיל המודיעין, 8200",
       pic: require("../assets/pictures/unknown.svg"),
       text: (
@@ -838,7 +838,7 @@ const consts = {
       article: false,
       name: 'רס"ל מנחם (מוסא) משה',
       unit: "חיל המודיעין, 8200",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 4,
       pic: require("../assets/pictures/unknown.svg"),
       text: (
         <>
@@ -856,7 +856,7 @@ const consts = {
       article: false,
       name: 'רס"ל מרקוס גיורא',
       unit: 'חיל המודיעין, מוד"ש - אוגדה 252',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 5,
       pic: require("../assets/pictures/unknown.svg"),
       text: (
         <>
@@ -875,7 +875,7 @@ const consts = {
       article: false,
       name: "סמל פרגל ברוך",
       unit: "חיל המודיעין, 8200",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 6,
       pic: require("../assets/pictures/unknown.svg"),
       text: (
         <>
@@ -894,7 +894,7 @@ const consts = {
       article: false,
       name: "סמל צוקר אבי",
       unit: "חיל המודיעין, 8200",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 7,
       pic: require("../assets/pictures/zoker.jpeg"),
       text: (
         <>
@@ -911,7 +911,7 @@ const consts = {
     {
       article: false,
       name: 'רס"ל קורצוויל אמנון',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 8,
       unit: 'חיל המודיעין, פד"ם',
       pic: require("../assets/pictures/unknown.svg"),
       text: (
@@ -929,7 +929,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 9,
       name: 'סמ"ר שמריך/צמריק משה/מוסא',
       unit: "חיל המודיעין, 8200",
       pic: require("../assets/pictures/shimrih.jpeg"),
@@ -947,7 +947,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 10,
       name: `סגן לוינגר עמוס`,
       unit: "חיל המודיעין, 8200",
       pic: require("../assets/pictures/unknown.svg"),
@@ -965,7 +965,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 11,
       name: `רס"ן קרן עופר`,
       unit: `חיל המודיעין, מוד"ש, חטמ"ר שלמה`,
       pic: require("../assets/pictures/unknown.svg"),
@@ -985,7 +985,7 @@ const consts = {
     {
       article: false,
       name: `רס"ל לב-רן אהוד`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 12,
       unit: `חיל המודיעין, 8200`,
       pic: require("../assets/pictures/unknown.svg"),
       text: (
@@ -1003,7 +1003,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 13,
       name: `סמל תור יוסף`,
       unit: `חיל המודיעין,מוד"ש פצ"ן`,
       pic: require("../assets/pictures/unknown.svg"),
@@ -1025,7 +1025,7 @@ const consts = {
       article: false,
       type: `ערב המלחמה`,
       name: "אביעזר יערי",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 0,
       miniTitle: `ננזף על כך שפעל באחריות ואומץ לב מקצועי`,
       pic: require("../assets/pictures/aviazar.png"),
       text: (
@@ -1086,7 +1086,7 @@ const consts = {
     {
       article: false,
       name: "אילן סהר",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 1,
       miniTitle: "האיש שהכיר את הגולן כמו את כף ידו",
       pic: require("../assets/pictures/ilan.png"),
       type: `מהלך המלחמה`,
@@ -1149,7 +1149,7 @@ const consts = {
       article: false,
       name: "אריה מורג",
       type: `ערב המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 2,
       miniTitle: `"צ'אצ', המטה הכללי איתן בדעתו שמה שאתם מדווחים עליו זה תרגיל"`,
       pic: require("../assets/pictures/aria.png"),
       text: (
@@ -1191,7 +1191,7 @@ const consts = {
       article: false,
       name: "יואל בן פורת",
       type: `ערב המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 3,
       miniTitle: `"גולדה, סמכי על 8200"`,
       pic: require("../assets/pictures/yoel.png"),
       text: (
@@ -1268,7 +1268,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 4,
       name: "יוסי לנגוצקי",
       miniTitle: `האיש עם "האמצעים המיוחדים"`,
       type: `לפני המלחמה`,
@@ -1314,7 +1314,7 @@ const consts = {
       article: false,
       name: "משה צוריך",
       type: `מהלך המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 5,
       miniTitle: `היחיד שנשאר בחיים מקבוצת הפיקוד הבכירה של חטיבת הבלימה ברמת הגולן`,
       pic: require("../assets/pictures/moshe.png"),
       text: (
@@ -1361,7 +1361,7 @@ const consts = {
       name: "צבי זמיר",
       miniTitle: `הביא את הבשורה ששברה את הקונספציה`,
       type: `ערב המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 6,
       pic: require("../assets/pictures/zvi.jpg"),
       text: (
         <>
@@ -1419,7 +1419,7 @@ const consts = {
       article: false,
       name: "אשר סדן",
       type: `מהלך המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 7,
       miniTitle: `יום הולדת עצוב על פסגת החרמונית`,
       pic: require("../assets/pictures/asher.png"),
       text: (
@@ -1481,7 +1481,7 @@ const consts = {
       pic: require("../assets/pictures/albert.jpg"),
       miniTitle: `האיש שידע שתהיה מלחמה`,
       type: `ערב המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 8,
       text: (
         <>
           אלברט סודאי נולד בשנת 1931 למשפחה מבוססת בבגדאד, שם גדל. כאשר עלה לארץ
@@ -1552,7 +1552,7 @@ const consts = {
       article: false,
       name: "סימן טוב בנימין",
       type: `ערב המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 9,
       miniTitle: `"היה היחיד בכל אמ"ן שקם ודפק על השולחן ולא חשש מהממונים עליו"`,
       pic: require("../assets/pictures/binyamin.webp"),
       text: (
@@ -1598,7 +1598,7 @@ const consts = {
       article: false,
       type: `ערב המלחמה`,
       name: "דוד גדליה",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 10,
       miniTitle: `קמ"ן הפיקוד שלא ראה את הבאות`,
       pic: require("../assets/pictures/gurion.jpg"),
       text: (
@@ -1644,7 +1644,7 @@ const consts = {
     {
       article: false,
       name: "יהודה שפר",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 11,
       type: `מהלך המלחמה`,
       miniTitle: `סייר מודיעין צונח מעל סיני`,
       pic: require("../assets/pictures/yehoda.png"),
@@ -1701,7 +1701,7 @@ const consts = {
     {
       article: false,
       type: `לפני המלחמה`,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 12,
       name: "אהרן יריב",
       pic: require("../assets/pictures/ahronesh.jpg"),
       text: (
@@ -1769,7 +1769,7 @@ const consts = {
       article: false,
       type: `ערב המלחמה`,
       name: "עמוס גלבוע",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 13,
       miniTitle: `הוזהר שיוצא מהדיון רגע לפני תחילת המלחמה רק כי "העז" לחלוק על הקונספציה`,
       pic: require("../assets/pictures/amos.png"),
       text: (
@@ -1829,7 +1829,7 @@ const consts = {
       article: false,
       type: `בעקבות המלחמה`,
       name: "אבי וייס",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 14,
       miniTitle: `הפצוע הראשון בסיני, אחד מאנשינו בשבי המצרי`,
       pic: require("../assets/pictures/timeline31.png"),
       text: (
@@ -1877,7 +1877,7 @@ const consts = {
       article: false,
       name: 'סרן גדעון אבידב ז"ל',
       years: "1952-1973",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 0,
       unit: 'חיל המודיעין, סיירת מטכ"ל',
       pic: require("../assets/pictures/aviv.png"),
       text: (
@@ -1913,7 +1913,7 @@ const consts = {
     {
       article: false,
       name: 'סרן בידץ שלמה ז"ל',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 1,
       years: "1952-1973",
       unit: 'חיל המודיעין, סיירת מטכ"ל',
       pic: require("../assets/pictures/shlomo.png"),
@@ -1949,7 +1949,7 @@ const consts = {
       article: false,
       name: 'סרן בן-חורין עמית ז"ל',
       years: "1947-1973",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 2,
       unit: 'חיל המודיעין, סיירת מטכ"ל',
       pic: require("../assets/pictures/amit.png"),
       text: (
@@ -1989,7 +1989,7 @@ const consts = {
       name: 'סרן בר-לב רפאל (רפי) ז"ל',
       years: "1947-1973",
       unit: 'חיל המודיעין, סיירת מטכ"ל',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 3,
       pic: require("../assets/pictures/barlev.png"),
       text: (
         <>
@@ -2030,7 +2030,7 @@ const consts = {
       name: 'סמ"ר חבר יהודה (אודי) ז"ל',
       years: "1949-1973",
       unit: 'חיל המודיעין, סיירת מטכ"ל',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 4,
       pic: require("../assets/pictures/haver.png"),
       text: (
         <>
@@ -2068,7 +2068,7 @@ const consts = {
       article: false,
       name: 'סמ"ר לוביא (מהלל) יהודה (יוסי) ז"ל',
       years: "1940-1973",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 5,
       unit: 'חיל המודיעין, סיירת מטכ"ל',
       pic: require("../assets/pictures/lovi.png"),
       text: (
@@ -2109,7 +2109,7 @@ const consts = {
       article: false,
       name: 'סמ"ר מדר אחיהוד (אחי) ז"ל',
       years: "1944-1973",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 6,
       unit: 'חיל המודיעין, סיירת מטכ"ל',
       pic: require("../assets/pictures/madar.png"),
       text: (
@@ -2147,7 +2147,7 @@ const consts = {
     {
       article: false,
       name: 'רב סרן נחמני אמתי ז"ל',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 7,
       years: "1947-1973",
       unit: 'חיל המודיעין, סיירת מטכ"ל',
       pic: require("../assets/pictures/nahmani.png"),
@@ -2185,7 +2185,7 @@ const consts = {
     {
       article: false,
       name: 'סמ"ר צור (צוקרמן) ברוך ז"ל',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 8,
       years: "1946-1973",
       unit: 'חיל המודיעין, סיירת מטכ"ל',
       pic: require("../assets/pictures/zor.png"),
@@ -2220,7 +2220,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 9,
       name: 'סמ"ר קין גדעון (גידי) ז"ל',
       years: "1946-1973",
       unit: 'חיל המודיעין, סיירת מטכ"ל',
@@ -2258,7 +2258,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 10,
       name: 'סמ"ר רון אבנר ז"ל',
       years: "1951-1973",
       unit: 'חיל המודיעין, סיירת מטכ"ל',
@@ -2296,7 +2296,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 11,
       name: 'סמ"ר שחם שי ז"ל',
       years: "1952-1973",
       unit: 'חיל המודיעין, סיירת מטכ"ל',
@@ -2332,7 +2332,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 12,
       name: 'סרן אתיאל (אתקין) דוד ז"ל',
       years: "1931-1973",
       unit: "חיל המודיעין, 504",
@@ -2370,7 +2370,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 13,
       name: 'סרן מנדלסון ישראל ז"ל',
       years: "1948-1973",
       unit: "חיל המודיעין, 504",
@@ -2411,7 +2411,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 14,
       name: 'סרן עדינו (שרעבי) משה ז"ל',
       years: "1946-1973",
       unit: "חיל המודיעין, 504",
@@ -2450,7 +2450,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 15,
       name: 'סרן שטנדר זאב ז"ל',
       years: "1946-1973",
       unit: "חיל המודיעין, 504",
@@ -2490,7 +2490,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 16,
       name: 'רב סרן היימן יהונתן ז"ל',
       years: "1932-1973",
       unit: "חיל המודיעין, 81",
@@ -2534,7 +2534,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 17,
       name: 'סמ"ר אבינועם חיים ז"ל',
       years: "1953-1973",
       unit: "חיל המודיעין, 8200",
@@ -2569,7 +2569,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 18,
       name: 'סמל אקסלרד אלפרד ז"ל',
       years: "1953-1973",
       unit: "חיל המודיעין, 8200",
@@ -2610,7 +2610,7 @@ const consts = {
     {
       article: false,
       name: 'סרן בן-צבי אבישי ז"ל',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 19,
       years: "1949-1973",
       unit: "חיל המודיעין, 8200",
       pic: require("../assets/pictures/avishai.png"),
@@ -2650,7 +2650,7 @@ const consts = {
     {
       article: false,
       name: 'סמל גרינברג נתן ז"ל',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 20,
       years: "1947-1973",
       unit: "חיל המודיעין, 8200",
       pic: require("../assets/pictures/grinberg.png"),
@@ -2680,7 +2680,7 @@ const consts = {
     {
       article: false,
       name: 'סמ"ר דוידיאן פרץ ז"ל',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 21,
       years: "1941-1973",
       unit: "חיל המודיעין, 8200",
       pic: require("../assets/pictures/pertz.png"),
@@ -2717,7 +2717,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 22,
       name: 'סגן אלוף יזהר ישי (יבזורי) ז"ל',
       years: "1937-1973",
       unit: "חיל המודיעין, 8200",
@@ -2766,7 +2766,7 @@ const consts = {
       article: false,
       name: 'רב"ט אגמון אורי ז"ל',
       years: "1953-1973",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 23,
       unit: 'חיל המודיעין, פד"ם',
       pic: require("../assets/pictures/ori.png"),
       text: (
@@ -2798,7 +2798,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 24,
       name: 'סמל בן יצחק מרדכי (מוטי) ז"ל',
       years: "1954-1973",
       unit: 'חיל המודיעין, פד"ם',
@@ -2833,7 +2833,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 25,
       name: 'סרן גורן (הויברגר) צבי ז"ל',
       years: "1946-1973",
       unit: 'חיל המודיעין, פד"ם',
@@ -2873,7 +2873,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 26,
       name: 'סמל קדוש מאיר ז"ל',
       years: "1950-1973",
       unit: 'חיל המודיעין, פד"ם',
@@ -2908,7 +2908,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 27,
       name: 'רב סמל שפירא אדריאן-יוסף ז"ל',
       years: "1952-1973",
       unit: 'חיל המודיעין, פד"ם',
@@ -2943,7 +2943,7 @@ const consts = {
     {
       article: false,
       name: 'סמ"ר אגסי אליהו ז"ל',
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 28,
       years: "1952-1973",
       unit: 'חיל המודיעין, פצ"ן',
       pic: require("../assets/pictures/agasi.png"),
@@ -2977,7 +2977,7 @@ const consts = {
     },
     {
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 29,
       name: 'סגן דביר דב ז"ל',
       years: "1949-1973",
       unit: 'חיל המודיעין, פצ"ן',
@@ -3051,7 +3051,7 @@ const consts = {
       article: false,
       name: 'סמ"ר סמואל בנימין ז"ל',
       years: "1936-1973",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 30,
       unit: 'חיל המודיעין, פצ"ן',
       pic: require("../assets/pictures/samuel.png"),
     },
@@ -3114,7 +3114,7 @@ const consts = {
         </>
       ),
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 31,
       name: 'רב סרן סלוצקי זאב עמית ז"ל',
       years: "1927-1973",
       unit: 'חיל המודיעין, פצ"ן',
@@ -3154,7 +3154,7 @@ const consts = {
         </>
       ),
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 32,
       name: 'סגן פלטי שי ז"ל',
       years: "1952-1973",
       unit: 'חיל המודיעין, פצ"ן',
@@ -3204,7 +3204,7 @@ const consts = {
         </>
       ),
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 33,
       name: 'רב"ט רוטנברג דוד (דודו) ז"ל',
       years: "1941-1973",
       unit: 'חיל המודיעין, פצ"ן',
@@ -3242,7 +3242,7 @@ const consts = {
         </>
       ),
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 34,
       name: 'סמל אדלר כרמי ז"ל',
       years: "1951-1973",
       unit: 'חיל המודיעין, פקמ"ז',
@@ -3287,7 +3287,7 @@ const consts = {
       article: false,
       name: 'רב סרן בוכוול עמיחי ז"ל',
       years: "1946-1973",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 35,
       unit: 'חיל המודיעין, פקמ"ז',
       pic: require("../assets/pictures/amihai.png"),
     },
@@ -3324,7 +3324,7 @@ const consts = {
       article: false,
       name: 'סמ"ר גרניק יהושע (שוקי) ז"ל',
       years: "1952-1973",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 36,
       unit: 'חיל המודיעין, פקמ"ז',
       pic: require("../assets/pictures/gernik.png"),
     },
@@ -3364,7 +3364,7 @@ const consts = {
         </>
       ),
       article: false,
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 37,
       name: '"סרן הוכמן (הוכלה) יצחק ז"ל',
       years: "1943-1973",
       unit: 'חיל המודיעין, פקמ"ז',
@@ -3400,7 +3400,7 @@ const consts = {
       article: false,
       name: '"סגן כהן משה (מוסה) ז"ל',
       years: "1951-1973",
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 38,
       unit: 'חיל המודיעין, פקמ"ז',
       pic: require("../assets/pictures/choen.png"),
     },
@@ -3410,7 +3410,7 @@ const consts = {
       years: "1948-1973",
       unit: 'חיל המודיעין, פקמ"ז',
       pic: require("../assets/pictures/amnon.png"),
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 39,
       text: (
         <>
           אמנון, בן שרה ואליהו, נולד בי‌ום ‌ז' בתמוז תש"ח (14.7.1948)‌ בפתח
@@ -3482,7 +3482,7 @@ const consts = {
           למפקדיו‌".
         </>
       ),
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 40,
       article: false,
       name: '"סרן חזק בארי (בקי) ז"ל',
       years: "1944-1973",
@@ -3492,7 +3492,7 @@ const consts = {
   ],
   timeLine: [
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 0,
       type: "timeline",
       date: `אוקטובר 1970`,
       title: `אדריכל המלחמה עולה לשלטון במצרים`,
@@ -3501,7 +3501,7 @@ const consts = {
       pic: require("../assets/pictures/timeline1.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 1,
       type: "timeline",
       date: `יוני 1971`,
       title: `האופציה הצבאית עולה רשמית 'על השולחן'`,
@@ -3510,7 +3510,7 @@ const consts = {
       pic: require("../assets/pictures/timeline2.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 2,
       type: "timeline",
       date: `ראשית 1973`,
       title: `סאדאת 'מטהר' את מעגל המתנגדים למלחמה`,
@@ -3519,7 +3519,7 @@ const consts = {
       article: true,
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 3,
       type: "timeline",
       date: `פברואר - אפריל 1973`,
       article: true,
@@ -3528,7 +3528,7 @@ const consts = {
       pic: require("../assets/pictures/timeline5.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 4,
       type: "timeline",
       date: `23 אפריל 1973 `,
       title: `הסורים מבקשים דחייה`,
@@ -3539,7 +3539,7 @@ const consts = {
       article: true,
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 5,
       type: "timeline",
       date: `מאי-אוגוסט 1973`,
       title: `ישראל מעלה כוננות ל"כחול-לבן"`,
@@ -3564,7 +3564,7 @@ const consts = {
       pic: require("../assets/pictures/timeline7.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 6,
       type: "timeline",
       date: `12 באוגוסט 1973 `,
       title: `מורידים כוננות`,
@@ -3573,7 +3573,7 @@ const consts = {
       pic: require("../assets/pictures/timeline8.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 7,
       type: "timeline",
       date: `אוגוסט 1973 `,
       article: true,
@@ -3582,7 +3582,7 @@ const consts = {
       pic: require("../assets/pictures/timeline9.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 8,
       type: "timeline",
       date: `22-26 אוגוסט 1973`,
       article: true,
@@ -3591,7 +3591,7 @@ const consts = {
       pic: require("../assets/pictures/timeline10.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 9,
       type: "timeline",
       date: `ראשית ספטמבר`,
       title: `קמ"ן פיקוד הצפון מרים דגל אדום`,
@@ -3600,7 +3600,7 @@ const consts = {
       article: true,
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 10,
       type: "timeline",
       date: `13 בספטמבר 1973`,
       title: `יום קרב אווירי בצפון`,
@@ -3609,7 +3609,7 @@ const consts = {
       article: true,
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 11,
       article: true,
       type: "timeline",
       date: `17 ספטמבר 1973`,
@@ -3617,7 +3617,7 @@ const consts = {
       pic: require("../assets/pictures/timeline14.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 12,
       type: "timeline",
       date: `24-26 בספטמבר 1973 `,
       title: `בפיקוד הצפון ממשיכים להתריע`,
@@ -3626,7 +3626,7 @@ const consts = {
       article: true,
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 13,
       type: "timeline",
       date: `25 ספטמבר 1973 `,
       title: `המלך חוסיין מזהיר את ראש הממשלה גולדה מאיר`,
@@ -3660,7 +3660,7 @@ const consts = {
       pic: require("../assets/pictures/timeline16.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 14,
       type: "timeline",
       date: `26 ספטמבר (ערב ראש השנה) `,
       title: `מתגברים את הצפון "לכל מקרה"`,
@@ -3684,7 +3684,7 @@ const consts = {
       pic: require("../assets/pictures/timeline17.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 15,
       type: "timeline",
       date: `29 בספטמבר 1973 `,
       title: `גורם זר מתריע על מתקפה סורית קרבה`,
@@ -3693,7 +3693,7 @@ const consts = {
       article: true,
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 16,
       type: "timeline",
       date: `30 בספטמבר 1973`,
       title: `זעירא: "צבא סוריה ערוך למלחמה, אולם לא ייצא למלחמה"`,
@@ -3714,7 +3714,7 @@ const consts = {
       pic: require("../assets/pictures/timeline19.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 17,
       type: "timeline",
       date: `30 ספטמבר 1973`,
       title: `בניגוד לעמדת אמ"ן, בחילות הים והקשר נערכים למלחמה`,
@@ -3737,7 +3737,7 @@ const consts = {
       pic: require("../assets/pictures/timeline20.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 18,
       type: "timeline",
       date: `1 באוקטובר 1973`,
       article: true,
@@ -3748,7 +3748,7 @@ const consts = {
       pic: require("../assets/pictures/timeline21.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 19,
       type: "timeline",
       date: `1 באוקטובר 1973`,
       title: `בצפון הסורים מקדמים כוחות, בדרום המצרים מתחילים בתרגיל ענק; פיקוד הצפון נערך למלחמה, באמ"ן ממשיכים להרגיע`,
@@ -3783,7 +3783,7 @@ const consts = {
       pic: require("../assets/pictures/timeline22.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 20,
       type: "timeline",
       article: true,
       date: `1 וה-3 באוקטובר 1973`,
@@ -3792,7 +3792,7 @@ const consts = {
       pic: require("../assets/pictures/timeline23.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 21,
       type: "timeline",
       date: `2 באוקטובר 1973`,
       desc: `לפי מגוון דיווחים עולה ששתי הדיביזיות המשורינות הסוריות יצאו ממחנות הקבע לשטחי כינוס או הערכות. קמ"ן פיקוד הצפון מתריע על המשמעות ההתקפית, אך באמ"ן מחקר מסבירים זאת בהיערכות סורית תגובתית לאור חשש ממהלך צבאי ישראלי.`,
@@ -3800,7 +3800,7 @@ const consts = {
       pic: require("../assets/pictures/timeline24.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 22,
       type: "timeline",
       date: `3 באוקטובר 1973`,
       title: `השאננות חוגגת`,
@@ -3819,7 +3819,7 @@ const consts = {
       pic: require("../assets/pictures/timeline25.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 23,
       type: "timeline",
       date: `4 באוקטובר 1973`,
       title: `משפחות היועצים הסובייטים מתפנות מסוריה, לאורך התעלה בצד המצרי מזהים "מאסות של אמל"ח", אבל ההערכה נשארת בעינה`,
@@ -3850,7 +3850,7 @@ const consts = {
       pic: require("../assets/pictures/timeline26.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 24,
       type: "timeline",
       article: true,
       date: `ליל ה-4-5 באוקטובר 1973`,
@@ -3859,7 +3859,7 @@ const consts = {
       pic: require("../assets/pictures/timeline27.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 25,
       type: "timeline",
       date: `5 באוקטובר 1973`,
       title: `"הסבירות למלחמה נמוכה מנמוכה"`,
@@ -3902,7 +3902,7 @@ const consts = {
       pic: require("../assets/pictures/timeline28.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 26,
       type: "timeline",
       article: true,
       date: `ליל 5-6 באוקטובר 1973`,
@@ -3911,7 +3911,7 @@ const consts = {
       pic: require("../assets/pictures/timeline29.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 27,
       type: "timeline",
       date: `6 באוקטובר 1973`,
       article: true,
@@ -3937,7 +3937,7 @@ const consts = {
       pic: require("../assets/pictures/timeline30.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 28,
       type: "timeline",
       date: `6 באוקטובר 1973 בשעה 13:55`,
       article: true,
@@ -3960,7 +3960,7 @@ const consts = {
       pic: require("../assets/pictures/timeline31.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 29,
       article: true,
       type: "timeline",
       date: `7 באוקטובר 1973 `,
@@ -3982,7 +3982,7 @@ const consts = {
       pic: require("../assets/pictures/timeline32.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 30,
       type: "timeline",
       article: true,
       date: `8 באוקטובר 1973`,
@@ -3991,7 +3991,7 @@ const consts = {
       pic: require("../assets/pictures/timeline33.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 31,
       type: "timeline",
       article: true,
       date: `9 באוקטובר 1973`,
@@ -4000,7 +4000,7 @@ const consts = {
       pic: require("../assets/pictures/timeline34.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 32,
       type: "timeline",
       article: true,
       date: `10 באוקטובר 1973`,
@@ -4027,7 +4027,7 @@ const consts = {
       pic: require("../assets/pictures/timeline35.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 33,
       article: true,
       type: "timeline",
       date: `11 באוקטובר  1973`,
@@ -4052,7 +4052,7 @@ const consts = {
       pic: require("../assets/pictures/timeline36.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 34,
       type: "timeline",
       article: true,
       date: `12 באוקטובר 1973`,
@@ -4061,7 +4061,7 @@ const consts = {
       pic: require("../assets/pictures/timeline37.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 35,
       type: "timeline",
       article: true,
       date: `24 באוקטובר 1973`,
@@ -4069,7 +4069,7 @@ const consts = {
       pic: require("../assets/pictures/timeline38.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 36,
       type: "timeline",
       article: true,
       date: `11 בנובמבר  1973 `,
@@ -4078,7 +4078,7 @@ const consts = {
       pic: require("../assets/pictures/timeline39.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 37,
       type: "timeline",
       article: true,
       date: `25 בנובמבר 1973`,
@@ -4087,7 +4087,7 @@ const consts = {
       pic: require("../assets/pictures/timeline40.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 38,
       type: "timeline",
       date: `1 באפריל 1974`,
       title: `בעקבות המלצת ועדת ארגנט – האלוף אלי זעירא מסיים תפקידו ופורש מצה"ל`,
@@ -4108,14 +4108,14 @@ const consts = {
       pic: require("../assets/pictures/timeline41.png"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 39,
       type: "timeline",
       clear: true,
       article: true,
       pic: require("../assets/pictures/clear.svg"),
     },
     {
-      id: Math.floor(Math.random() * (1000 + 1)),
+      id: 40,
       type: "timeline",
       article: true,
       clear: true,
