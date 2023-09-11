@@ -548,7 +548,7 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/tap.1993dcf5.svg"
   },
   {
-    "revision": "b57e30603efa99e748ded8d6dc44e5dd",
+    "revision": "145f758de7bb87d17ef8611854a263a1",
     "url": "/kipur/index.html"
   }
 ];
