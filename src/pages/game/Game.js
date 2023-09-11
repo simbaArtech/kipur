@@ -371,7 +371,7 @@ class Crossword extends React.Component {
         <div className="text">{sessionStorage.getItem("clue")}</div>
         {this.state.boxInFocus && (
           <div onClick={this.showAns} className="buttonCheck">
-            רמז
+            חשיפת מילה
           </div>
         )}
         {this.state.isCheckButtonClicked && (

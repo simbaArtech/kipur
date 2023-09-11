@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+
 import articlepic from "../../assets/pictures/cardImage.jpg";
 import Carousel from "../../components/carousel/Carousel";
-import { AccountCircle, CalendarMonth } from "@mui/icons-material";
 import {
   SemiTitle,
   ArticleDetailsContainer,
@@ -14,6 +14,7 @@ import {
 import Article from "../article/Article";
 import SecBanner from "./banner/SecBanner";
 import Navbar from "../../components/navbar/Navbar";
+import { useHistory } from "react-router-dom";
 
 const aritcles = [
   {
@@ -153,8 +154,9 @@ const aritcles = [
 ];
 
 export default function Recommended() {
+  const history = useHistory();
   const [showCard, setShowCard] = useState(false);
-  const [articleI, setArticleI] = useState();
+  const [propsToSend, setPropsToSend] = useState();
   const [showPopUp, setShowPopUp] = useState(false);
 
   return (
@@ -167,7 +169,7 @@ export default function Recommended() {
             <ArticleContainer
               onClick={() => {
                 setShowCard(true);
-                setArticleI(article);
+                setPropsToSend(article);
               }}
             >
               {article.pic ? (
@@ -188,9 +190,6 @@ export default function Recommended() {
                 </ArticleDetailsContainer>
               </ArticleTextContainer>
             </ArticleContainer>
-            {showCard && (
-              <Article setShowCard={setShowCard} article={articleI} />
-            )}
           </div>
         );
       })}

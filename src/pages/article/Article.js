@@ -17,11 +17,15 @@ import ArrowIcon from "@mui/icons-material/ArrowBackIos";
 import React from "react";
 import logo from "../../assets/pictures/logo.webp";
 
-export default function Article({ setShowCard, article }) {
+// { setShowCard, article }}
+
+export default function Article() {
+
   return (
     <>
       <Wrapper>
-        <BackBtn onClick={() => setShowCard(false)}>
+        {/* onClick={() => setShowCard(false)} */}
+        <BackBtn>
           <ArrowIcon
             sx={{ color: "white", width: "1.5rem", paddingLeft: "5px" }}
           />
