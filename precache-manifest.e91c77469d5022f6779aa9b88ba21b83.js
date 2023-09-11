@@ -1,27 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "4906b80899f0b08559a1",
-    "url": "/kipur/static/css/main.9e496432.chunk.css"
+    "revision": "699aa6b16f4cde0689a3",
+    "url": "/kipur/static/css/main.0fcac472.chunk.css"
   },
   {
-    "revision": "4906b80899f0b08559a1",
-    "url": "/kipur/static/js/main.4906b808.chunk.js"
+    "revision": "699aa6b16f4cde0689a3",
+    "url": "/kipur/static/js/main.699aa6b1.chunk.js"
   },
   {
-    "revision": "cd13fb4e0564142fa5ee",
-    "url": "/kipur/static/js/1.cd13fb4e.chunk.js"
+    "revision": "76e4684868e07ff0fdfd",
+    "url": "/kipur/static/css/1.3757d6d5.chunk.css"
   },
   {
-    "revision": "a2e6ff77233f9571c5ad",
-    "url": "/kipur/static/css/2.6a893ef6.chunk.css"
+    "revision": "76e4684868e07ff0fdfd",
+    "url": "/kipur/static/js/1.76e46848.chunk.js"
   },
   {
-    "revision": "a2e6ff77233f9571c5ad",
-    "url": "/kipur/static/js/2.a2e6ff77.chunk.js"
+    "revision": "a7ce45f57019b886a042",
+    "url": "/kipur/static/js/runtime~main.a7ce45f5.js"
   },
   {
-    "revision": "5979209e715af2210005",
-    "url": "/kipur/static/js/runtime~main.5979209e.js"
+    "revision": "9d05be2cab8d4fda582c5c92728e82c5",
+    "url": "/kipur/static/media/unknown.9d05be2c.svg"
   },
   {
     "revision": "fea3e17284b170eb57beaab7826b6e24",
@@ -40,30 +40,6 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/AlmoniDemibold.182a0295.ttf"
   },
   {
-    "revision": "d1d5f73ea6b8abf9df9799dca1102fe6",
-    "url": "/kipur/static/media/yoel.d1d5f73e.png"
-  },
-  {
-    "revision": "5824bb63c665f7de4b59e7e696c839f9",
-    "url": "/kipur/static/media/binyamin.5824bb63.webp"
-  },
-  {
-    "revision": "7c7d03a2c47a9cc4272b90d922f41a5c",
-    "url": "/kipur/static/media/forTimeline.7c7d03a2.png"
-  },
-  {
-    "revision": "de56fa8f68315881fe0df38b9382ce5e",
-    "url": "/kipur/static/media/ahron.de56fa8f.jpg"
-  },
-  {
-    "revision": "870f5ea5c89a0ceebc9cb66964b7a567",
-    "url": "/kipur/static/media/konenot.870f5ea5.jpeg"
-  },
-  {
-    "revision": "f5419379f29e2ed9e0bcbb9188786a4a",
-    "url": "/kipur/static/media/hosi.f5419379.jpg"
-  },
-  {
     "revision": "3d95b1e96e297109bf661bb106816e75",
     "url": "/kipur/static/media/clear.3d95b1e9.svg"
   },
@@ -76,24 +52,112 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/AlmoniLight.379f355d.ttf"
   },
   {
-    "revision": "fac59744a3634e6f01e7c2a845045344",
-    "url": "/kipur/static/media/back.fac59744.png"
+    "revision": "15f3b486e1b6d9c410c83c80455fb4f1",
+    "url": "/kipur/static/media/odot.15f3b486.svg"
   },
   {
-    "revision": "b7323189f4059cb6a5c7cfe2456050de",
-    "url": "/kipur/static/media/clock.b7323189.svg"
+    "revision": "ac5456406abc29110fd1fd86649fddae",
+    "url": "/kipur/static/media/home.ac545640.svg"
   },
   {
-    "revision": "1d92c961630799bb0ed74ab59a02ad66",
-    "url": "/kipur/static/media/kelim.1d92c961.png"
+    "revision": "a7b8d59eb3cc0bd76e24f4506fb6e20f",
+    "url": "/kipur/static/media/homeSel.a7b8d59e.svg"
+  },
+  {
+    "revision": "946b4d41b125102b69ddf450f515e9ae",
+    "url": "/kipur/static/media/storySel.946b4d41.svg"
+  },
+  {
+    "revision": "7ce7e113e7ee5b5b083bce10dc60777d",
+    "url": "/kipur/static/media/story.7ce7e113.svg"
+  },
+  {
+    "revision": "31e3d5de4c487ac962f20dd1dfc4b547",
+    "url": "/kipur/static/media/timelineSel.31e3d5de.svg"
+  },
+  {
+    "revision": "5fbbc7fc5c8212f64cec88faf965c481",
+    "url": "/kipur/static/media/timeline.5fbbc7fc.svg"
+  },
+  {
+    "revision": "8d9e4f808332bf15f8840d89dbd4c6ba",
+    "url": "/kipur/static/media/people.8d9e4f80.svg"
+  },
+  {
+    "revision": "26ea136285ab403a45df3a14cec79a55",
+    "url": "/kipur/static/media/peopleSel.26ea1362.svg"
+  },
+  {
+    "revision": "e20a011365390f3523ab0298a94e859d",
+    "url": "/kipur/static/media/crosswordSel.e20a0113.svg"
+  },
+  {
+    "revision": "868308c65583ff39545ae91d788e5192",
+    "url": "/kipur/static/media/crossword.868308c6.svg"
+  },
+  {
+    "revision": "de56fa8f68315881fe0df38b9382ce5e",
+    "url": "/kipur/static/media/ahron.de56fa8f.jpg"
+  },
+  {
+    "revision": "870f5ea5c89a0ceebc9cb66964b7a567",
+    "url": "/kipur/static/media/konenot.870f5ea5.jpeg"
+  },
+  {
+    "revision": "dc10ad542bdc9efdb2086b67e66e9f36",
+    "url": "/kipur/static/media/zarih.dc10ad54.png"
+  },
+  {
+    "revision": "a3adf364af0c43264886c1cda22ba3b8",
+    "url": "/kipur/static/media/kisenjer.a3adf364.jpeg"
+  },
+  {
+    "revision": "f5419379f29e2ed9e0bcbb9188786a4a",
+    "url": "/kipur/static/media/hosi.f5419379.jpg"
+  },
+  {
+    "revision": "c0323daa58273b253049e6773e980dce",
+    "url": "/kipur/static/media/kaman.c0323daa.png"
+  },
+  {
+    "revision": "37faef9bb29b417b25435c9984adb40b",
+    "url": "/kipur/static/media/hailyam.37faef9b.jpeg"
+  },
+  {
+    "revision": "d01ec3a83db946cb4976763669b0d4b9",
+    "url": "/kipur/static/media/zaav.d01ec3a8.jpeg"
+  },
+  {
+    "revision": "b54f30d5e80ea03602527aa8a0a139c6",
+    "url": "/kipur/static/media/ashraf.b54f30d5.jpg"
+  },
+  {
+    "revision": "df7f40bb0c83401d8e0c57183ac3b328",
+    "url": "/kipur/static/media/leket.df7f40bb.jpeg"
+  },
+  {
+    "revision": "dc9f976de160a2828d709107a69eb41e",
+    "url": "/kipur/static/media/tahrir.dc9f976d.webp"
+  },
+  {
+    "revision": "d667b459d60e82639b4d7049d9465503",
+    "url": "/kipur/static/media/sager.d667b459.jpg"
+  },
+  {
+    "revision": "cbff7221dda8d009a18368eb24ff57ef",
+    "url": "/kipur/static/media/basis.cbff7221.png"
+  },
+  {
+    "revision": "5b0982b75b8b184b69b0514afc12c00c",
+    "url": "/kipur/static/media/mismah.5b0982b7.png"
+  },
+  {
+    "revision": "7c605a4e89848df0c2d40f2811249826",
+    "url": "/kipur/static/media/agrent.7c605a4e.jpg"
   },
   {
     "revision": "82c0f9568526cbfa1f1bafd4b093bcf0",
     "url": "/kipur/static/media/naim.82c0f956.jpeg"
-  },
-  {
-    "revision": "fa7a2b198fef41c06357174550a07be2",
-    "url": "/kipur/static/media/david.fa7a2b19.jpeg"
   },
   {
     "revision": "4eaf08d38baf30b142cfe24dd3477fec",
@@ -112,8 +176,12 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/ilan.23873217.png"
   },
   {
-    "revision": "5494c22b4433caf034d63b8a9f8e156a",
-    "url": "/kipur/static/media/aria.5494c22b.png"
+    "revision": "1085e0402cb3b1a0c1d77702136982a6",
+    "url": "/kipur/static/media/aria.1085e040.png"
+  },
+  {
+    "revision": "d1d5f73ea6b8abf9df9799dca1102fe6",
+    "url": "/kipur/static/media/yoel.d1d5f73e.png"
   },
   {
     "revision": "0fb08529189010dc5b822623001e6f8d",
@@ -130,6 +198,10 @@ self.__precacheManifest = [
   {
     "revision": "044019359956f5386f62680df1903975",
     "url": "/kipur/static/media/albert.04401935.jpg"
+  },
+  {
+    "revision": "5824bb63c665f7de4b59e7e696c839f9",
+    "url": "/kipur/static/media/binyamin.5824bb63.webp"
   },
   {
     "revision": "cf6180fb49297cd662c123f381698690",
@@ -304,58 +376,6 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/hazak.47f73696.png"
   },
   {
-    "revision": "dc10ad542bdc9efdb2086b67e66e9f36",
-    "url": "/kipur/static/media/zarih.dc10ad54.png"
-  },
-  {
-    "revision": "a3adf364af0c43264886c1cda22ba3b8",
-    "url": "/kipur/static/media/kisenjer.a3adf364.jpeg"
-  },
-  {
-    "revision": "c0323daa58273b253049e6773e980dce",
-    "url": "/kipur/static/media/kaman.c0323daa.png"
-  },
-  {
-    "revision": "37faef9bb29b417b25435c9984adb40b",
-    "url": "/kipur/static/media/hailyam.37faef9b.jpeg"
-  },
-  {
-    "revision": "d01ec3a83db946cb4976763669b0d4b9",
-    "url": "/kipur/static/media/zaav.d01ec3a8.jpeg"
-  },
-  {
-    "revision": "b54f30d5e80ea03602527aa8a0a139c6",
-    "url": "/kipur/static/media/ashraf.b54f30d5.jpg"
-  },
-  {
-    "revision": "df7f40bb0c83401d8e0c57183ac3b328",
-    "url": "/kipur/static/media/leket.df7f40bb.jpeg"
-  },
-  {
-    "revision": "dc9f976de160a2828d709107a69eb41e",
-    "url": "/kipur/static/media/tahrir.dc9f976d.webp"
-  },
-  {
-    "revision": "d667b459d60e82639b4d7049d9465503",
-    "url": "/kipur/static/media/sager.d667b459.jpg"
-  },
-  {
-    "revision": "cbff7221dda8d009a18368eb24ff57ef",
-    "url": "/kipur/static/media/basis.cbff7221.png"
-  },
-  {
-    "revision": "5b0982b75b8b184b69b0514afc12c00c",
-    "url": "/kipur/static/media/mismah.5b0982b7.png"
-  },
-  {
-    "revision": "7c605a4e89848df0c2d40f2811249826",
-    "url": "/kipur/static/media/agrent.7c605a4e.jpg"
-  },
-  {
-    "revision": "15f3b486e1b6d9c410c83c80455fb4f1",
-    "url": "/kipur/static/media/odot.15f3b486.svg"
-  },
-  {
     "revision": "fe0c28ed7f54d439e8b9f4f811405c1e",
     "url": "/kipur/static/media/timeline1.fe0c28ed.png"
   },
@@ -508,51 +528,27 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/timeline41.49fb7492.png"
   },
   {
+    "revision": "fac59744a3634e6f01e7c2a845045344",
+    "url": "/kipur/static/media/back.fac59744.png"
+  },
+  {
+    "revision": "1d92c961630799bb0ed74ab59a02ad66",
+    "url": "/kipur/static/media/kelim.1d92c961.png"
+  },
+  {
+    "revision": "b7323189f4059cb6a5c7cfe2456050de",
+    "url": "/kipur/static/media/clock.b7323189.svg"
+  },
+  {
+    "revision": "7c7d03a2c47a9cc4272b90d922f41a5c",
+    "url": "/kipur/static/media/forTimeline.7c7d03a2.png"
+  },
+  {
     "revision": "1993dcf5c821328ad6585d4aa78f6c69",
     "url": "/kipur/static/media/tap.1993dcf5.svg"
   },
   {
-    "revision": "ac5456406abc29110fd1fd86649fddae",
-    "url": "/kipur/static/media/home.ac545640.svg"
-  },
-  {
-    "revision": "a7b8d59eb3cc0bd76e24f4506fb6e20f",
-    "url": "/kipur/static/media/homeSel.a7b8d59e.svg"
-  },
-  {
-    "revision": "946b4d41b125102b69ddf450f515e9ae",
-    "url": "/kipur/static/media/storySel.946b4d41.svg"
-  },
-  {
-    "revision": "7ce7e113e7ee5b5b083bce10dc60777d",
-    "url": "/kipur/static/media/story.7ce7e113.svg"
-  },
-  {
-    "revision": "338159b0f874485e2240e82269230f05",
-    "url": "/kipur/static/media/timelineSel.338159b0.svg"
-  },
-  {
-    "revision": "5fbbc7fc5c8212f64cec88faf965c481",
-    "url": "/kipur/static/media/timeline.5fbbc7fc.svg"
-  },
-  {
-    "revision": "8d9e4f808332bf15f8840d89dbd4c6ba",
-    "url": "/kipur/static/media/people.8d9e4f80.svg"
-  },
-  {
-    "revision": "26ea136285ab403a45df3a14cec79a55",
-    "url": "/kipur/static/media/peopleSel.26ea1362.svg"
-  },
-  {
-    "revision": "e20a011365390f3523ab0298a94e859d",
-    "url": "/kipur/static/media/crosswordSel.e20a0113.svg"
-  },
-  {
-    "revision": "868308c65583ff39545ae91d788e5192",
-    "url": "/kipur/static/media/crossword.868308c6.svg"
-  },
-  {
-    "revision": "eea1db9d90889191a191414383a88ed2",
+    "revision": "eaf9cc4d366fd806d3d1684d93f3aca8",
     "url": "/kipur/index.html"
   }
 ];
