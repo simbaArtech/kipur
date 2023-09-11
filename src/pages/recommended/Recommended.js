@@ -19,27 +19,20 @@ import { useNavigate } from "react-router-dom";
 import consts from "../../pages/consts";
 import Footer from "../../components/footer/Footer";
 
-// const videos = [
-//   {
-//     article: false,
-//     type: "7 דקות",
-//     title: `אמ"ן במנהרת הזמן`,
-//     pic: require("../../assets/videos/טיימליין אמן.mp4"),
-//   },
-//   {
-//     article: false,
-//     type: "6 דקות",
-//     title: `לקחים בעקבות מלחמת יום הכיפורים`,
-//     pic: require("../../assets/videos/נקודות בזמן.mp4"),
-//   },
-//   // {
-//   //   article: false,
-//   //   type: "11 דקות",
-//   //   title: 'פיקוד צפון במלחמת יום הכיפורים',
-//   //   pic: require("../../assets/videos/יום הכיפורים.mp4"),
-//   // },
-
-// ];
+const videos = [
+  {
+    article: false,
+    type: "7 דקות",
+    title: `אמ"ן במנהרת הזמן`,
+    src: "https://www.youtube.com/watch?v=65mZD9XQNOg",
+  },
+  {
+    article: false,
+    type: "6 דקות",
+    title: `לקחים בעקבות מלחמת יום הכיפורים`,
+    src: "https://www.youtube.com/watch?v=P-1SJt25jWs",
+  },
+];
 
 export default function Recommended() {
   const navigate = useNavigate();
@@ -84,7 +77,34 @@ export default function Recommended() {
           </div>
         );
       })} */}
-
+      <SemiTitle>סרטונים ממולצים</SemiTitle>
+      {videos.map((video) => {
+        return (
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <a href={video.src}>
+              <ArticleContainer>
+                {video.pic ? (
+                  <ArticlePic src={video.pic} />
+                ) : (
+                  <ArticlePic src={articlepic} />
+                )}
+                <ArticleTextContainer>
+                  <ArticleTitle>{video.title}</ArticleTitle>
+                  <ArticleDetailsContainer>
+                    <ArticleDetail>
+                      {video.type}
+                      <img
+                        src={require("../../assets/pictures/clock.svg")}
+                        style={{ height: "14px", marginLeft: "5px" }}
+                      />
+                    </ArticleDetail>
+                  </ArticleDetailsContainer>
+                </ArticleTextContainer>
+              </ArticleContainer>
+            </a>
+          </div>
+        );
+      })}
       <SemiTitle>כתבות מומלצות</SemiTitle>
       {articles.map((article) => {
         return (
@@ -115,7 +135,7 @@ export default function Recommended() {
           </div>
         );
       })}
-      <Footer/>
+      <Footer />
       {!showCard ? <Navbar selected="recommended" /> : null}
     </>
   );
