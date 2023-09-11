@@ -16,18 +16,25 @@ import {
 import ArrowIcon from "@mui/icons-material/ArrowBackIos";
 import React from "react";
 import logo from "../../assets/pictures/logo.webp";
-
-// { setShowCard, article }}
+import { useNavigate } from "react-router-dom";
+import { aritcles } from "./consts";
 
 export default function Article() {
-
+  //"https://50yearskippur.github.io/kipur/article/",
+  const id = window.location.href.replace("http://localhost:3000/article/", "");
+  const article = aritcles.find((item) => item.id == Number(id));
+  console.log(article);
+  const navigation = useNavigate();
   return (
     <>
       <Wrapper>
-        {/* onClick={() => setShowCard(false)} */}
-        <BackBtn>
+        <BackBtn onClick={() => navigation.goBack()}>
           <ArrowIcon
-            sx={{ color: "white", width: "1.5rem", paddingLeft: "5px" }}
+            sx={{
+              color: "white",
+              width: "1.5rem",
+              paddingLeft: "5px",
+            }}
           />
         </BackBtn>
         <CardHeaderLogo src={logo} />

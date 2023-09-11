@@ -30,7 +30,7 @@ function App() {
             <Route path="/images" element={<ImagesAndEvents />} />
             <Route path="/recommended" element={<Recommended />} />
             <Route path="/people" element={<People />} />
-            <Route path="/article" element={<Article />} />
+            <Route path="/article/:id" element={<Article />} />
             <Route path="/game" element={<Game />} />
           </Routes>
         </BrowserRouter>

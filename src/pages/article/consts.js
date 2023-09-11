@@ -5,6 +5,7 @@ export const aritcles = [
            type: "לפני המלחמה",
            title: `ניצני הקונספציה בתקופתו של ראש אמ"ן אהרון יריב`,
            miniTitle: `"אהרל'ה היה מגיע כנראה לאותה מסקנה, אך מציגה אחרת"`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                תיאור הקונספציה טרם פרוץ מלחמת יום הכיפורים בדרך כלל העמיד במרכז
@@ -60,6 +61,7 @@ export const aritcles = [
            type: "לפני המלחמה",
            title: `כוננות כחול-לבן`,
            miniTitle: `המלחמה שלא באה (עדיין..)`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                'שם קוד' לצעדי כוננות שננקטו בין אפריל לאוגוסט 1973. הכוננות
@@ -109,6 +111,7 @@ export const aritcles = [
            type: "לפני המלחמה",
            title: `"הצריחים הגבוהים" – תוכנית המלחמה המצרית`,
            miniTitle: `כיבוש רצועה צרה בשטח הישראלי להנעת תהליך מדיני`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                תוכנית ההתקפה המקורית של הצבא המצרי ("גרניט 2") הייתה כיבוש סיני
@@ -154,6 +157,7 @@ export const aritcles = [
            type: "לפני המלחמה",
            title: `שיחות קיסינג'ר-איסמעיל`,
            miniTitle: `תהליך שיחות השלום שלא הבשיל`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                ממשלת גולדה מאיר הצהירה לאורך כל שנות כהונתה בדבר רצונה לכינון
@@ -190,6 +194,7 @@ export const aritcles = [
            type: `ערב המלחמה`,
            title: `פגישת גולדה – חוסיין`,
            miniTitle: `ההתרעה של המלך שנדחתה על הסף`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                ב-25 בספטמבר 1973 בשעות הערב, התקיים מפגש בין רוה"מ גולדה מאיר
@@ -227,6 +232,7 @@ export const aritcles = [
            type: `ערב המלחמה`,
            title: `חקירת קציני המודיעין המצריים (5 באוקטובר)`,
            miniTitle: `"סמכו עלינו, מחר תהיה מלחמה"`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                מאז סיומה של מלחמת ששת הימים חדרו חוליות מצריות רבות לסיני וחלקן
@@ -281,6 +287,7 @@ export const aritcles = [
          {
            article: true,
            type: `ערב המלחמה`,
+           id: Math.floor(Math.random() * (100 + 1)),
            title: `מספן המודיעין בחיל הים במלחמת יום הכיפורים`,
            text: (
              <>
@@ -342,6 +349,7 @@ export const aritcles = [
            pic: require("../../assets/pictures/hailyam.jpeg"),
          },
          {
+           id: Math.floor(Math.random() * (100 + 1)),
            article: true,
            miniTitle: `אמצעי ההתרעה שלא התריע`,
            type: `ערב המלחמה`,
@@ -379,6 +387,7 @@ export const aritcles = [
            article: true,
            miniTitle: `פינוי משפחות המומחים הסובייטים מסוריה שהיה אמור להדליק נורה אדומה`,
            type: `ערב המלחמה`,
+           id: Math.floor(Math.random() * (100 + 1)),
            title: `ידיעת הזהב`,
            text: (
              <>
@@ -419,6 +428,7 @@ export const aritcles = [
            miniTitle: `בכיר מקורות היומינט של ישראל במצרים בכל הזמנים`,
            type: `ערב המלחמה`,
            title: `אשרף מרואן`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                אשרף מרואן, סוכן בכיר שהופעל על ידי המוסד וכונה "המלאך", היה בין
@@ -471,6 +481,7 @@ export const aritcles = [
            miniTitle: `המסמך שהכשיל`,
            type: `ערב המלחמה`,
            title: `'לקט סעיף 40'`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                "המסמך האחרון" הינו לקט מודיעין שיצא ממחלקת המחקר של אמ"ן ב-5
@@ -515,13 +526,14 @@ export const aritcles = [
                בקלות מתרוממת מרבצה".
              </>
            ),
-           pic: require('../../assets/pictures/leket.jpeg')
+           pic: require("../../assets/pictures/leket.jpeg"),
          },
          {
            article: true,
            miniTitle: `תרגיל ההונאה הגדול של המצרים`,
            type: `ערב המלחמה`,
            title: `"תחריר 41"`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                ביום פתיחת מלחמת יום הכיפורים, ב-6 באוקטובר 1973, בשעות הצהריים
@@ -573,6 +585,7 @@ export const aritcles = [
            article: true,
            type: `מהלך המלחמה`,
            title: `הפתעת הסאגרים`,
+           id: Math.floor(Math.random() * (100 + 1)),
            text: (
              <>
                הטנקיסטים במלחמת יום הכיפורים שנעו בסיני לא היו מודעים כלל
@@ -600,6 +613,7 @@ export const aritcles = [
          {
            article: true,
            type: `מהלך המלחמה`,
+           id: Math.floor(Math.random() * (100 + 1)),
            title: `בסיס אום חשיבה`,
            text: (
              <>
@@ -653,6 +667,7 @@ export const aritcles = [
          {
            article: true,
            type: `בעקבות המלחמה`,
+           id: Math.floor(Math.random() * (100 + 1)),
            miniTitle: `'פרקליט השטן' אל מול המחקר הצבאי באמ"ן`,
            title: `מחלקת הבקרה באמ"ן`,
            text: (
@@ -700,6 +715,7 @@ export const aritcles = [
          {
            article: true,
            type: `בעקבות המלחמה`,
+           id: Math.floor(Math.random() * (100 + 1)),
            miniTitle: ``,
            title: `הלחץ הציבורי והרקע להקמת ועדת אגרנט`,
            text: (
