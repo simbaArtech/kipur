@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "699aa6b16f4cde0689a3",
-    "url": "/kipur/static/css/main.0fcac472.chunk.css"
+    "revision": "db969c6ae98a251a6d81",
+    "url": "/kipur/static/css/main.a8589ede.chunk.css"
   },
   {
-    "revision": "699aa6b16f4cde0689a3",
-    "url": "/kipur/static/js/main.699aa6b1.chunk.js"
+    "revision": "db969c6ae98a251a6d81",
+    "url": "/kipur/static/js/main.db969c6a.chunk.js"
   },
   {
-    "revision": "76e4684868e07ff0fdfd",
-    "url": "/kipur/static/css/1.3757d6d5.chunk.css"
+    "revision": "ca2eca735c4fec9016b6",
+    "url": "/kipur/static/css/1.b028d1f9.chunk.css"
   },
   {
-    "revision": "76e4684868e07ff0fdfd",
-    "url": "/kipur/static/js/1.76e46848.chunk.js"
+    "revision": "ca2eca735c4fec9016b6",
+    "url": "/kipur/static/js/1.ca2eca73.chunk.js"
   },
   {
     "revision": "a7ce45f57019b886a042",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/unknown.9d05be2c.svg"
   },
   {
-    "revision": "fea3e17284b170eb57beaab7826b6e24",
-    "url": "/kipur/static/media/logo.fea3e172.webp"
-  },
-  {
     "revision": "ac2d0bc05777b29468d68b3551ecd560",
     "url": "/kipur/static/media/cardImage.ac2d0bc0.jpg"
+  },
+  {
+    "revision": "fea3e17284b170eb57beaab7826b6e24",
+    "url": "/kipur/static/media/logo.fea3e172.webp"
   },
   {
     "revision": "b830b6c86a389e646959f95c0afb7e3a",
@@ -42,6 +42,10 @@ self.__precacheManifest = [
   {
     "revision": "3d95b1e96e297109bf661bb106816e75",
     "url": "/kipur/static/media/clear.3d95b1e9.svg"
+  },
+  {
+    "revision": "b7323189f4059cb6a5c7cfe2456050de",
+    "url": "/kipur/static/media/clock.b7323189.svg"
   },
   {
     "revision": "e450158fee3e1b92281cc5fc6cb6e128",
@@ -536,10 +540,6 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/kelim.1d92c961.png"
   },
   {
-    "revision": "b7323189f4059cb6a5c7cfe2456050de",
-    "url": "/kipur/static/media/clock.b7323189.svg"
-  },
-  {
     "revision": "7c7d03a2c47a9cc4272b90d922f41a5c",
     "url": "/kipur/static/media/forTimeline.7c7d03a2.png"
   },
@@ -548,7 +548,7 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/tap.1993dcf5.svg"
   },
   {
-    "revision": "eaf9cc4d366fd806d3d1684d93f3aca8",
+    "revision": "b57e30603efa99e748ded8d6dc44e5dd",
     "url": "/kipur/index.html"
   }
 ];
