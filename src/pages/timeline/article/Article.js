@@ -26,7 +26,10 @@ export default function Article({ setShowCard, article }) {
         </BackBtn>
         <CardHeaderLogo src={logo} />
         <div style={{ background: "gray" }}>
-          <CardImage style={{ height: "17rem" }} imgSrc={article.pic} />
+          <CardImage
+            style={{ height: "17rem", marginTop: "-3rem" }}
+            imgSrc={article.pic}
+          />
         </div>
         <CardContainer>
           <>

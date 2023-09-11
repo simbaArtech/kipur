@@ -90,7 +90,7 @@ export const TextContainer = styled.div`
 `;
 
 export const BackBtn = styled.div`
-  position: absolute;
+  position: sticky;
   top: 2rem;
   left: 1.5rem;
   z-index: 1;

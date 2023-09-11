@@ -1,6 +1,7 @@
 import React from "react";
 import "./GameStyle.css";
 import logo from "../../assets/pictures/crosswordFull.svg.png";
+import Navbar from "../../components/navbar/Navbar";
 
 import { GRID_DATA } from "./consts";
 
@@ -382,6 +383,7 @@ class Crossword extends React.Component {
           בדיקה
         </div>
         {this.state.showError ? <div>***מלאו את כל הטבלה</div> : null}
+        <Navbar selected="game" />
       </div>
     );
   }

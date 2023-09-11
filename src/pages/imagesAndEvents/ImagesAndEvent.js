@@ -21,6 +21,7 @@ import {
 import Article from "../article/Article";
 import { aritcles } from "../article/consts";
 import { personalities } from "../people/consts";
+import Navbar from "../../components/navbar/Navbar";
 
 export default function ImagesAndEvents() {
   const [showCardO, setShowCardO] = useState(false);
@@ -103,6 +104,7 @@ export default function ImagesAndEvents() {
             </div>
           );
         })}
+        {!showCardO && !showCard ? <Navbar selected="images" /> : null}
       </>
     </>
   );

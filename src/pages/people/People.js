@@ -18,6 +18,7 @@ import {
 } from "./peopleStyle";
 import Article from "../article/Article";
 import { warPrisoners, slainPeople } from "../people/consts";
+import Navbar from "../../components/navbar/Navbar";
 
 export default function People() {
   const [personI, setPersonI] = useState();
@@ -123,6 +124,7 @@ export default function People() {
           </div>
         ))}
       {showCardT && <Article setShowCard={setShowCardT} article={personI} />}
+      {!showCardT && !showCardO ? <Navbar selected="people" /> : null}
     </>
   );
 }

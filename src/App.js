@@ -1,84 +1,41 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/header/Header";
+import Home from "./pages/home/Home";
+import TimeLine from "./pages/timeline/TimeLine";
+import ImagesAndEvents from "./pages/imagesAndEvents/ImagesAndEvent";
 import Recommended from "./pages/recommended/Recommended";
 import People from "./pages/people/People";
-import ImagesAndEvents from "./pages/imagesAndEvents/ImagesAndEvent";
 import Footer from "./components/footer/Footer";
-import React, { useState } from "react";
-import Navbar from "./components/navbar/Navbar";
-import BadResolution from "./components/badResolution/BadResolution";
-import TimeLine from "./pages/timeline/TimeLine";
-import Crossword from "./components/game/Game";
-import FirstTimeBanner from "./components/firstBanner/FirstBanner";
-import { useArticle } from "./context/ArticleContext";
+import Article from "./pages/article/Article";
+import Header from "./components/header/Header";
+import Game from "./pages/game/Game";
 
 function App() {
-  const [selected, setSelected] = useState("recommended");
-  const items = [
-    {
-      id: "recommended",
-      heb: "עמוד הבית",
-      icon: require("./assets/pictures/home.svg"),
-      iconSel: require("./assets/pictures/homeSel.svg"),
-    },
-    {
-      id: "images",
-      iconSel: require("./assets/pictures/storySel.svg"),
-      heb: "אישים ואירועים",
-      icon: require("./assets/pictures/story.svg"),
-    },
-    {
-      iconSel: require("./assets/pictures/timelineSel.svg"),
-      id: "timeline",
-      heb: "מנהרת הזמן",
-      icon: require("./assets/pictures/timeline.svg"),
-    },
-    {
-      icon: require("./assets/pictures/people.svg"),
-      id: "people",
-      heb: "חללים ושבויים",
-      iconSel: require("./assets/pictures/peopleSel.svg"),
-    },
-    {
-      id: "game",
-      heb: "תשבץ היגיון",
-      iconSel: require("./assets/pictures/crosswordSel.svg"),
-      icon: require("./assets/pictures/crossword.svg"),
-    },
-  ];
   return (
     <>
-      <FirstTimeBanner />
-      {window.innerWidth > 500 && <BadResolution />}
       <Header />
-      <div style={{ background: "#32332F" }}>
-        {selected == "recommended" ? (
-          <>
-            <Recommended />
-            <Footer />
-          </>
-        ) : selected == "people" ? (
-          <>
-            <People />
-            <Footer />
-          </>
-        ) : selected == "images" ? (
-          <>
-            <ImagesAndEvents />
-            <Footer />
-          </>
-        ) : selected == "timeline" ? (
-          <TimeLine />
-        ) : (
-          selected == "game" && (
-            <>
-              <Crossword />
-              <Footer />
-            </>
-          )
-        )}
+      <div
+        style={{
+          background: "#32332F",
+          minHeight: "100vh",
+          paddingBottom: "5rem",
+        }}
+      >
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/timeline" element={<TimeLine />} />
+            <Route path="/images" element={<ImagesAndEvents />} />
+            <Route path="/recommended" element={<Recommended />} />
+            <Route path="/people" element={<People />} />
+            <Route path="/article" element={<Article />} />
+            <Route path="/game" element={<Game />} />
+          </Routes>
+        </BrowserRouter>
+        <Footer />
       </div>
-      <Navbar items={items} selected={selected} setSelected={setSelected} />
     </>
   );
 }

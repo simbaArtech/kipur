@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   top: 0;
   width: 100%;
   z-index: 120;
-  height: 100%;
+  height: 110%;
   background-color: white;
 `;
 
@@ -91,7 +91,7 @@ export const TextContainer = styled.div`
 `;
 
 export const BackBtn = styled.div`
-  position: absolute;
+  position: sticky;
   top: 2rem;
   left: 1.5rem;
   z-index: 1;

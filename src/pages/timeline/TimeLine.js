@@ -12,6 +12,7 @@ import {
 } from "./TimeLineStyles";
 import { data } from "./consts";
 import Article from "../timeline/article/Article";
+import Navbar from "../../components/navbar/Navbar";
 
 export default function TimeLine() {
   const [selectedItem, setSelectedItem] = useState(0);
@@ -85,6 +86,7 @@ export default function TimeLine() {
           ))}
         </StyledCarousel>
       </Container>
+      <Navbar selected="timeline" />
       {showDesc && <Article setShowCard={setShowDesc} article={article} />}
     </>
   );

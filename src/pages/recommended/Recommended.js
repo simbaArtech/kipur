@@ -13,7 +13,8 @@ import {
 } from "../../components/general";
 import Article from "../article/Article";
 import SecBanner from "./banner/SecBanner";
-import { useArticle } from "../../context/ArticleContext";
+import Navbar from "../../components/navbar/Navbar";
+
 const aritcles = [
   {
     article: true,
@@ -155,6 +156,7 @@ export default function Recommended() {
   const [showCard, setShowCard] = useState(false);
   const [articleI, setArticleI] = useState();
   const [showPopUp, setShowPopUp] = useState(false);
+
   return (
     <>
       <Carousel />
@@ -203,6 +205,7 @@ export default function Recommended() {
           </ArticleTextContainer>
         </ArticleContainer>
       </div>
+      {!showCard ? <Navbar selected="recommended" /> : null}
       {showPopUp && <SecBanner setShowPopUp={setShowPopUp} />}
     </>
   );

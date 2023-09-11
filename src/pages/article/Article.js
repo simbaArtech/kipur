@@ -29,7 +29,10 @@ export default function Article({ setShowCard, article }) {
         <CardHeaderLogo src={logo} />
         <div style={{ background: "gray" }}>
           <CardImage
-            style={{ height: article.article ? "25rem" : "17rem" }}
+            style={{
+              height: article.article ? "25rem" : "17rem",
+              marginTop: "-3rem",
+            }}
             imgSrc={
               article.article
                 ? article.pic
