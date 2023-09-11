@@ -15,14 +15,15 @@ import Article from "../article/Article";
 import SecBanner from "./banner/SecBanner";
 import Navbar from "../../components/navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-import { aritcles } from "../article/consts";
-
-const aritcle = [aritcles[1], aritcles[5], aritcles[7]];
+import consts from "../../pages/consts";
+import Footer from "../../components/footer/Footer";
 
 export default function Recommended() {
+  const aritcles = consts.aritcles;
   const navigate = useNavigate();
   const [showCard, setShowCard] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
+  const aritcle = [aritcles[1], aritcles[5], aritcles[7]];
 
   return (
     <>
@@ -33,7 +34,7 @@ export default function Recommended() {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <ArticleContainer
               onClick={() => {
-                navigate(`/article/${article.id}`);
+                navigate(`/article/${article.id}/aritcles`);
               }}
             >
               {article.pic ? (
@@ -70,6 +71,7 @@ export default function Recommended() {
       </div>
       {!showCard ? <Navbar selected="recommended" /> : null}
       {showPopUp && <SecBanner setShowPopUp={setShowPopUp} />}
+      <Footer />
     </>
   );
 }

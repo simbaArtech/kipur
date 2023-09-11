@@ -19,14 +19,17 @@ import {
 } from "../people/peopleStyle";
 
 import Article from "../article/Article";
-import { aritcles } from "../article/consts";
-import { personalities } from "../people/consts";
+import consts from "../consts";
 import Navbar from "../../components/navbar/Navbar";
+import { useNavigate } from "react-router-dom";
+import Footer from "../../components/footer/Footer";
 
 export default function ImagesAndEvents() {
+  const aritcles = consts.aritcles;
+  const personalities = consts.personalities;
+  const navigate = useNavigate();
   const [showCardO, setShowCardO] = useState(false);
   const [showCard, setShowCard] = useState(false);
-  const [articleI, setArticleI] = useState();
   const [selectedLabel, setSelectedLabel] = useState("לפני המלחמה");
   const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "בעקבות המלחמה"];
 
@@ -56,17 +59,13 @@ export default function ImagesAndEvents() {
                 <PersonalCircle
                   src={person.pic}
                   onClick={() => {
-                    setShowCardO(true);
-                    setArticleI(person);
+                    navigate(`/article/${person.id}/personalities`);
                   }}
                 />
                 <PersonalName>{person.name}</PersonalName>
               </PersonalContainer>
             );
           })}
-          {showCardO && (
-            <Article setShowCard={setShowCardO} article={articleI} />
-          )}
         </PersonalitiesContainer>
         <TitleLabel>
           <SemiTitle>אירועים</SemiTitle>
@@ -76,8 +75,7 @@ export default function ImagesAndEvents() {
             <div style={{ display: "flex", justifyContent: "center" }}>
               <ArticleContainer
                 onClick={() => {
-                  setShowCard(true);
-                  setArticleI(article);
+                  navigate(`/article/${article.id}/aritcles`);
                 }}
               >
                 {article.pic ? (
@@ -87,25 +85,14 @@ export default function ImagesAndEvents() {
                 )}
                 <ArticleTextContainer>
                   <ArticleTitle>{article.title}</ArticleTitle>
-                  {/* <ArticleDetailsContainer>
-                    <ArticleDetail>
-                      {article.type}
-                      <img
-                        src={require("../../assets/pictures/clock.svg")}
-                        style={{ height: "14px", marginLeft: "5px" }}
-                      />
-                    </ArticleDetail>
-                  </ArticleDetailsContainer> */}
                 </ArticleTextContainer>
               </ArticleContainer>
-              {showCard && (
-                <Article setShowCard={setShowCard} article={articleI} />
-              )}
             </div>
           );
         })}
         {!showCardO && !showCard ? <Navbar selected="images" /> : null}
       </>
+      <Footer />
     </>
   );
 }

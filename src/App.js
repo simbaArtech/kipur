@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/Home";
@@ -6,7 +6,6 @@ import TimeLine from "./pages/timeline/TimeLine";
 import ImagesAndEvents from "./pages/imagesAndEvents/ImagesAndEvent";
 import Recommended from "./pages/recommended/Recommended";
 import People from "./pages/people/People";
-import Footer from "./components/footer/Footer";
 import Article from "./pages/article/Article";
 import Header from "./components/header/Header";
 import Game from "./pages/game/Game";
@@ -30,11 +29,10 @@ function App() {
             <Route path="/images" element={<ImagesAndEvents />} />
             <Route path="/recommended" element={<Recommended />} />
             <Route path="/people" element={<People />} />
-            <Route path="/article/:id" element={<Article />} />
+            <Route path="/article/:id/:type" element={<Article />} />
             <Route path="/game" element={<Game />} />
           </Routes>
         </BrowserRouter>
-        <Footer />
       </div>
     </>
   );
