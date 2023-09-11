@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "4c0501d2163491fdf69b",
-    "url": "/kipur/static/css/main.a8589ede.chunk.css"
+    "revision": "c9655226febfd55a5621",
+    "url": "/kipur/static/css/main.c5d53aaf.chunk.css"
   },
   {
-    "revision": "4c0501d2163491fdf69b",
-    "url": "/kipur/static/js/main.4c0501d2.chunk.js"
+    "revision": "c9655226febfd55a5621",
+    "url": "/kipur/static/js/main.c9655226.chunk.js"
   },
   {
-    "revision": "ce4fa7343dd6dcab911f",
-    "url": "/kipur/static/css/1.b028d1f9.chunk.css"
+    "revision": "06334a2950f08c374f08",
+    "url": "/kipur/static/css/1.b08ea8fb.chunk.css"
   },
   {
-    "revision": "ce4fa7343dd6dcab911f",
-    "url": "/kipur/static/js/1.ce4fa734.chunk.js"
+    "revision": "06334a2950f08c374f08",
+    "url": "/kipur/static/js/1.06334a29.chunk.js"
   },
   {
     "revision": "a7ce45f57019b886a042",
@@ -42,6 +42,10 @@ self.__precacheManifest = [
   {
     "revision": "3d95b1e96e297109bf661bb106816e75",
     "url": "/kipur/static/media/clear.3d95b1e9.svg"
+  },
+  {
+    "revision": "1d92c961630799bb0ed74ab59a02ad66",
+    "url": "/kipur/static/media/kelim.1d92c961.png"
   },
   {
     "revision": "b7323189f4059cb6a5c7cfe2456050de",
@@ -536,8 +540,12 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/back.fac59744.png"
   },
   {
-    "revision": "1d92c961630799bb0ed74ab59a02ad66",
-    "url": "/kipur/static/media/kelim.1d92c961.png"
+    "revision": "3a44d8a1be496e62fdb0471609a0f449",
+    "url": "/kipur/static/media/סרטון 2.3a44d8a1.jpeg"
+  },
+  {
+    "revision": "debf57148ac03244905ca6da28d6a568",
+    "url": "/kipur/static/media/סרטון 1.debf5714.jpeg"
   },
   {
     "revision": "7c7d03a2c47a9cc4272b90d922f41a5c",
@@ -548,7 +556,7 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/tap.1993dcf5.svg"
   },
   {
-    "revision": "38964475211d75357cf3b5cee5379d1c",
+    "revision": "0e3167e1d60dd2cfbe8c1abeb8268fcb",
     "url": "/kipur/index.html"
   }
 ];
