@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import articlepic from "../../assets/pictures/cardImage.jpg";
 import Carousel from "../../components/carousel/Carousel";
+import { AccountCircle, CalendarMonth } from "@mui/icons-material";
 import {
   SemiTitle,
   ArticleDetailsContainer,
@@ -18,18 +19,74 @@ import { useNavigate } from "react-router-dom";
 import consts from "../../pages/consts";
 import Footer from "../../components/footer/Footer";
 
+// const videos = [
+//   {
+//     article: false,
+//     type: "7 דקות",
+//     title: `אמ"ן במנהרת הזמן`,
+//     pic: require("../../assets/videos/טיימליין אמן.mp4"),
+//   },
+//   {
+//     article: false,
+//     type: "6 דקות",
+//     title: `לקחים בעקבות מלחמת יום הכיפורים`,
+//     pic: require("../../assets/videos/נקודות בזמן.mp4"),
+//   },
+//   // {
+//   //   article: false,
+//   //   type: "11 דקות",
+//   //   title: 'פיקוד צפון במלחמת יום הכיפורים',
+//   //   pic: require("../../assets/videos/יום הכיפורים.mp4"),
+//   // },
+
+// ];
+
 export default function Recommended() {
-  const aritcles = consts.aritcles;
   const navigate = useNavigate();
   const [showCard, setShowCard] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
-  const aritcle = [aritcles[1], aritcles[5], aritcles[7]];
+  const [showFullScreen, setShowFullScreen] = useState(false);
+  const [articles, setArticles] = useState(
+    getRandomArticles(consts.aritcles, 5)
+  );
+
+  function getRandomArticles(arr, num) {
+    const shuffled = arr.slice().sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, num);
+  }
 
   return (
     <>
       <Carousel />
+      {/* <SemiTitle>סרטונים מומלצים</SemiTitle>
+      {videos.map((article) => {
+        return (
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <ArticleContainer >
+              <div style={{width: '20px !important', height: '80px !important', marginLeft: '10px', objectFit: 'cover'}}>
+              <video style={{borderRadius: '12px', width: '120px', height: "90px", verticalAlign: 'top'}} controls >
+                <source src={article.pic} type="video/mp4" />
+              </video>
+              </div>
+              <ArticleTextContainer>
+                <ArticleTitle>{article.title}</ArticleTitle>
+                <ArticleDetailsContainer>
+                  <ArticleDetail>
+                    <img
+                      src={require("../../assets/pictures/clock.svg")}
+                      style={{ height: "14px", marginLeft: "5px" }}
+                    />
+                    {article.type}
+                  </ArticleDetail>
+                </ArticleDetailsContainer>
+              </ArticleTextContainer>
+            </ArticleContainer>
+          </div>
+        );
+      })} */}
+
       <SemiTitle>כתבות מומלצות</SemiTitle>
-      {aritcle.map((article) => {
+      {articles.map((article) => {
         return (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <ArticleContainer
@@ -58,20 +115,8 @@ export default function Recommended() {
           </div>
         );
       })}
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <ArticleContainer
-          style={{ alignItems: "center" }}
-          onClick={() => setShowPopUp(true)}
-        >
-          <ArticlePic src={require("../../assets/pictures/kelim.png")} />
-          <ArticleTextContainer>
-            <ArticleTitle>כלים חינוכיים של אמ"ן</ArticleTitle>
-          </ArticleTextContainer>
-        </ArticleContainer>
-      </div>
+      <Footer/>
       {!showCard ? <Navbar selected="recommended" /> : null}
-      {showPopUp && <SecBanner setShowPopUp={setShowPopUp} />}
-      <Footer />
     </>
   );
 }
