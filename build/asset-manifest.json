@@ -1,10 +1,10 @@
 {
   "main.css": "/kipur/static/css/main.a8589ede.chunk.css",
-  "main.js": "/kipur/static/js/main.3f39fd01.chunk.js",
-  "main.js.map": "/kipur/static/js/main.3f39fd01.chunk.js.map",
+  "main.js": "/kipur/static/js/main.81997526.chunk.js",
+  "main.js.map": "/kipur/static/js/main.81997526.chunk.js.map",
   "static/css/1.b028d1f9.chunk.css": "/kipur/static/css/1.b028d1f9.chunk.css",
-  "static/js/1.ca2eca73.chunk.js": "/kipur/static/js/1.ca2eca73.chunk.js",
-  "static/js/1.ca2eca73.chunk.js.map": "/kipur/static/js/1.ca2eca73.chunk.js.map",
+  "static/js/1.ce4fa734.chunk.js": "/kipur/static/js/1.ce4fa734.chunk.js",
+  "static/js/1.ce4fa734.chunk.js.map": "/kipur/static/js/1.ce4fa734.chunk.js.map",
   "runtime~main.js": "/kipur/static/js/runtime~main.a7ce45f5.js",
   "runtime~main.js.map": "/kipur/static/js/runtime~main.a7ce45f5.js.map",
   "static/media/unknown.svg": "/kipur/static/media/unknown.9d05be2c.svg",
@@ -142,6 +142,6 @@
   "static/css/main.a8589ede.chunk.css.map": "/kipur/static/css/main.a8589ede.chunk.css.map",
   "static/css/1.b028d1f9.chunk.css.map": "/kipur/static/css/1.b028d1f9.chunk.css.map",
   "index.html": "/kipur/index.html",
-  "precache-manifest.a9672574523059e58c52a6d36ea9882b.js": "/kipur/precache-manifest.a9672574523059e58c52a6d36ea9882b.js",
+  "precache-manifest.ae9821c52d28482fc07dc04b86cb9475.js": "/kipur/precache-manifest.ae9821c52d28482fc07dc04b86cb9475.js",
   "service-worker.js": "/kipur/service-worker.js"
 }

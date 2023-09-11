@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "3f39fd01a266a8ac092d",
+    "revision": "819975262b5ac71f9368",
     "url": "/kipur/static/css/main.a8589ede.chunk.css"
   },
   {
-    "revision": "3f39fd01a266a8ac092d",
-    "url": "/kipur/static/js/main.3f39fd01.chunk.js"
+    "revision": "819975262b5ac71f9368",
+    "url": "/kipur/static/js/main.81997526.chunk.js"
   },
   {
-    "revision": "ca2eca735c4fec9016b6",
+    "revision": "ce4fa7343dd6dcab911f",
     "url": "/kipur/static/css/1.b028d1f9.chunk.css"
   },
   {
-    "revision": "ca2eca735c4fec9016b6",
-    "url": "/kipur/static/js/1.ca2eca73.chunk.js"
+    "revision": "ce4fa7343dd6dcab911f",
+    "url": "/kipur/static/js/1.ce4fa734.chunk.js"
   },
   {
     "revision": "a7ce45f57019b886a042",
@@ -548,7 +548,7 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/tap.1993dcf5.svg"
   },
   {
-    "revision": "c6b677edcd5e141062232cbb5afb6d9b",
+    "revision": "ff67ffc220ffc7c0a753b2e6a82ccd48",
     "url": "/kipur/index.html"
   }
 ];

@@ -22,8 +22,8 @@ import consts from "../../pages/consts";
 export default function Article() {
   //"https://50yearskippur.github.io/kipur/article/",
   const params = window.location.href.split("/");
-  const id = params[5];
-  const type = params[6];
+  const id = params[6];
+  const type = params[7];
   const article = consts[type].find((item) => item.id == Number(id));
   const navigation = useNavigate();
   return (
