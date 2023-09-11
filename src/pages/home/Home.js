@@ -13,6 +13,7 @@ export default function Home() {
       {window.innerWidth > 500 && <BadResolution />}
       <Recommended />
       <Navbar selected="recommended" />
+      <Footer/>
     </>
   );
 }

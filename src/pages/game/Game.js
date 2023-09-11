@@ -4,6 +4,7 @@ import logo from "../../assets/pictures/crosswordFull.svg.png";
 import Navbar from "../../components/navbar/Navbar";
 
 import { GRID_DATA } from "./consts";
+import Footer from "../../components/footer/Footer";
 
 const CLUE_DATA = {
   Ac1: {
@@ -371,7 +372,7 @@ class Crossword extends React.Component {
         <div className="text">{sessionStorage.getItem("clue")}</div>
         {this.state.boxInFocus && (
           <div onClick={this.showAns} className="buttonCheck">
-            רמז
+            חשיפת מילה
           </div>
         )}
         {this.state.isCheckButtonClicked && (
@@ -384,6 +385,7 @@ class Crossword extends React.Component {
         </div>
         {this.state.showError ? <div>***מלאו את כל הטבלה</div> : null}
         <Navbar selected="game" />
+        <Footer />
       </div>
     );
   }
