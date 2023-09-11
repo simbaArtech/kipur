@@ -16,7 +16,7 @@ import {
   PersonalitiesContainer,
   SeeAll,
 } from "./peopleStyle";
-import Article from "../../components/article/Article";
+import Article from "../article/Article";
 import { warPrisoners, slainPeople } from "../people/consts";
 
 export default function People() {

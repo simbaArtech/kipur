@@ -10,6 +10,7 @@ import BadResolution from "./components/badResolution/BadResolution";
 import TimeLine from "./pages/timeline/TimeLine";
 import Crossword from "./components/game/Game";
 import FirstTimeBanner from "./components/firstBanner/FirstBanner";
+import { useArticle } from "./context/ArticleContext";
 
 function App() {
   const [selected, setSelected] = useState("recommended");

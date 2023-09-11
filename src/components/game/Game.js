@@ -3,8 +3,6 @@ import "./GameStyle.css";
 import logo from "../../assets/pictures/crosswordFull.svg.png";
 
 import { GRID_DATA } from "./consts";
-import { Button } from "bootstrap";
-import { type } from "os";
 
 const CLUE_DATA = {
   Ac1: {
@@ -204,12 +202,14 @@ class Crossword extends React.Component {
       showData: false,
       showAnswer: false,
       showError: false,
+      isCheckButtonClicked: false,
     };
 
     this.setActiveClueBoxes = this.setActiveClueBoxes.bind(this);
     this.setActiveClue = this.setActiveClue.bind(this);
     this.setBoxInFocus = this.setBoxInFocus.bind(this);
     this.setShowData = this.setShowData.bind(this);
+    this.handleCheckAnswers = this.handleCheckAnswers.bind(this);
   }
 
   setActiveClueBoxes(boxes) {
@@ -337,6 +337,7 @@ class Crossword extends React.Component {
         }
       }
     });
+    this.setState({ isCheckButtonClicked: true });
   }
 
   render() {
@@ -367,12 +368,16 @@ class Crossword extends React.Component {
         />
         {this.state.showData && <img className="crossword-img" src={logo} />}
         <div className="text">{sessionStorage.getItem("clue")}</div>
-        <div onClick={this.showAns} className="buttonCheck">
-          רמז
-        </div>
-        <div onClick={this.showAllData} className="buttonCheck">
-          חשיפת התשובות
-        </div>
+        {this.state.boxInFocus && (
+          <div onClick={this.showAns} className="buttonCheck">
+            רמז
+          </div>
+        )}
+        {this.state.isCheckButtonClicked && (
+          <div onClick={this.showAllData.bind(this)} className="buttonCheck">
+            חשיפת תשובות
+          </div>
+        )}
         <div onClick={this.handleCheckAnswers} className="buttonCheck">
           בדיקה
         </div>

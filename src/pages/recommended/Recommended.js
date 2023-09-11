@@ -11,9 +11,9 @@ import {
   ArticleTitle,
   ArticleDetail,
 } from "../../components/general";
-import Article from "../../components/article/Article";
+import Article from "../article/Article";
 import SecBanner from "./banner/SecBanner";
-
+import { useArticle } from "../../context/ArticleContext";
 const aritcles = [
   {
     article: true,
@@ -155,7 +155,6 @@ export default function Recommended() {
   const [showCard, setShowCard] = useState(false);
   const [articleI, setArticleI] = useState();
   const [showPopUp, setShowPopUp] = useState(false);
-
   return (
     <>
       <Carousel />

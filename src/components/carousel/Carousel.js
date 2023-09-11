@@ -6,7 +6,7 @@ import { Pagination, Navigation, Autoplay, EffectCoverflow } from "swiper";
 import "./styles.css";
 import { DarkOnImage } from "../../pages/timeline/TimeLineStyles";
 import { CardTitle, CardWrapper, StyledSwiperSlide } from "./styles";
-import Article from "../article/Article";
+import Article from "../../pages/article/Article";
 import { useEffect } from "react";
 
 export default function Carousel() {

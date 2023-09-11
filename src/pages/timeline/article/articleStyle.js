@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 120;
   height: 100%;
   background-color: white;
 `;
@@ -22,6 +22,9 @@ export const CardContainer = styled.div`
   top: -27px;
   border-radius: 20px 20px 0 0;
   padding-top: 0.7rem;
+  heigt: 100%;
+  padding-bottom: 10rem;
+  z-index: 101;
 `;
 
 export const CardTitle = styled.div`
@@ -92,12 +95,12 @@ export const BackBtn = styled.div`
   top: 2rem;
   left: 1.5rem;
   z-index: 1;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #606060;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #606060;
   border-radius: 50%;
 `;
 export const CardHeaderLogo = styled.img`

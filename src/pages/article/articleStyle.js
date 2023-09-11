@@ -21,6 +21,9 @@ export const CardContainer = styled.div`
   top: -27px;
   border-radius: 20px 20px 0 0;
   padding-top: 0.7rem;
+  min-height: 100%;
+  padding-bottom: 10rem;
+  overflow-y: auto;
 `;
 
 export const CardTitle = styled.div`
@@ -91,8 +94,8 @@ export const BackBtn = styled.div`
   top: 2rem;
   left: 1.5rem;
   z-index: 1;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background: #606060;
   display: flex;
   justify-content: space-around;

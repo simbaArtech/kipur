@@ -18,8 +18,8 @@ import {
   PersonalitiesContainer,
 } from "../people/peopleStyle";
 
-import Article from "../../components/article/Article";
-import { aritcles } from "../../components/article/consts";
+import Article from "../article/Article";
+import { aritcles } from "../article/consts";
 import { personalities } from "../people/consts";
 
 export default function ImagesAndEvents() {
