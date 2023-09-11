@@ -1,27 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "8d03530ce7a985921537",
-    "url": "/kipur/static/css/main.9e496432.chunk.css"
+    "revision": "e8c596302d292b9249fe",
+    "url": "/kipur/static/css/main.19b0ad7a.chunk.css"
   },
   {
-    "revision": "8d03530ce7a985921537",
-    "url": "/kipur/static/js/main.8d03530c.chunk.js"
+    "revision": "e8c596302d292b9249fe",
+    "url": "/kipur/static/js/main.e8c59630.chunk.js"
   },
   {
-    "revision": "cd13fb4e0564142fa5ee",
-    "url": "/kipur/static/js/1.cd13fb4e.chunk.js"
+    "revision": "485905692824facbcab8",
+    "url": "/kipur/static/css/1.698e72c7.chunk.css"
   },
   {
-    "revision": "a2e6ff77233f9571c5ad",
-    "url": "/kipur/static/css/2.6a893ef6.chunk.css"
+    "revision": "485905692824facbcab8",
+    "url": "/kipur/static/js/1.48590569.chunk.js"
   },
   {
-    "revision": "a2e6ff77233f9571c5ad",
-    "url": "/kipur/static/js/2.a2e6ff77.chunk.js"
-  },
-  {
-    "revision": "5979209e715af2210005",
-    "url": "/kipur/static/js/runtime~main.5979209e.js"
+    "revision": "a7ce45f57019b886a042",
+    "url": "/kipur/static/js/runtime~main.a7ce45f5.js"
   },
   {
     "revision": "fea3e17284b170eb57beaab7826b6e24",
@@ -552,7 +548,7 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/crossword.868308c6.svg"
   },
   {
-    "revision": "d1c885df0666c8926aa3005b0ae51a79",
+    "revision": "db11b479e75610af4a591a27cca4520b",
     "url": "/kipur/index.html"
   }
 ];
