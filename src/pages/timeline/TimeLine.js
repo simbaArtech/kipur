@@ -20,9 +20,16 @@ export default function TimeLine() {
   const [selectedItem, setSelectedItem] = useState(0);
   const [showDesc, setShowDesc] = useState(false);
   const imageRef = useRef(null);
+  const carouselRef = useRef();
+  
+  useEffect(() => {
+    if(sessionStorage.getItem("timeline")){
+      carouselRef.current.goTo(Number(sessionStorage.getItem("timeline"))
+  }, [])
 
   const handleChangeImage = (currentItem) => {
     setSelectedItem(currentItem.index);
+    sessionStorage.setItem("timeline", currentItem.index);
   };
   return (
     <>
@@ -31,6 +38,7 @@ export default function TimeLine() {
           verticalMode
           itemsToShow={3}
           focusOnSelect={true}
+          ref={carouselRef}
           onChange={(event) => {
             handleChangeImage(event);
             setShowDesc(false);
