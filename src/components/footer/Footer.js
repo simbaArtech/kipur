@@ -80,11 +80,6 @@ export default function Footer({ card }) {
           <div
             style={{ direction: "rtl", display: "flex", alignItems: "stretch" }}
           >
-            <img
-              src={require("../../assets/pictures/email.png")}
-              style={{ width: "15px", height: "15px", marginLeft: "5px" }}
-            />
-            צרו קשר{" "}
             <a
               style={{
                 marginRight: "5px",
@@ -93,7 +88,16 @@ export default function Footer({ card }) {
               }}
               href="mailto:artechb15@gmail.com"
             >
-              artechb15@gmail.com
+              <img
+                src={require("../../assets/pictures/email.png")}
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  marginLeft: "5px",
+                  marginBottom: "-4px",
+                }}
+              />
+              צרו קשר artechb15@gmail.com
             </a>
           </div>
           <div style={containerStyle}>

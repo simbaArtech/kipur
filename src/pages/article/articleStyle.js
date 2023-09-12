@@ -85,7 +85,7 @@ export const TextContainer = styled.div`
   direction: rtl;
   color: black;
   font-size: 1rem;
-  font-family: "Assistant";
+  font-family: Almoni;
   margin-bottom: 3rem;
 `;
 
