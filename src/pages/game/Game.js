@@ -759,7 +759,7 @@ class Box extends React.Component {
           value={this.ref}
           onClick={(e) => handleClick(this.props, e)}
           id={`input${this.props.id}`}
-          style={{ direction: "rtl", textAlign: "center" }}
+          style={{ direction: "rtl", textAlign: "center", fontSize: "1rem" }}
           type="text"
           maxLength="1"
           className={`box-input ${this.state.highlight ? "highlight" : ""}`}
