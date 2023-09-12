@@ -53,6 +53,7 @@ export default function People() {
     color: "black",
     borderRadius: "20vw",
     fontSize: "15px",
+    lineHeight: "1.6",
   };
   const unselectedStyle = {
     // margin: "auto",

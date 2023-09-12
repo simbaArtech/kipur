@@ -49,3 +49,9 @@ export const ArticlePic = styled.img`
   border-radius: 12px;
   object-fit: cover;
 `;
+
+export const VideoContaiber = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+`;

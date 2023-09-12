@@ -37,6 +37,12 @@ export default function ImagesAndEvents() {
   const [filteredItems, setFilteredItems] = useState(personalities);
 
   useEffect(() => {
+    if (sessionStorage.getItem("filterBy")) {
+      setSelectedLabel(sessionStorage.getItem("filterBy"));
+    }
+  }, []);
+
+  useEffect(() => {
     const filtered = aritcles.filter((item) => item.type === selectedLabel);
     setFilteredArticles(filtered);
     const filteredPerson = personalities.filter(

@@ -11,6 +11,7 @@ import {
   ArticlePic,
   ArticleTitle,
   ArticleDetail,
+  VideoContaiber,
 } from "../../components/general";
 import Article from "../article/Article";
 import SecBanner from "./banner/SecBanner";
@@ -18,6 +19,7 @@ import Navbar from "../../components/navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import consts from "../../pages/consts";
 import Footer from "../../components/footer/Footer";
+import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 
 const videos = [
   {
@@ -93,14 +95,23 @@ export default function Recommended() {
           </div>
         );
       })} */}
-      <SemiTitle>סרטונים ממולצים</SemiTitle>
+      <SemiTitle>סרטונים מומלצים</SemiTitle>
       {videos.map((video) => {
         return (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <a style={{ textDecoration: "none" }} href={video.src}>
               <ArticleContainer>
                 {video.pic ? (
-                  <ArticlePic src={video.pic} />
+                  <VideoContaiber>
+                    <VideoLibraryIcon
+                      style={{
+                        position: "absolute",
+                        color: "white",
+                        opacity: ".7",
+                      }}
+                    />
+                    <ArticlePic src={video.pic} />
+                  </VideoContaiber>
                 ) : (
                   <ArticlePic src={articlepic} />
                 )}

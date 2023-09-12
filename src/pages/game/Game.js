@@ -355,8 +355,29 @@ class Crossword extends React.Component {
     }
     return (
       <div className="crossword">
-        <div style={{ color: "white", direction: "rtl", marginTop: "3rem" }}>
+        <div
+          style={{
+            color: "white",
+            direction: "rtl",
+            width: "100%",
+            textAlign: "right",
+            narginRight: "1rem",
+          }}
+        >
           *נכתב ע"י סגן ל` מהיחידה הטכנולוגית
+        </div>
+        <div
+          style={{
+            color: "white",
+            direction: "rtl",
+            width: "100%",
+            textAlign: "center",
+            padding: "0 2rem",
+            fontSize: " 1.1rem",
+            marginTop: "1rem",
+          }}
+        >
+          לחיצה אחת תאפשר פנייה לערך במאוזן, לחיצה שנייה תאפשר פנייה לערך במאונך
         </div>
         <Board
           grid={this.state.grid}

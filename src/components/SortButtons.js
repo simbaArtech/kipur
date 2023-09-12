@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
 export default function SortButtons({ labels, setSelectedLabel }) {
-  const [selected, setSelected] = useState(labels[0]);
+  const lableStorage = sessionStorage.getItem("filterBy");
+  const [selected, setSelected] = useState(
+    lableStorage ? lableStorage : labels[0]
+  );
 
   const containerStyle = {
     display: "flex",
@@ -17,10 +20,12 @@ export default function SortButtons({ labels, setSelectedLabel }) {
     color: "black",
     margin: "auto",
     width: "fit-content",
-    padding: "2px 12px",
+    padding: "3px 12px",
     background: "white",
     borderRadius: "20vw",
     fontSize: "15px",
+    height: "2rem",
+    lineHeight: "1.8",
   };
   const unselectedStyle = {
     margin: "auto",
@@ -31,6 +36,8 @@ export default function SortButtons({ labels, setSelectedLabel }) {
     color: "black",
     borderRadius: "20vw",
     border: "2px solid #657c54",
+    height: "2rem",
+    lineHeight: "1.8",
   };
 
   return (
@@ -40,8 +47,10 @@ export default function SortButtons({ labels, setSelectedLabel }) {
           key={label}
           style={selected == label ? selectedStyle : unselectedStyle}
           onClick={() => {
+            sessionStorage.setItem("filterBy", label);
             setSelectedLabel(label);
             setSelected(label);
+            // Corrected the placement of the closing parenthesis
           }}
         >
           {selected == label ? label : label.split(" ")[0]}

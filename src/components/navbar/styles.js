@@ -14,4 +14,5 @@ export const Wrapper = styled.div`
   flex-direction: row-reverse;
   font-size: 0.85rem;
   z-index: 10;
+  padding-top: 0.7rem;
 `;
