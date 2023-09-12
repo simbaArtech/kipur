@@ -21,11 +21,12 @@ export default function TimeLine() {
   const [showDesc, setShowDesc] = useState(false);
   const imageRef = useRef(null);
   const carouselRef = useRef();
-  
+
   useEffect(() => {
-    if(sessionStorage.getItem("timeline")){
-      carouselRef.current.goTo(Number(sessionStorage.getItem("timeline"))
-  }, [])
+    if (sessionStorage.getItem("timeline")) {
+      carouselRef.current.goTo(Number(sessionStorage.getItem("timeline")));
+    }
+  }, []);
 
   const handleChangeImage = (currentItem) => {
     setSelectedItem(currentItem.index);

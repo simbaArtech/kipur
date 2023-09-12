@@ -34,29 +34,25 @@ export default function ImagesAndEvents() {
   const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "בעקבות המלחמה"];
 
   const [filteredArticles, setFilteredArticles] = useState(aritcles);
-  const [filteredItems, setFilteredItems] = useState(personalities)
+  const [filteredItems, setFilteredItems] = useState(personalities);
 
-useEffect(() => {
-If (sessionStorage.getItem(“filterBy”){
-SetSelectedLabel(sessionStorage.getItem(“filterBy”)
-}
-}, []);
+  useEffect(() => {
+    if (sessionStorage.getItem("filterBy")) {
+      setSelectedLabel(sessionStorage.getItem("filterBy"));
+    }
+  }, []);
 
+  // useEffect(() => {
+  //   const filtered = aritcles.filter((item) => item.type === selectedLabel);
+  //   setFilteredArticles(filtered);
+  //   const filteredPerson = personalities.filter(
+  //     (item) => item.type === selectedLabel
+  //   );
+  //   setFilteredItems(filteredPerson);
 
-useEffect(() => {
-    const filtered = aritcles.filter((item) => item.type === selectedLabel);
-    setFilteredArticles(filtered);
-    const filteredPerson = personalities.filter(
-      (item) => item.type === selectedLabel
-    );
-    setFilteredItems(filteredPerson);
-
-// putting in sessionStorage
-
-sessionStorage.setItem(”filterBy”, selectedLabel)
-
-}}, [selectedLabel]);
-
+  //   // Fix the extra closing parenthesis here
+  //   sessionStorage.setItem("filterBy", selectedLabel);
+  // }, [selectedLabel]);
 
   return (
     <>
