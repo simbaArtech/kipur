@@ -1,7 +1,7 @@
 {
-  "main.css": "/kipur/static/css/main.3745707b.chunk.css",
-  "main.js": "/kipur/static/js/main.025cc4e5.chunk.js",
-  "main.js.map": "/kipur/static/js/main.025cc4e5.chunk.js.map",
+  "main.css": "/kipur/static/css/main.0d272112.chunk.css",
+  "main.js": "/kipur/static/js/main.728d34dd.chunk.js",
+  "main.js.map": "/kipur/static/js/main.728d34dd.chunk.js.map",
   "static/css/1.5d84cd2d.chunk.css": "/kipur/static/css/1.5d84cd2d.chunk.css",
   "static/js/1.aa2a0b8d.chunk.js": "/kipur/static/js/1.aa2a0b8d.chunk.js",
   "static/js/1.aa2a0b8d.chunk.js.map": "/kipur/static/js/1.aa2a0b8d.chunk.js.map",
@@ -142,9 +142,9 @@
   "static/media/סרטון 1.jpeg": "/kipur/static/media/סרטון 1.debf5714.jpeg",
   "static/media/forTimeline.png": "/kipur/static/media/forTimeline.7c7d03a2.png",
   "static/media/tap.svg": "/kipur/static/media/tap.1993dcf5.svg",
-  "static/css/main.3745707b.chunk.css.map": "/kipur/static/css/main.3745707b.chunk.css.map",
+  "static/css/main.0d272112.chunk.css.map": "/kipur/static/css/main.0d272112.chunk.css.map",
   "static/css/1.5d84cd2d.chunk.css.map": "/kipur/static/css/1.5d84cd2d.chunk.css.map",
   "index.html": "/kipur/index.html",
-  "precache-manifest.be19da6817ddf5bc393f569bb6b61948.js": "/kipur/precache-manifest.be19da6817ddf5bc393f569bb6b61948.js",
+  "precache-manifest.5357b1e3415f0ddc2ce274b8800a6574.js": "/kipur/precache-manifest.5357b1e3415f0ddc2ce274b8800a6574.js",
   "service-worker.js": "/kipur/service-worker.js"
 }
