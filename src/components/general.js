@@ -28,6 +28,7 @@ export const ArticleContainer = styled.div`
 `;
 export const ArticleTitle = styled.div`
   color: white;
+  font-weight: bold;
 `;
 export const ArticleDetailsContainer = styled.div`
   display: flex;
@@ -39,6 +40,7 @@ export const ArticleDetail = styled.div`
   display: flex;
   align-items: center;
   color: #99b882;
+  direction: rtl;
   font-size: 1rem;
 `;
 

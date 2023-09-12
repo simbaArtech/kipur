@@ -54,6 +54,7 @@ export const TitlesContainer = styled.div`
 
 export const ImageTitle = styled.p`
   color: white;
+  font-weight: 600;
   font-size: 12px;
   opacity: ${({ isSelected }) => (isSelected ? "1" : "0.5")};
   width: 200px;
@@ -67,6 +68,7 @@ export const ImageTitle = styled.p`
 export const ImageDate = styled.p`
   padding: 0;
   font-size: 24px;
+  font-weight: 600;
   opacity: ${({ isSelected }) => (isSelected ? "1" : "0.5")};
   letter-spacing: 2px;
   font-family: ${AlmoniDemibold};

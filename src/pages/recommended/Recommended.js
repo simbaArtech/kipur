@@ -119,11 +119,11 @@ export default function Recommended() {
                   <ArticleTitle>{video.title}</ArticleTitle>
                   <ArticleDetailsContainer>
                     <ArticleDetail>
-                      {video.type}
                       <img
                         src={require("../../assets/pictures/clock.svg")}
                         style={{ height: "14px", marginLeft: "5px" }}
-                      />
+                        />
+                        {video.type}
                     </ArticleDetail>
                   </ArticleDetailsContainer>
                 </ArticleTextContainer>
@@ -150,11 +150,11 @@ export default function Recommended() {
                 <ArticleTitle>{article.title}</ArticleTitle>
                 <ArticleDetailsContainer>
                   <ArticleDetail>
-                    {article.type}
                     <img
                       src={require("../../assets/pictures/clock.svg")}
                       style={{ height: "14px", marginLeft: "5px" }}
-                    />
+                      />
+                      {article.type}
                   </ArticleDetail>
                 </ArticleDetailsContainer>
               </ArticleTextContainer>

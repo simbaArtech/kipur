@@ -588,9 +588,6 @@ class Board extends React.Component {
               setActiveClue={this.props.setActiveClue}
               setBoxInFocus={this.props.setBoxInFocus}
               isInFocus={this.props.boxInFocus == id}
-              // disableTouch={
-              //   /* Determine whether to disable touch for this box */
-              // }
             />
           );
         })}
@@ -786,11 +783,7 @@ class Box extends React.Component {
 
     return (
       <div>
-        <div
-          className={`box ${!this.props.letter ? " blank" : ""} ${
-            this.props.disableTouch ? "touch-disabled" : ""
-          }`}
-        >
+        <div className={`box ${!this.props.letter ? " blank" : ""}`}>
           {visibleLabel}
           {input}
         </div>

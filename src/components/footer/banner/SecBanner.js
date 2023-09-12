@@ -17,7 +17,7 @@ const SecBanner = ({ label, setShowPopUp }) => {
 
   return (
     <Wrapper style={{ display: showBanner ? "block" : "" }}>
-      <Banner style={label.style ? label.style : { height: "65%" }}>
+      <Banner style={label.style ? label.style : { height: "500px" }}>
         <Title>{label.title}</Title>
         <SemiTitle style={{ height: label.name === "צרו קשר" ? "4rem" : "" }}>
           {label.text}

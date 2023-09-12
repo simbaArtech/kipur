@@ -120,10 +120,6 @@
   font-weight: bold;
 }
 
-.touch-disabled {
-  touch-action: manipulation;
-}
-
 .highlight {
   background: #bdb9b9;
 }
