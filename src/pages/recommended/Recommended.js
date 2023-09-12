@@ -67,33 +67,7 @@ export default function Recommended() {
           style={{ borderRadius: "1rem", width: "340px", height: "auto" }}
         />
       </div>
-      {/* <SemiTitle>סרטונים מומלצים</SemiTitle>
-      {videos.map((article) => {
-        return (
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <ArticleContainer >
-              <div style={{width: '20px !important', height: '80px !important', marginLeft: '10px', objectFit: 'cover'}}>
-              <video style={{borderRadius: '12px', width: '120px', height: "90px", verticalAlign: 'top'}} controls >
-                <source src={article.pic} type="video/mp4" />
-              </video>
-              </div>
-              <ArticleTextContainer>
-                <ArticleTitle>{article.title}</ArticleTitle>
-                <ArticleDetailsContainer>
-                  <ArticleDetail>
-                    <img
-                      src={require("../../assets/pictures/clock.svg")}
-                      style={{ height: "14px", marginLeft: "5px" }}
-                    />
-                    {article.type}
-                  </ArticleDetail>
-                </ArticleDetailsContainer>
-              </ArticleTextContainer>
-            </ArticleContainer>
-          </div>
-        );
-      })} */}
-      <SemiTitle>סרטונים ממולצים</SemiTitle>
+      <SemiTitle>סרטונים מומלצים</SemiTitle>
       {videos.map((video) => {
         return (
           <div style={{ display: "flex", justifyContent: "center" }}>
@@ -108,11 +82,11 @@ export default function Recommended() {
                   <ArticleTitle>{video.title}</ArticleTitle>
                   <ArticleDetailsContainer>
                     <ArticleDetail>
-                      {video.type}
                       <img
                         src={require("../../assets/pictures/clock.svg")}
                         style={{ height: "14px", marginLeft: "5px" }}
-                      />
+                        />
+                        {video.type}
                     </ArticleDetail>
                   </ArticleDetailsContainer>
                 </ArticleTextContainer>
@@ -139,11 +113,11 @@ export default function Recommended() {
                 <ArticleTitle>{article.title}</ArticleTitle>
                 <ArticleDetailsContainer>
                   <ArticleDetail>
-                    {article.type}
                     <img
                       src={require("../../assets/pictures/clock.svg")}
                       style={{ height: "14px", marginLeft: "5px" }}
-                    />
+                      />
+                      {article.type}
                   </ArticleDetail>
                 </ArticleDetailsContainer>
               </ArticleTextContainer>

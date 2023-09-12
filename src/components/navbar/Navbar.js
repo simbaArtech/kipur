@@ -57,7 +57,7 @@ export default function Navbar({ selected }) {
   };
 
   return (
-    <Wrapper>
+    <Wrapper onClick={() => sessionStorage.setItem("firstTimeBannerDismissed", "true")}>
       {items.map((item) => (
         <div
           style={{ display: "inline", textAlign: "center" }}

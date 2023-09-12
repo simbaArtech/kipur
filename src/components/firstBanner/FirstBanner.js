@@ -20,6 +20,15 @@ const FirstTimeBanner = () => {
     };
   }, []);
 
+    const handlePopState = (event) => {
+      if (event.type === "popstate") {
+        sessionStorage.setItem("firstTimeBannerDismissed", "true");
+      }
+    };
+
+
+  window.addEventListener("popstate", handlePopState);
+
   const handleDismiss = () => {
     setShowBanner(false);
     sessionStorage.setItem("firstTimeBannerDismissed", "true");
