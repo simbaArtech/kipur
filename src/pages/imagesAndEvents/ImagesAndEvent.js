@@ -30,20 +30,33 @@ export default function ImagesAndEvents() {
   const navigate = useNavigate();
   const [showCardO, setShowCardO] = useState(false);
   const [showCard, setShowCard] = useState(false);
-  const [selectedLabel, setSelectedLabel] = useState("לפני המלחמה");
+  const [selectedLabel, setSelectedLabel] = useState("");
   const labels = ["לפני המלחמה", "ערב המלחמה", "מהלך המלחמה", "בעקבות המלחמה"];
 
   const [filteredArticles, setFilteredArticles] = useState(aritcles);
-  const [filteredItems, setFilteredItems] = useState(personalities);
+  const [filteredItems, setFilteredItems] = useState(personalities)
 
-  useEffect(() => {
+useEffect(() => {
+If (sessionStorage.getItem(“filterBy”){
+SetSelectedLabel(sessionStorage.getItem(“filterBy”)
+}
+}, []);
+
+
+useEffect(() => {
     const filtered = aritcles.filter((item) => item.type === selectedLabel);
     setFilteredArticles(filtered);
     const filteredPerson = personalities.filter(
       (item) => item.type === selectedLabel
     );
     setFilteredItems(filteredPerson);
-  }, [selectedLabel]);
+
+// putting in sessionStorage
+
+sessionStorage.setItem(”filterBy”, selectedLabel)
+
+}}, [selectedLabel]);
+
 
   return (
     <>
