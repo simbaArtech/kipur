@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "8b827e63efa32c442b95",
-    "url": "/kipur/static/css/main.c5d53aaf.chunk.css"
+    "revision": "025cc4e591d5a6b05c47",
+    "url": "/kipur/static/css/main.3745707b.chunk.css"
   },
   {
-    "revision": "8b827e63efa32c442b95",
-    "url": "/kipur/static/js/main.8b827e63.chunk.js"
+    "revision": "025cc4e591d5a6b05c47",
+    "url": "/kipur/static/js/main.025cc4e5.chunk.js"
   },
   {
-    "revision": "06334a2950f08c374f08",
-    "url": "/kipur/static/css/1.b08ea8fb.chunk.css"
+    "revision": "aa2a0b8d981f242351ca",
+    "url": "/kipur/static/css/1.5d84cd2d.chunk.css"
   },
   {
-    "revision": "06334a2950f08c374f08",
-    "url": "/kipur/static/js/1.06334a29.chunk.js"
+    "revision": "aa2a0b8d981f242351ca",
+    "url": "/kipur/static/js/1.aa2a0b8d.chunk.js"
   },
   {
     "revision": "a7ce45f57019b886a042",
@@ -210,6 +210,10 @@ self.__precacheManifest = [
   {
     "revision": "5824bb63c665f7de4b59e7e696c839f9",
     "url": "/kipur/static/media/binyamin.5824bb63.webp"
+  },
+  {
+    "revision": "6fb25a5ec72247abf3f5644d95cdf69c",
+    "url": "/kipur/static/media/davidGdl.6fb25a5e.jpeg"
   },
   {
     "revision": "cf6180fb49297cd662c123f381698690",
@@ -556,7 +560,7 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/tap.1993dcf5.svg"
   },
   {
-    "revision": "1e8f691330c2aafbde8561c9a039cede",
+    "revision": "1f2d660a3e97396905278570d91f4a73",
     "url": "/kipur/index.html"
   }
 ];

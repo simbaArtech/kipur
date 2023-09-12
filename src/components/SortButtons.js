@@ -32,10 +32,10 @@ export default function SortButtons({ labels, setSelectedLabel }) {
     width: "4.5rem",
     fontSize: "15px",
     padding: "2px 0px",
-    background: "#657c54",
+    background: "#99b882",
     color: "black",
     borderRadius: "20vw",
-    border: "2px solid #657c54",
+    border: "2px solid #99b882",
     height: "2rem",
     lineHeight: "1.8",
   };

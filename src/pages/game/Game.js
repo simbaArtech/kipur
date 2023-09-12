@@ -361,12 +361,14 @@ class Crossword extends React.Component {
             direction: "rtl",
             width: "100%",
             textAlign: "right",
-            narginRight: "1rem",
+            marginRight: "1rem",
+            marginRight: "2rem",
+            marginTop: "0.5rem",
           }}
         >
           *נכתב ע"י סגן ל` מהיחידה הטכנולוגית
         </div>
-        <div
+        {/* <div
           style={{
             color: "white",
             direction: "rtl",
@@ -378,7 +380,7 @@ class Crossword extends React.Component {
           }}
         >
           לחיצה אחת תאפשר פנייה לערך במאוזן, לחיצה שנייה תאפשר פנייה לערך במאונך
-        </div>
+        </div> */}
         <Board
           grid={this.state.grid}
           allClues={this.state.clues}
@@ -586,6 +588,9 @@ class Board extends React.Component {
               setActiveClue={this.props.setActiveClue}
               setBoxInFocus={this.props.setBoxInFocus}
               isInFocus={this.props.boxInFocus == id}
+              // disableTouch={
+              //   /* Determine whether to disable touch for this box */
+              // }
             />
           );
         })}
@@ -781,7 +786,11 @@ class Box extends React.Component {
 
     return (
       <div>
-        <div className={`box ${!this.props.letter ? " blank" : ""}`}>
+        <div
+          className={`box ${!this.props.letter ? " blank" : ""} ${
+            this.props.disableTouch ? "touch-disabled" : ""
+          }`}
+        >
           {visibleLabel}
           {input}
         </div>

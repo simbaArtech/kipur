@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Almoni"
+  font-family: "Almoni";
 }
 
 .crossword {
@@ -12,11 +12,11 @@
 }
 
 .crossword-img {
-    height: 21rem;
-    position: absolute;
-    z-index: 5;
-    width: 20.5rem;
-    top: 9rem
+  height: 21rem;
+  position: absolute;
+  z-index: 5;
+  width: 20.5rem;
+  top: 9rem;
 }
 
 .clue-lists {
@@ -82,10 +82,10 @@
 }
 
 .right {
-    background-color: #D6EBC7 !important;
+  background-color: #d6ebc7 !important;
 }
-.false{
-    background-color: #DC9F9B ;
+.false {
+  background-color: #dc9f9b;
 }
 
 .box-input {
@@ -107,18 +107,21 @@
   top: 1px;
 }
 
-.blank { 
+.blank {
   background: black;
 }
 
 .buttonCheck {
-    background-color: #99B882;
-    color: white;
-    border-radius: 10px;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    
+  background-color: #99b882;
+  color: black;
+  border-radius: 18px;
+  padding: 0.25rem 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
 
+.touch-disabled {
+  touch-action: manipulation;
 }
 
 .highlight {
