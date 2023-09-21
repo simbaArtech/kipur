@@ -33,7 +33,8 @@ const videos = [
     article: false,
     type: "6 דקות",
     title: `לקחים בעקבות מלחמת יום הכיפורים`,
-    src: "https://www.youtube.com/watch?v=P-1SJt25jWs",
+    src:
+      "https://drive.google.com/file/d/1x5LRkS6SyLB5-XvQRWXuHHuO6v6dVjcj/view",
     pic: require("../../assets/pictures/סרטון 1.jpeg"),
   },
 ];
@@ -122,8 +123,8 @@ export default function Recommended() {
                       <img
                         src={require("../../assets/pictures/clock.svg")}
                         style={{ height: "14px", marginLeft: "5px" }}
-                        />
-                        {video.type}
+                      />
+                      {video.type}
                     </ArticleDetail>
                   </ArticleDetailsContainer>
                 </ArticleTextContainer>
@@ -153,8 +154,8 @@ export default function Recommended() {
                     <img
                       src={require("../../assets/pictures/clock.svg")}
                       style={{ height: "14px", marginLeft: "5px" }}
-                      />
-                      {article.type}
+                    />
+                    {article.type}
                   </ArticleDetail>
                 </ArticleDetailsContainer>
               </ArticleTextContainer>

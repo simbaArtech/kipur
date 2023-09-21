@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "b71a32c59e4e7c4936c4",
+    "revision": "ac6954e0daa15771ec4d",
     "url": "/kipur/static/css/main.08a7c6ee.chunk.css"
   },
   {
-    "revision": "b71a32c59e4e7c4936c4",
-    "url": "/kipur/static/js/main.b71a32c5.chunk.js"
+    "revision": "ac6954e0daa15771ec4d",
+    "url": "/kipur/static/js/main.ac6954e0.chunk.js"
   },
   {
     "revision": "aa2a0b8d981f242351ca",
@@ -560,7 +560,7 @@ self.__precacheManifest = [
     "url": "/kipur/static/media/tap.1993dcf5.svg"
   },
   {
-    "revision": "9c50c36e324691e93b3029bceb4c2f58",
+    "revision": "45fa794a3ca36b99862f39b7c71bda77",
     "url": "/kipur/index.html"
   }
 ];
